@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<SplitPane dividerPositions="0.6942446043165468" focusTraversable="true" minHeight="332.0" minWidth="-1.0" prefHeight="332.0" prefWidth="558.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <items>
+    <AnchorPane minHeight="-1.0" minWidth="-1.0" prefHeight="330.0" prefWidth="392.0">
+      <children>
+        <ListView prefHeight="306.0" prefWidth="393.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane minHeight="305.0" minWidth="-1.0" prefHeight="305.0" prefWidth="98.0">
+      <children>
+        <VBox minHeight="146.0" minWidth="-1.0" prefHeight="165.0" prefWidth="127.0" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <fx:include source="top.fxml" />
+          </children>
+        </VBox>
+        <VBox prefHeight="165.0" prefWidth="157.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="165.0">
+          <children>
+            <fx:include source="down.fxml" prefHeight="165.0" prefWidth="167.0" />
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="mydb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="mydb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="current_condition"/>
+    <table id="10" parent="2" name="date"/>
+    <table id="11" parent="2" name="diognosis"/>
+    <table id="12" parent="2" name="diognosis_has_visit"/>
+    <table id="13" parent="2" name="doctor"/>
+    <table id="14" parent="2" name="patient"/>
+    <table id="15" parent="2" name="position"/>
+    <table id="16" parent="2" name="qualification"/>
+    <table id="17" parent="2" name="queue"/>
+    <table id="18" parent="2" name="service_type"/>
+    <table id="19" parent="2" name="services"/>
+    <table id="20" parent="2" name="services_has_visit"/>
+    <table id="21" parent="2" name="social_status"/>
+    <table id="22" parent="2" name="specialization"/>
+    <table id="23" parent="2" name="time"/>
+    <table id="24" parent="2" name="visit"/>
+    <table id="25" parent="2" name="visit_has_specialization"/>
+    <column id="26" parent="9" name="id_current_condition">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="9" name="current_condition">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="28" parent="9" name="PRIMARY">
+      <ColNames>id_current_condition</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="10" name="id_date">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="31" parent="10" name="PRIMARY">
+      <ColNames>id_date</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="11" name="id_diognosis">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="11" name="diognosis">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="34" parent="11" name="PRIMARY">
+      <ColNames>id_diognosis</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="12" name="diognosis_id_diognosis">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="12" name="visit_id_visit">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="12" name="fk_diognosis_has_visit_diognosis1_idx">
+      <ColNames>diognosis_id_diognosis</ColNames>
+    </index>
+    <index id="38" parent="12" name="fk_diognosis_has_visit_visit1_idx">
+      <ColNames>visit_id_visit</ColNames>
+    </index>
+    <key id="39" parent="12" name="PRIMARY">
+      <ColNames>diognosis_id_diognosis
+visit_id_visit</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="12" name="fk_diognosis_has_visit_diognosis1">
+      <ColNames>diognosis_id_diognosis</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>diognosis</RefTableName>
+      <RefColNames>id_diognosis</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="41" parent="12" name="fk_diognosis_has_visit_visit1">
+      <ColNames>visit_id_visit</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>visit</RefTableName>
+      <RefColNames>id_visit</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="42" parent="13" name="id_doctor">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="13" name="d_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="d_surname">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="id_position">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="13" name="id_qualification">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="13" name="id_specialization">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="48" parent="13" name="id_qualification_idx">
+      <ColNames>id_qualification</ColNames>
+    </index>
+    <index id="49" parent="13" name="id_specialization_idx">
+      <ColNames>id_specialization</ColNames>
+    </index>
+    <index id="50" parent="13" name="position_idx">
+      <ColNames>id_position</ColNames>
+    </index>
+    <key id="51" parent="13" name="PRIMARY">
+      <ColNames>id_doctor</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="52" parent="13" name="position">
+      <ColNames>id_position</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>position</RefTableName>
+      <RefColNames>id_position</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="53" parent="13" name="id_qualification">
+      <ColNames>id_qualification</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>qualification</RefTableName>
+      <RefColNames>id_qualification</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="54" parent="13" name="id_specialization">
+      <ColNames>id_specialization</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>specialization</RefTableName>
+      <RefColNames>id_specialization</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="55" parent="14" name="id_patient">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="56" parent="14" name="p_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="57" parent="14" name="p_surname">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="58" parent="14" name="b_date">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="59" parent="14" name="id_social_status">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="14" name="id_current_condition">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="14" name="id_medical_card">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="62" parent="14" name="id_current_condition_idx">
+      <ColNames>id_current_condition</ColNames>
+    </index>
+    <index id="63" parent="14" name="id_social_status_idx">
+      <ColNames>id_social_status</ColNames>
+    </index>
+    <key id="64" parent="14" name="PRIMARY">
+      <ColNames>id_patient</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="14" name="id_social_status">
+      <ColNames>id_social_status</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>social_status</RefTableName>
+      <RefColNames>id_social_status</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="66" parent="14" name="id_current_condition">
+      <ColNames>id_current_condition</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>current_condition</RefTableName>
+      <RefColNames>id_current_condition</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="67" parent="15" name="id_position">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="68" parent="15" name="position">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="69" parent="15" name="PRIMARY">
+      <ColNames>id_position</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="70" parent="16" name="id_qualification">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="71" parent="16" name="qualification">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="72" parent="16" name="PRIMARY">
+      <ColNames>id_qualification</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="73" parent="17" name="id_queue">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="17" name="current_date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="75" parent="17" name="cab_num">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="76" parent="17" name="visit_has_specialization_id_visit_has_specialization">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="77" parent="17" name="id_doctor">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="17" name="id_timetable">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="79" parent="17" name="id_weekday">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="80" parent="17" name="fk_queue_date_idx">
+      <ColNames>id_weekday</ColNames>
+    </index>
+    <index id="81" parent="17" name="fk_queue_doctor_idx">
+      <ColNames>id_doctor</ColNames>
+    </index>
+    <index id="82" parent="17" name="fk_queue_time_idx">
+      <ColNames>id_timetable</ColNames>
+    </index>
+    <index id="83" parent="17" name="fk_queue_visit_has_specialization1_idx">
+      <ColNames>visit_has_specialization_id_visit_has_specialization</ColNames>
+    </index>
+    <key id="84" parent="17" name="PRIMARY">
+      <ColNames>id_queue</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="85" parent="17" name="fk_queue_visit_has_specialization1">
+      <ColNames>visit_has_specialization_id_visit_has_specialization</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>visit_has_specialization</RefTableName>
+      <RefColNames>id_visit_has_specialization</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="86" parent="17" name="fk_queue_doctor">
+      <ColNames>id_doctor</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>doctor</RefTableName>
+      <RefColNames>id_doctor</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="87" parent="17" name="fk_queue_time">
+      <ColNames>id_timetable</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>time</RefTableName>
+      <RefColNames>id_time</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="88" parent="17" name="fk_queue_date">
+      <ColNames>id_weekday</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>date</RefTableName>
+      <RefColNames>id_date</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="89" parent="18" name="id_service_type">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="18" name="service_name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="91" parent="18" name="service_price">
+      <Position>3</Position>
+      <DataType>decimal(5,2)|0</DataType>
+    </column>
+    <key id="92" parent="18" name="PRIMARY">
+      <ColNames>id_service_type</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="19" name="id_services">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="19" name="service_type">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="95" parent="19" name="fk_services_service_type1_idx">
+      <ColNames>service_type</ColNames>
+    </index>
+    <key id="96" parent="19" name="PRIMARY">
+      <ColNames>id_services</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="97" parent="19" name="fk_services_service_type1">
+      <ColNames>service_type</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>service_type</RefTableName>
+      <RefColNames>id_service_type</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="98" parent="20" name="services_id_services">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="20" name="visit_id_visit">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="100" parent="20" name="fk_services_has_visit_services1_idx">
+      <ColNames>services_id_services</ColNames>
+    </index>
+    <index id="101" parent="20" name="fk_services_has_visit_visit1_idx">
+      <ColNames>visit_id_visit</ColNames>
+    </index>
+    <key id="102" parent="20" name="PRIMARY">
+      <ColNames>services_id_services
+visit_id_visit</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="103" parent="20" name="fk_services_has_visit_services1">
+      <ColNames>services_id_services</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>services</RefTableName>
+      <RefColNames>id_services</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="104" parent="20" name="fk_services_has_visit_visit1">
+      <ColNames>visit_id_visit</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>visit</RefTableName>
+      <RefColNames>id_visit</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="105" parent="21" name="id_social_status">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="106" parent="21" name="social_status">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="107" parent="21" name="PRIMARY">
+      <ColNames>id_social_status</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="108" parent="22" name="id_specialization">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="109" parent="22" name="specialization">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="110" parent="22" name="PRIMARY">
+      <ColNames>id_specialization</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="111" parent="23" name="id_time">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="112" parent="23" name="time_start">
+      <Position>2</Position>
+      <DataType>time(4)|0</DataType>
+    </column>
+    <column id="113" parent="23" name="time_end">
+      <Position>3</Position>
+      <DataType>time(4)|0</DataType>
+    </column>
+    <key id="114" parent="23" name="PRIMARY">
+      <ColNames>id_time</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="115" parent="24" name="id_visit">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="116" parent="24" name="id_patient">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="117" parent="24" name="date_cured">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="118" parent="24" name="start_date_treatment">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="119" parent="24" name="id_queue">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="120" parent="24" name="fk_visit_queue1_idx">
+      <ColNames>id_queue</ColNames>
+    </index>
+    <index id="121" parent="24" name="id_patient_idx">
+      <ColNames>id_patient</ColNames>
+    </index>
+    <key id="122" parent="24" name="PRIMARY">
+      <ColNames>id_visit</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="123" parent="24" name="id_patient">
+      <ColNames>id_patient</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>patient</RefTableName>
+      <RefColNames>id_patient</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="124" parent="24" name="fk_visit_queue1">
+      <ColNames>id_queue</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>queue</RefTableName>
+      <RefColNames>id_queue</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="125" parent="25" name="id_visit_has_specialization">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="25" name="visit_id_visit">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="127" parent="25" name="specialization_id_specialization">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="128" parent="25" name="fk_visit_has_specialization_specialization1_idx">
+      <ColNames>specialization_id_specialization</ColNames>
+    </index>
+    <index id="129" parent="25" name="fk_visit_has_specialization_visit1_idx">
+      <ColNames>visit_id_visit</ColNames>
+    </index>
+    <key id="130" parent="25" name="PRIMARY">
+      <ColNames>id_visit_has_specialization</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="131" parent="25" name="fk_visit_has_specialization_visit1">
+      <ColNames>visit_id_visit</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>visit</RefTableName>
+      <RefColNames>id_visit</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <foreign-key id="132" parent="25" name="fk_visit_has_specialization_specialization1">
+      <ColNames>specialization_id_specialization</ColNames>
+      <RefSchemaName>mydb</RefSchemaName>
+      <RefTableName>specialization</RefTableName>
+      <RefColNames>id_specialization</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

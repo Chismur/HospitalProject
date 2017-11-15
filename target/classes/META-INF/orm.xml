@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.hospitalproject.model.CurrentConditionEntity">
+        <table name="current_condition" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idCurrentCondition">
+                <column name="id_current_condition" precision="11"/>
+            </id>
+            <basic name="currentCondition">
+                <column name="current_condition" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="patientsByIdCurrentCondition" mapped-by="currentConditionByIdCurrentCondition"
+                         target-entity="com.hospitalproject.model.PatientEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.DateEntity">
+        <table name="date" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idDate">
+                <column name="id_date" precision="11"/>
+            </id>
+            <basic name="name">
+                <column name="name" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="queuesByIdDate" mapped-by="dateByIdWeekday"
+                         target-entity="com.hospitalproject.model.QueueEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.DiognosisEntity">
+        <table name="diognosis" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idDiognosis">
+                <column name="id_diognosis" precision="11"/>
+            </id>
+            <basic name="diognosis">
+                <column name="diognosis" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="diognosisHasVisitsByIdDiognosis" mapped-by="diognosisByDiognosisIdDiognosis"
+                         target-entity="com.hospitalproject.model.DiognosisHasVisitEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.DiognosisHasVisitEntity">
+        <table name="diognosis_has_visit" schema="mydb" catalog=""/>
+        <id-class class="com.hospitalproject.model.DiognosisHasVisitEntityPK"/>
+        <attributes>
+            <id name="diognosisIdDiognosis">
+                <column name="diognosis_id_diognosis" precision="11"/>
+            </id>
+            <id name="visitIdVisit">
+                <column name="visit_id_visit" precision="11"/>
+            </id>
+            <many-to-one name="diognosisByDiognosisIdDiognosis" optional="true"
+                         target-entity="com.hospitalproject.model.DiognosisEntity">
+                <join-column name="diognosis_id_diognosis" referenced-column-name="id_diognosis"/>
+            </many-to-one>
+            <many-to-one name="visitByVisitIdVisit" optional="true"
+                         target-entity="com.hospitalproject.model.VisitEntity">
+                <join-column name="visit_id_visit" referenced-column-name="id_visit"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.DoctorEntity">
+        <table name="doctor" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idDoctor">
+                <column name="id_doctor" precision="11"/>
+            </id>
+            <basic name="dName">
+                <column name="d_name" nullable="false" length="45"/>
+            </basic>
+            <basic name="dSurname">
+                <column name="d_surname" nullable="false" length="45"/>
+            </basic>
+            <basic name="idPosition">
+                <column name="id_position" precision="11"/>
+            </basic>
+            <basic name="idQualification">
+                <column name="id_qualification" precision="11"/>
+            </basic>
+            <basic name="idSpecialization">
+                <column name="id_specialization" precision="11"/>
+            </basic>
+            <many-to-one name="positionByIdPosition" optional="true"
+                         target-entity="com.hospitalproject.model.PositionEntity">
+                <join-column name="id_position" referenced-column-name="id_position" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="qualificationByIdQualification" optional="true"
+                         target-entity="com.hospitalproject.model.QualificationEntity">
+                <join-column name="id_qualification" referenced-column-name="id_qualification" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="specializationByIdSpecialization" optional="true"
+                         target-entity="com.hospitalproject.model.SpecializationEntity">
+                <join-column name="id_specialization" referenced-column-name="id_specialization" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="queuesByIdDoctor" mapped-by="doctorByIdDoctor"
+                         target-entity="com.hospitalproject.model.QueueEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.PatientEntity">
+        <table name="patient" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idPatient">
+                <column name="id_patient" precision="11"/>
+            </id>
+            <basic name="pName">
+                <column name="p_name" nullable="false" length="45"/>
+            </basic>
+            <basic name="pSurname">
+                <column name="p_surname" nullable="false" length="45"/>
+            </basic>
+            <basic name="bDate">
+                <column name="b_date" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="idSocialStatus">
+                <column name="id_social_status" precision="11"/>
+            </basic>
+            <basic name="idCurrentCondition">
+                <column name="id_current_condition" precision="11"/>
+            </basic>
+            <basic name="idMedicalCard">
+                <column name="id_medical_card" precision="11"/>
+            </basic>
+            <many-to-one name="socialStatusByIdSocialStatus" optional="true"
+                         target-entity="com.hospitalproject.model.SocialStatusEntity">
+                <join-column name="id_social_status" referenced-column-name="id_social_status" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="currentConditionByIdCurrentCondition" optional="true"
+                         target-entity="com.hospitalproject.model.CurrentConditionEntity">
+                <join-column name="id_current_condition" referenced-column-name="id_current_condition" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="visitsByIdPatient" mapped-by="patientByIdPatient"
+                         target-entity="com.hospitalproject.model.VisitEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.PositionEntity">
+        <table name="position" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idPosition">
+                <column name="id_position" precision="11"/>
+            </id>
+            <basic name="position">
+                <column name="position" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="doctorsByIdPosition" mapped-by="positionByIdPosition"
+                         target-entity="com.hospitalproject.model.DoctorEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.QualificationEntity">
+        <table name="qualification" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idQualification">
+                <column name="id_qualification" precision="11"/>
+            </id>
+            <basic name="qualification">
+                <column name="qualification" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="doctorsByIdQualification" mapped-by="qualificationByIdQualification"
+                         target-entity="com.hospitalproject.model.DoctorEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.QueueEntity">
+        <table name="queue" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idQueue">
+                <column name="id_queue" precision="11"/>
+            </id>
+            <basic name="currentDate">
+                <column name="current_date" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="cabNum">
+                <column name="cab_num" nullable="false" precision="11"/>
+            </basic>
+            <basic name="visitHasSpecializationIdVisitHasSpecialization">
+                <column name="visit_has_specialization_id_visit_has_specialization" nullable="false" precision="11"/>
+            </basic>
+            <basic name="idDoctor">
+                <column name="id_doctor" precision="11"/>
+            </basic>
+            <basic name="idTimetable">
+                <column name="id_timetable" nullable="false" precision="11"/>
+            </basic>
+            <basic name="idWeekday">
+                <column name="id_weekday" nullable="false" precision="11"/>
+            </basic>
+            <many-to-one name="visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization" optional="true"
+                         target-entity="com.hospitalproject.model.VisitHasSpecializationEntity">
+                <join-column name="visit_has_specialization_id_visit_has_specialization" nullable="false"
+                             referenced-column-name="id_visit_has_specialization" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="doctorByIdDoctor" optional="true" target-entity="com.hospitalproject.model.DoctorEntity">
+                <join-column name="id_doctor" referenced-column-name="id_doctor" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="timeByIdTimetable" optional="true" target-entity="com.hospitalproject.model.TimeEntity">
+                <join-column name="id_timetable" nullable="false" referenced-column-name="id_time" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="dateByIdWeekday" optional="true" target-entity="com.hospitalproject.model.DateEntity">
+                <join-column name="id_weekday" nullable="false" referenced-column-name="id_date" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="visitsByIdQueue" mapped-by="queueByIdQueue"
+                         target-entity="com.hospitalproject.model.VisitEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.ServiceTypeEntity">
+        <table name="service_type" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idServiceType">
+                <column name="id_service_type" precision="11"/>
+            </id>
+            <basic name="serviceName">
+                <column name="service_name" nullable="false" length="45"/>
+            </basic>
+            <basic name="servicePrice">
+                <column name="service_price" nullable="false" precision="2"/>
+            </basic>
+            <one-to-many name="servicesByIdServiceType" mapped-by="serviceTypeByServiceType"
+                         target-entity="com.hospitalproject.model.ServicesEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.ServicesEntity">
+        <table name="services" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idServices">
+                <column name="id_services" precision="11"/>
+            </id>
+            <basic name="serviceType">
+                <column name="service_type" precision="11"/>
+            </basic>
+            <many-to-one name="serviceTypeByServiceType" optional="true"
+                         target-entity="com.hospitalproject.model.ServiceTypeEntity">
+                <join-column name="service_type" referenced-column-name="id_service_type" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="servicesHasVisitsByIdServices" mapped-by="servicesByServicesIdServices"
+                         target-entity="com.hospitalproject.model.ServicesHasVisitEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.ServicesHasVisitEntity">
+        <table name="services_has_visit" schema="mydb" catalog=""/>
+        <id-class class="com.hospitalproject.model.ServicesHasVisitEntityPK"/>
+        <attributes>
+            <id name="servicesIdServices">
+                <column name="services_id_services" precision="11"/>
+            </id>
+            <id name="visitIdVisit">
+                <column name="visit_id_visit" precision="11"/>
+            </id>
+            <many-to-one name="servicesByServicesIdServices" optional="true"
+                         target-entity="com.hospitalproject.model.ServicesEntity">
+                <join-column name="services_id_services" referenced-column-name="id_services" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="visitByVisitIdVisit" optional="true"
+                         target-entity="com.hospitalproject.model.VisitEntity">
+                <join-column name="visit_id_visit" referenced-column-name="id_visit" insertable="false" updatable="false"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.SocialStatusEntity">
+        <table name="social_status" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idSocialStatus">
+                <column name="id_social_status" precision="11"/>
+            </id>
+            <basic name="socialStatus">
+                <column name="social_status" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="patientsByIdSocialStatus" mapped-by="socialStatusByIdSocialStatus"
+                         target-entity="com.hospitalproject.model.PatientEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.SpecializationEntity">
+        <table name="specialization" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idSpecialization">
+                <column name="id_specialization" precision="11"/>
+            </id>
+            <basic name="specialization">
+                <column name="specialization" nullable="false" length="45"/>
+            </basic>
+            <one-to-many name="doctorsByIdSpecialization" mapped-by="specializationByIdSpecialization"
+                         target-entity="com.hospitalproject.model.DoctorEntity"/>
+            <one-to-many name="visitHasSpecializationsByIdSpecialization"
+                         mapped-by="specializationBySpecializationIdSpecialization"
+                         target-entity="com.hospitalproject.model.VisitHasSpecializationEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.TimeEntity">
+        <table name="time" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idTime">
+                <column name="id_time" precision="11"/>
+            </id>
+            <basic name="timeStart">
+                <column name="time_start" nullable="false" precision="4"/>
+            </basic>
+            <basic name="timeEnd">
+                <column name="time_end" nullable="false" precision="4"/>
+            </basic>
+            <one-to-many name="queuesByIdTime" mapped-by="timeByIdTimetable"
+                         target-entity="com.hospitalproject.model.QueueEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.VisitEntity">
+        <table name="visit" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idVisit">
+                <column name="id_visit" precision="11"/>
+            </id>
+            <basic name="idPatient">
+                <column name="id_patient" precision="11"/>
+            </basic>
+            <basic name="dateCured">
+                <column name="date_cured" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="startDateTreatment">
+                <column name="start_date_treatment" nullable="false" precision="-1"/>
+            </basic>
+            <basic name="idQueue">
+                <column name="id_queue" precision="11"/>
+            </basic>
+            <many-to-one name="patientByIdPatient" optional="true"
+                         target-entity="com.hospitalproject.model.PatientEntity">
+                <join-column name="id_patient" referenced-column-name="id_patient" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="queueByIdQueue" optional="true" target-entity="com.hospitalproject.model.QueueEntity">
+                <join-column name="id_queue" referenced-column-name="id_queue" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="diognosisHasVisitsByIdVisit" mapped-by="visitByVisitIdVisit"
+                         target-entity="com.hospitalproject.model.DiognosisHasVisitEntity"/>
+            <one-to-many name="servicesHasVisitsByIdVisit" mapped-by="visitByVisitIdVisit"
+                         target-entity="com.hospitalproject.model.ServicesHasVisitEntity"/>
+            <one-to-many name="visitHasSpecializationsByIdVisit" mapped-by="visitByVisitIdVisit"
+                         target-entity="com.hospitalproject.model.VisitHasSpecializationEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.VisitHasSpecializationEntity">
+        <table name="visit_has_specialization" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idVisitHasSpecialization">
+                <column name="id_visit_has_specialization" precision="11"/>
+            </id>
+            <basic name="visitIdVisit">
+                <column name="visit_id_visit" precision="11"/>
+            </basic>
+            <basic name="specializationIdSpecialization">
+                <column name="specialization_id_specialization" precision="11"/>
+            </basic>
+            <many-to-one name="visitByVisitIdVisit" optional="true"
+                         target-entity="com.hospitalproject.model.VisitEntity">
+                <join-column name="visit_id_visit" referenced-column-name="id_visit" insertable="false" updatable="false"/>
+            </many-to-one>
+            <many-to-one name="specializationBySpecializationIdSpecialization" optional="true"
+                         target-entity="com.hospitalproject.model.SpecializationEntity">
+                <join-column name="specialization_id_specialization" referenced-column-name="id_specialization" insertable="false" updatable="false"/>
+            </many-to-one>
+            <one-to-many name="queuesByIdVisitHasSpecialization"
+                         mapped-by="visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization"
+                         target-entity="com.hospitalproject.model.QueueEntity"/>
+        </attributes>
+    </entity>
+</entity-mappings>
