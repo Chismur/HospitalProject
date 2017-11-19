@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<Pane id="RightPane" prefHeight="400.0" prefWidth="203.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <MenuButton id="visits" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" text="Visits">
+      <items>
+        <MenuItem mnemonicParsing="false" text="Show" />
+        <MenuItem mnemonicParsing="false" text="Refactor" />
+      </items>
+    </MenuButton>
+    <MenuButton id="patients" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" text="Patients">
+      <items>
+        <MenuItem mnemonicParsing="false" onAction="#showPatients" text="Show" />
+        <MenuItem mnemonicParsing="false" text="Refactor" />
+      </items>
+    </MenuButton>
+    <MenuButton id="queue" layoutX="14.0" layoutY="105.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" text="Queue">
+      <items>
+        <MenuItem mnemonicParsing="false" text="Show" />
+        <MenuItem mnemonicParsing="false" text="Refactor" />
+      </items>
+    </MenuButton>
+    <MenuButton id="doctors" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" text="Doctors">
+      <items>
+        <MenuItem mnemonicParsing="false" text="Show" />
+        <MenuItem mnemonicParsing="false" text="Refactor" />
+      </items>
+    </MenuButton>
+  </children>
+</Pane>

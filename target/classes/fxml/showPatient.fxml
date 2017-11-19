@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<TableView prefHeight="400.0" prefWidth="397.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <columns>
+    <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="26.0" text="id" />
+    <TableColumn prefWidth="75.0" text="Name" />
+    <TableColumn prefWidth="75.0" text="Surname" />
+    <TableColumn prefWidth="75.0" text="Birth Date" />
+    <TableColumn prefWidth="75.0" text="SS" />
+    <TableColumn prefWidth="75.0" text="CC" />
+    <TableColumn prefWidth="75.0" text="id MC" />
+  </columns>
+</TableView>
