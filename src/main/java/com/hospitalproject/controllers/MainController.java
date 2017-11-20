@@ -1,18 +1,20 @@
 package com.hospitalproject.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.hospitalproject.config.SpringConfig;
-import com.hospitalproject.model.PatientEntity;
+import com.hospitalproject.loaderProvider.FXMLLoaderProvider;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
-
-        import java.net.URL;
-        import java.util.ResourceBundle;
-        import javafx.fxml.FXML;
         import javafx.scene.control.MenuButton;
         import javafx.scene.control.MenuItem;
         import javafx.scene.layout.Pane;
@@ -21,6 +23,9 @@ import org.springframework.stereotype.Component;
 public class MainController {
     @Autowired
     SpringConfig springConfig;
+
+    @Autowired
+    PatientController patientController;
 
     @FXML
     private ResourceBundle resources;
@@ -94,7 +99,15 @@ public class MainController {
     }
 
     @FXML
-    void refactorPatients(ActionEvent event) {
+    void refactorPatients(ActionEvent event) throws IOException {
+       // try{
+            patientController.showStage();
+           // patientController.showCC(event);
+//        }
+//        catch (Exception e){
+//            System.out.println("Exception refactor patient");
+//        }
+
 
     }
 
@@ -108,7 +121,7 @@ public class MainController {
 
     @FXML
     void showPatients(ActionEvent event) {
-
+        patientController.showPatientTableView();
     }
 
     @FXML

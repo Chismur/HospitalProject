@@ -22,6 +22,8 @@ public class Main extends Application {
         final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
         FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
         Parent root = loader.load();
+        primaryStage.setMinHeight(400);
+        primaryStage.setMinWidth(600);
         primaryStage.setTitle("HospitalProject");
         primaryStage.setScene(new Scene(root, 400, 600));
         primaryStage.show();
