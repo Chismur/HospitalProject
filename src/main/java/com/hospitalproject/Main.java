@@ -35,23 +35,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class Main extends Application {
 
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-//        FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
-//        Parent root = loader.load();
-//        primaryStage.setMinHeight(400);
-//        primaryStage.setMinWidth(600);
-//        primaryStage.setTitle("HospitalProject");
-//        primaryStage.setScene(new Scene(root, 400, 600));
-//        primaryStage.show();
-//    }
-//
-//
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-
     protected ConfigurableApplicationContext springContext;
     protected StageManager stageManager;
 
@@ -81,7 +64,7 @@ public class Main extends Application {
      * window.
      */
     protected void displayInitialScene() {
-        stageManager.switchScene(FxmlView.LOGIN);
+        stageManager.switchScene(FxmlView.DOCTORS);
     }
 
 

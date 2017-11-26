@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="184.0" prefWidth="203.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.LoginController">
-  <children>
-    <Button fx:id="cancelBtn" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#cancel" prefWidth="81.0" text="Cancel" />
-    <Button fx:id="loginBtn" layoutX="108.0" layoutY="149.0" mnemonicParsing="false" onAction="#login" prefWidth="81.0" text="Login" />
-    <Label layoutX="14.0" layoutY="22.0" text="Login:" />
-    <PasswordField fx:id="password" layoutX="8.0" layoutY="101.0" prefWidth="187.0" promptText="Password" />
-    <TextField fx:id="username" layoutX="8.0" layoutY="45.0" prefWidth="187.0" promptText="Username" />
-    <Label layoutX="14.0" layoutY="81.0" text="Password:" />
-  </children>
+<AnchorPane id="AnchorPane" stylesheets="/css/styles.css" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="184.0" prefWidth="203.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.hospitalproject.controllers.LoginController">
+    <children>
+        <Label fx:id="lblLogin" layoutX="97.0" layoutY="46.0" text="Login" textFill="WHITE">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="cancelBtn" layoutX="14.0" layoutY="149.0" mnemonicParsing="false" onAction="#cancel"
+                prefWidth="81.0" text="Cancel">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX"/>
+            </effect>
+        </Button>
+        <Button fx:id="loginBtn" layoutX="108.0" layoutY="149.0" mnemonicParsing="false" onAction="#login"
+                prefWidth="81.0" text="Login">
+            <font>
+                <Font size="15.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="ONE_PASS_BOX"/>
+            </effect>
+        </Button>
+        <Label layoutX="14.0" layoutY="22.0" text="Login:"/>
+        <PasswordField fx:id="password" layoutX="8.0" layoutY="101.0" prefWidth="187.0" promptText="Password"/>
+        <TextField fx:id="username" layoutX="8.0" layoutY="45.0" prefWidth="187.0" promptText="Username"/>
+        <Label layoutX="14.0" layoutY="81.0" text="Password:"/>
+    </children>
 
 </AnchorPane>

@@ -119,15 +119,6 @@ public class PatientController {
     }
 
     public void showStage() throws IOException {
-//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-//        FXMLLoader loader =ctx.getBean(SpringFXMLLoader.class).getLoader("/fxml/patient.fxml");
-//        Parent root = loader.load();
-//        Stage stage = new Stage();
-//        stage.setMinWidth(100);
-//        stage.setMinHeight(100);
-//        stage.setScene(new Scene(root));
-//        // stage.initModality(Modality.WINDOW_MODAL);
-//        stage.show();
     }
 
     @FXML

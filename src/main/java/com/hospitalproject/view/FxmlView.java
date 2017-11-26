@@ -10,7 +10,7 @@ public enum FxmlView {
     MAIN {
         @Override
         public String getTitle() {
-            return getStringFromResourceBundle("patient.title");
+            return getStringFromResourceBundle("main.title");
         }
 
         @Override
@@ -27,6 +27,17 @@ public enum FxmlView {
         @Override
         public String getFxmlFile() {
             return "/fxml/login.fxml";
+        }
+    },
+    DOCTORS{
+        @Override
+        public String getTitle() {
+            return getStringFromResourceBundle("doctors.title");
+        }
+
+        @Override
+        public String getFxmlFile() {
+            return "/fxml/doctors.fxml";
         }
     };
 
