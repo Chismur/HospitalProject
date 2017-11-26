@@ -119,9 +119,6 @@
             <basic name="idCurrentCondition">
                 <column name="id_current_condition" precision="11"/>
             </basic>
-            <basic name="idMedicalCard">
-                <column name="id_medical_card" precision="11"/>
-            </basic>
             <many-to-one name="socialStatusByIdSocialStatus" optional="true"
                          target-entity="com.hospitalproject.model.SocialStatusEntity">
                 <join-column name="id_social_status" referenced-column-name="id_social_status" insertable="false" updatable="false"/>
@@ -158,6 +155,20 @@
             </basic>
             <one-to-many name="doctorsByIdQualification" mapped-by="qualificationByIdQualification"
                          target-entity="com.hospitalproject.model.DoctorEntity"/>
+        </attributes>
+    </entity>
+    <entity class="com.hospitalproject.model.UsersEntity">
+        <table name="users" schema="mydb" catalog=""/>
+        <attributes>
+            <id name="idUser">
+                <column name=" id_user" precision="11"/>
+            </id>
+            <basic name="password">
+                <column name="password" nullable="false" length="45"/>
+            </basic>
+            <basic name="login">
+                <column name="login" nullable="false" length="45"/>
+            </basic>
         </attributes>
     </entity>
     <entity class="com.hospitalproject.model.QueueEntity">

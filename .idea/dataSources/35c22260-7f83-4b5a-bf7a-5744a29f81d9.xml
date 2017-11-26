@@ -27,70 +27,71 @@
     <table id="21" parent="2" name="social_status"/>
     <table id="22" parent="2" name="specialization"/>
     <table id="23" parent="2" name="time"/>
-    <table id="24" parent="2" name="visit"/>
-    <table id="25" parent="2" name="visit_has_specialization"/>
-    <column id="26" parent="9" name="id_current_condition">
+    <table id="24" parent="2" name="users"/>
+    <table id="25" parent="2" name="visit"/>
+    <table id="26" parent="2" name="visit_has_specialization"/>
+    <column id="27" parent="9" name="id_current_condition">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="27" parent="9" name="current_condition">
+    <column id="28" parent="9" name="current_condition">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <key id="28" parent="9" name="PRIMARY">
+    <key id="29" parent="9" name="PRIMARY">
       <ColNames>id_current_condition</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="29" parent="10" name="id_date">
+    <column id="30" parent="10" name="id_date">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="10" name="name">
+    <column id="31" parent="10" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <key id="31" parent="10" name="PRIMARY">
+    <key id="32" parent="10" name="PRIMARY">
       <ColNames>id_date</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="32" parent="11" name="id_diognosis">
+    <column id="33" parent="11" name="id_diognosis">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="11" name="diognosis">
+    <column id="34" parent="11" name="diognosis">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <key id="34" parent="11" name="PRIMARY">
+    <key id="35" parent="11" name="PRIMARY">
       <ColNames>id_diognosis</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="35" parent="12" name="diognosis_id_diognosis">
+    <column id="36" parent="12" name="diognosis_id_diognosis">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="12" name="visit_id_visit">
+    <column id="37" parent="12" name="visit_id_visit">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="37" parent="12" name="fk_diognosis_has_visit_diognosis1_idx">
+    <index id="38" parent="12" name="fk_diognosis_has_visit_diognosis1_idx">
       <ColNames>diognosis_id_diognosis</ColNames>
     </index>
-    <index id="38" parent="12" name="fk_diognosis_has_visit_visit1_idx">
+    <index id="39" parent="12" name="fk_diognosis_has_visit_visit1_idx">
       <ColNames>visit_id_visit</ColNames>
     </index>
-    <key id="39" parent="12" name="PRIMARY">
+    <key id="40" parent="12" name="PRIMARY">
       <ColNames>diognosis_id_diognosis
 visit_id_visit</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="40" parent="12" name="fk_diognosis_has_visit_diognosis1">
+    <foreign-key id="41" parent="12" name="fk_diognosis_has_visit_diognosis1">
       <ColNames>diognosis_id_diognosis</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>diognosis</RefTableName>
@@ -98,7 +99,7 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <foreign-key id="41" parent="12" name="fk_diognosis_has_visit_visit1">
+    <foreign-key id="42" parent="12" name="fk_diognosis_has_visit_visit1">
       <ColNames>visit_id_visit</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>visit</RefTableName>
@@ -106,49 +107,49 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="42" parent="13" name="id_doctor">
+    <column id="43" parent="13" name="id_doctor">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="43" parent="13" name="d_name">
+    <column id="44" parent="13" name="d_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="44" parent="13" name="d_surname">
+    <column id="45" parent="13" name="d_surname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="45" parent="13" name="id_position">
+    <column id="46" parent="13" name="id_position">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="13" name="id_qualification">
+    <column id="47" parent="13" name="id_qualification">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="13" name="id_specialization">
+    <column id="48" parent="13" name="id_specialization">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="48" parent="13" name="id_qualification_idx">
+    <index id="49" parent="13" name="id_qualification_idx">
       <ColNames>id_qualification</ColNames>
     </index>
-    <index id="49" parent="13" name="id_specialization_idx">
+    <index id="50" parent="13" name="id_specialization_idx">
       <ColNames>id_specialization</ColNames>
     </index>
-    <index id="50" parent="13" name="position_idx">
+    <index id="51" parent="13" name="position_idx">
       <ColNames>id_position</ColNames>
     </index>
-    <key id="51" parent="13" name="PRIMARY">
+    <key id="52" parent="13" name="PRIMARY">
       <ColNames>id_doctor</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="52" parent="13" name="position">
+    <foreign-key id="53" parent="13" name="position">
       <ColNames>id_position</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>position</RefTableName>
@@ -156,7 +157,7 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <foreign-key id="53" parent="13" name="id_qualification">
+    <foreign-key id="54" parent="13" name="id_qualification">
       <ColNames>id_qualification</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>qualification</RefTableName>
@@ -164,7 +165,7 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <foreign-key id="54" parent="13" name="id_specialization">
+    <foreign-key id="55" parent="13" name="id_specialization">
       <ColNames>id_specialization</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>specialization</RefTableName>
@@ -172,36 +173,31 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="55" parent="14" name="id_patient">
+    <column id="56" parent="14" name="id_patient">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="56" parent="14" name="p_name">
+    <column id="57" parent="14" name="p_name">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="57" parent="14" name="p_surname">
+    <column id="58" parent="14" name="p_surname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="58" parent="14" name="b_date">
+    <column id="59" parent="14" name="b_date">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="59" parent="14" name="id_social_status">
+    <column id="60" parent="14" name="id_social_status">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="14" name="id_current_condition">
+    <column id="61" parent="14" name="id_current_condition">
       <Position>6</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="61" parent="14" name="id_medical_card">
-      <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
@@ -461,41 +457,59 @@ visit_id_visit</ColNames>
       <ColNames>id_time</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="115" parent="24" name="id_visit">
+    <column id="115" parent="24" name=" id_user">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="116" parent="24" name="id_patient">
+    <column id="116" parent="24" name="password">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="117" parent="24" name="login">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="118" parent="24" name="PRIMARY">
+      <ColNames> id_user</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="119" parent="25" name="id_visit">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="120" parent="25" name="id_patient">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="117" parent="24" name="date_cured">
+    <column id="121" parent="25" name="date_cured">
       <Position>3</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="118" parent="24" name="start_date_treatment">
+    <column id="122" parent="25" name="start_date_treatment">
       <Position>4</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="119" parent="24" name="id_queue">
+    <column id="123" parent="25" name="id_queue">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="120" parent="24" name="fk_visit_queue1_idx">
+    <index id="124" parent="25" name="fk_visit_queue1_idx">
       <ColNames>id_queue</ColNames>
     </index>
-    <index id="121" parent="24" name="id_patient_idx">
+    <index id="125" parent="25" name="id_patient_idx">
       <ColNames>id_patient</ColNames>
     </index>
-    <key id="122" parent="24" name="PRIMARY">
+    <key id="126" parent="25" name="PRIMARY">
       <ColNames>id_visit</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="123" parent="24" name="id_patient">
+    <foreign-key id="127" parent="25" name="id_patient">
       <ColNames>id_patient</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>patient</RefTableName>
@@ -503,7 +517,7 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <foreign-key id="124" parent="24" name="fk_visit_queue1">
+    <foreign-key id="128" parent="25" name="fk_visit_queue1">
       <ColNames>id_queue</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>queue</RefTableName>
@@ -511,32 +525,32 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <column id="125" parent="25" name="id_visit_has_specialization">
+    <column id="129" parent="26" name="id_visit_has_specialization">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="126" parent="25" name="visit_id_visit">
+    <column id="130" parent="26" name="visit_id_visit">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="127" parent="25" name="specialization_id_specialization">
+    <column id="131" parent="26" name="specialization_id_specialization">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="128" parent="25" name="fk_visit_has_specialization_specialization1_idx">
+    <index id="132" parent="26" name="fk_visit_has_specialization_specialization1_idx">
       <ColNames>specialization_id_specialization</ColNames>
     </index>
-    <index id="129" parent="25" name="fk_visit_has_specialization_visit1_idx">
+    <index id="133" parent="26" name="fk_visit_has_specialization_visit1_idx">
       <ColNames>visit_id_visit</ColNames>
     </index>
-    <key id="130" parent="25" name="PRIMARY">
+    <key id="134" parent="26" name="PRIMARY">
       <ColNames>id_visit_has_specialization</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="131" parent="25" name="fk_visit_has_specialization_visit1">
+    <foreign-key id="135" parent="26" name="fk_visit_has_specialization_visit1">
       <ColNames>visit_id_visit</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>visit</RefTableName>
@@ -544,7 +558,7 @@ visit_id_visit</ColNames>
       <OnUpdate>no-action</OnUpdate>
       <OnDelete>no-action</OnDelete>
     </foreign-key>
-    <foreign-key id="132" parent="25" name="fk_visit_has_specialization_specialization1">
+    <foreign-key id="136" parent="26" name="fk_visit_has_specialization_specialization1">
       <ColNames>specialization_id_specialization</ColNames>
       <RefSchemaName>mydb</RefSchemaName>
       <RefTableName>specialization</RefTableName>

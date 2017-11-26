@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 
-    <persistence-unit name="NewPersistenceUnit">
+    <!--persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.hospitalproject.model.UsersEntity</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mydb"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="1234"/>
@@ -13,8 +14,9 @@
             <property name="hibernate.format_sql" value="true"/>
             <property name="hbm2ddl.auto" value="update"/>
         </properties>
-    </persistence-unit>
-    <persistence-unit name="persistenceUnit">
+    </persistence-unit-->
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <mapping-file>META-INF/orm.xml</mapping-file>
         <class>com.hospitalproject.model.CurrentConditionEntity</class>
         <class>com.hospitalproject.model.DateEntity</class>
@@ -33,9 +35,16 @@
         <class>com.hospitalproject.model.TimeEntity</class>
         <class>com.hospitalproject.model.VisitEntity</class>
         <class>com.hospitalproject.model.VisitHasSpecializationEntity</class>
+        <class>com.hospitalproject.model.UsersEntity</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mydb"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="1234"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

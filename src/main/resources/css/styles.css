@@ -1,0 +1,15 @@
+.btnGreen{
+    -fx-background-color:  green;
+}
+
+.background{
+    -fx-background-color: grey;
+}
+
+.check-box{
+    -fx-background-color: lightgreen;
+}
+
+.btnRed{
+    -fx-background-color:  red;
+}

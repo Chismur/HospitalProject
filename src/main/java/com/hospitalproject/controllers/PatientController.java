@@ -1,143 +1,137 @@
 package com.hospitalproject.controllers;
 
-/**
- * Created by kingm on 19.11.2017.
- */
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import com.hospitalproject.config.SpringConfig;
-import com.hospitalproject.loaderProvider.FXMLLoaderProvider;
+import com.hospitalproject.loaderProvider.SpringFXMLLoader;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
-import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import org.springframework.stereotype.Controller;
 
-@Component
+import java.io.IOException;
+
+@Controller
 public class PatientController {
+
     @Autowired
     SpringConfig springConfig;
 
-    @FXML
-    private ResourceBundle resources;
+    @Autowired
+    MainController mainController;
 
     @FXML
-    private URL location;
+    private TextField lastName;
 
     @FXML
-    private AnchorPane idAnchorPane;
+    private ComboBox<?> cbCurrentCondition;
 
     @FXML
-    private TableColumn<?, ?> idBirthDPatient;
+    private Button btnVisits;
 
     @FXML
-    private TableColumn<?, ?> idCurrentConditionPatient;
+    private Button btnLogout;
 
     @FXML
-    private TableColumn<?, ?> idMedCaedPatient;
+    private TableColumn<?, ?> colLastName;
 
     @FXML
-    private TableColumn<?, ?> idNamePatient;
+    private Button btnDoctors;
 
     @FXML
-    private TableColumn<?, ?> idPatient;
+    private TableColumn<?, ?> colDOB;
 
     @FXML
-    private TableColumn<?, ?> idSocialStatusPatient;
+    private MenuItem deleteUsers;
 
     @FXML
-    private TableColumn<?, ?> idSurnamePatient;
+    private TableColumn<?, ?> colUserId;
 
     @FXML
-    private TableView<?> idTableViewPatient;
+    private Label userId;
 
     @FXML
-    private ComboBox<?> idCurrentConditionPatientButton;
+    private TableColumn<?, ?> colFirstName;
 
     @FXML
-    private TextField idFirstNameTextField;
+    private TableColumn<?, ?> colEdit;
 
     @FXML
-    private TextField idSecondNameTextField;
+    private TextField firstName;
 
     @FXML
-    private ComboBox<?> idSocialStatusPatientButton;
-
+    private Button btnQueue;
 
     @FXML
-    void chooseSS(ActionEvent event) {
+    private ComboBox<?> cbSocialStatus;
+
+    @FXML
+    private TableColumn<?, ?> colSocialStatus;
+
+    @FXML
+    private Button btnPatients;
+
+    @FXML
+    private DatePicker dob;
+
+    @FXML
+    private Button reset;
+
+    @FXML
+    private TableView<?> userTable;
+
+    @FXML
+    private TableColumn<?, ?> colCurrentCondition;
+
+    @FXML
+    private Button saveUser;
+
+    @FXML
+    void deletePatient(ActionEvent event) {
+
     }
 
     @FXML
-    void showCC(ActionEvent event) throws IOException {
-        //try {
+    void reset(ActionEvent event) {
 
-        //}
-//        catch (Exception e){
-//            e.printStackTrace();
-//        }
+    }
+
+
+    @FXML
+    void savePatient(ActionEvent event) {
+
     }
 
     @FXML
-    void initialize()  {
-        assert idAnchorPane != null : "fx:id=\"idAnchorPane\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idBirthDPatient != null : "fx:id=\"idBirthDPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idCurrentConditionPatient != null : "fx:id=\"idCurrentConditionPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idMedCaedPatient != null : "fx:id=\"idMedCaedPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idNamePatient != null : "fx:id=\"idNamePatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idPatient != null : "fx:id=\"idPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idSocialStatusPatient != null : "fx:id=\"idSocialStatusPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idSurnamePatient != null : "fx:id=\"idSurnamePatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-        assert idTableViewPatient != null : "fx:id=\"idTableViewPatient\" was not injected: check your FXML file 'showPatient.fxml'.";
-
-
-        assert idCurrentConditionPatientButton != null : "fx:id=\"idCurrentConditionPatientButton\" was not injected: check your FXML file 'refactorPatient.fxml'.";
-        assert idFirstNameTextField != null : "fx:id=\"idFirstNameTextField\" was not injected: check your FXML file 'refactorPatient.fxml'.";
-        assert idSecondNameTextField != null : "fx:id=\"idSecondNameTextField\" was not injected: check your FXML file 'refactorPatient.fxml'.";
-        assert idSocialStatusPatientButton != null : "fx:id=\"idSocialStatusPatientButton\" was not injected: check your FXML file 'refactorPatient.fxml'.";
-
-
+    void exit(ActionEvent event) {
 
     }
 
     public void showStage() throws IOException {
-        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-        FXMLLoader loader =ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/refactorPatient.fxml");
-        Parent root = loader.load();
-        Stage stage = new Stage();
-        stage.setMinWidth(100);
-        stage.setMinHeight(100);
-        stage.setScene(new Scene(root));
-        // stage.initModality(Modality.WINDOW_MODAL);
-        stage.show();
+//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+//        FXMLLoader loader =ctx.getBean(SpringFXMLLoader.class).getLoader("/fxml/patient.fxml");
+//        Parent root = loader.load();
+//        Stage stage = new Stage();
+//        stage.setMinWidth(100);
+//        stage.setMinHeight(100);
+//        stage.setScene(new Scene(root));
+//        // stage.initModality(Modality.WINDOW_MODAL);
+//        stage.show();
     }
 
-    public void showPatientTableView(){
-        try {
-            final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-            FXMLLoader loader =ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/showPatient.fxml");
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setMinWidth(100);
-            stage.setMinHeight(100);
-            stage.setScene(new Scene(root));
-            // stage.initModality(Modality.WINDOW_MODAL);
-            stage.show();
-        }
-        catch (Exception e){
-            System.out.println("Stage exception");
-        }
+    @FXML
+    public void toMenu(ActionEvent event) throws IOException {
+
     }
 }
-

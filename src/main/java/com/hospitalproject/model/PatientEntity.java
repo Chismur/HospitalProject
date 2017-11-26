@@ -16,7 +16,6 @@ public class PatientEntity {
     private Date bDate;
     private int idSocialStatus;
     private int idCurrentCondition;
-    private int idMedicalCard;
     private SocialStatusEntity socialStatusByIdSocialStatus;
     private CurrentConditionEntity currentConditionByIdCurrentCondition;
     private Collection<VisitEntity> visitsByIdPatient;
@@ -81,16 +80,6 @@ public class PatientEntity {
         this.idCurrentCondition = idCurrentCondition;
     }
 
-    @Basic
-    @Column(name = "id_medical_card", nullable = false)
-    public int getIdMedicalCard() {
-        return idMedicalCard;
-    }
-
-    public void setIdMedicalCard(int idMedicalCard) {
-        this.idMedicalCard = idMedicalCard;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -101,7 +90,6 @@ public class PatientEntity {
         if (idPatient != that.idPatient) return false;
         if (idSocialStatus != that.idSocialStatus) return false;
         if (idCurrentCondition != that.idCurrentCondition) return false;
-        if (idMedicalCard != that.idMedicalCard) return false;
         if (pName != null ? !pName.equals(that.pName) : that.pName != null) return false;
         if (pSurname != null ? !pSurname.equals(that.pSurname) : that.pSurname != null) return false;
         if (bDate != null ? !bDate.equals(that.bDate) : that.bDate != null) return false;
@@ -117,7 +105,6 @@ public class PatientEntity {
         result = 31 * result + (bDate != null ? bDate.hashCode() : 0);
         result = 31 * result + idSocialStatus;
         result = 31 * result + idCurrentCondition;
-        result = 31 * result + idMedicalCard;
         return result;
     }
 

@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.hospitalproject.config.SpringConfig;
-import com.hospitalproject.loaderProvider.FXMLLoaderProvider;
+import com.hospitalproject.loaderProvider.SpringFXMLLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -100,14 +100,6 @@ public class MainController {
 
     @FXML
     void refactorPatients(ActionEvent event) throws IOException {
-       // try{
-            patientController.showStage();
-           // patientController.showCC(event);
-//        }
-//        catch (Exception e){
-//            System.out.println("Exception refactor patient");
-//        }
-
 
     }
 
@@ -120,8 +112,8 @@ public class MainController {
     }
 
     @FXML
-    void showPatients(ActionEvent event) {
-        patientController.showPatientTableView();
+    void showPatients(ActionEvent event) throws IOException {
+        patientController.showStage();
     }
 
     @FXML
@@ -131,6 +123,10 @@ public class MainController {
     @FXML
     void showVisits(ActionEvent event) {
     }
+
+    public void showStage() throws IOException {
+    }
+
 
 }
 

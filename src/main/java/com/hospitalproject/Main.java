@@ -1,36 +1,93 @@
 package com.hospitalproject;
 
-import com.hospitalproject.config.SpringConfig;
-import com.hospitalproject.loaderProvider.FXMLLoaderProvider;
+import com.hospitalproject.config.StageManager;
+import com.hospitalproject.view.FxmlView;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@Component
+//@Component
+//public class Main extends Application {
+//
+//    @Autowired
+//    SpringConfig springConfig;
+//
+//    @Override
+//    public void start(Stage primaryStage) throws Exception{
+//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+//        FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
+//        Parent root = loader.load();
+//        primaryStage.setMinHeight(400);
+//        primaryStage.setMinWidth(600);
+//        primaryStage.setTitle("HospitalProject");
+//        primaryStage.setScene(new Scene(root, 400, 600));
+//        primaryStage.show();
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
+//}
+
+@SpringBootApplication
 public class Main extends Application {
 
-    @Autowired
-    SpringConfig springConfig;
+//    @Override
+//    public void start(Stage primaryStage) throws Exception{
+//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
+//        FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
+//        Parent root = loader.load();
+//        primaryStage.setMinHeight(400);
+//        primaryStage.setMinWidth(600);
+//        primaryStage.setTitle("HospitalProject");
+//        primaryStage.setScene(new Scene(root, 400, 600));
+//        primaryStage.show();
+//    }
+//
+//
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
+
+    protected ConfigurableApplicationContext springContext;
+    protected StageManager stageManager;
+
+    public static void main(final String[] args) {
+        Application.launch(args);
+    }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-        FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
-        Parent root = loader.load();
-        primaryStage.setMinHeight(400);
-        primaryStage.setMinWidth(600);
-        primaryStage.setTitle("HospitalProject");
-        primaryStage.setScene(new Scene(root, 400, 600));
-        primaryStage.show();
+    public void init() throws Exception {
+        springContext = springBootApplicationContext();
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        stageManager = springContext.getBean(StageManager.class, stage);
+        displayInitialScene();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        springContext.close();
+    }
+
+    /**
+     * Useful to override this method by sub-classes wishing to change the first
+     * Scene to be displayed on startup. Example: Functional tests on main
+     * window.
+     */
+    protected void displayInitialScene() {
+        stageManager.switchScene(FxmlView.LOGIN);
     }
 
 
-    public static void main(String[] args) {
-        launch(args);
+    private ConfigurableApplicationContext springBootApplicationContext() {
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(Main.class);
+        String[] args = getParameters().getRaw().stream().toArray(String[]::new);
+        return builder.run(args);
     }
 }
