@@ -1,12 +1,10 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.IPositionsDAO;
-import com.hospitalproject.model.PositionEntity;
+import com.hospitalproject.dao.interfaces.IPositionsDAO;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by kingm on 27.11.2017.

@@ -1,6 +1,6 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.IPatientDAO;
+import com.hospitalproject.dao.interfaces.IPatientDAO;
 import com.hospitalproject.model.PatientEntity;
 import org.springframework.stereotype.Repository;
 
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by kingm on 14.11.2017.
  */
-@Repository("PatientDAOImpl")
+@Repository("IPatientDAO")
 public class PatientDAOImpl implements IPatientDAO {
 
     @PersistenceUnit
@@ -37,5 +37,10 @@ public class PatientDAOImpl implements IPatientDAO {
     @Override
     public void updatePatient(PatientEntity patientEntity) {
         entityManager.merge(patientEntity);
+    }
+
+    @Override
+    public void deletePatient(PatientEntity patientEntity) {
+        entityManager.remove(patientEntity);
     }
 }

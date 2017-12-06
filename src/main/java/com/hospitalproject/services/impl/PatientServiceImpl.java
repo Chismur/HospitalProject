@@ -1,11 +1,10 @@
 package com.hospitalproject.services.impl;
 
-import com.hospitalproject.dao.ICurrentConditionDAO;
-import com.hospitalproject.dao.IPatientDAO;
-import com.hospitalproject.dao.ISocialStatusDAO;
-import com.hospitalproject.dao.impl.PatientDAOImpl;
+import com.hospitalproject.dao.interfaces.ICurrentConditionDAO;
+import com.hospitalproject.dao.interfaces.IPatientDAO;
+import com.hospitalproject.dao.interfaces.ISocialStatusDAO;
 import com.hospitalproject.model.PatientEntity;
-import com.hospitalproject.services.IPatientService;
+import com.hospitalproject.services.interfaces.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +42,11 @@ public class PatientServiceImpl implements IPatientService {
     @Override
     public List<String> getAllCurrentCondition() {
         return iCurrentConditionDAO.getAllCurrentCondition();
+    }
+
+    @Override
+    public void deletePatient(PatientEntity patientEntity) {
+        patientDAO.deletePatient(patientEntity);
     }
 
     @Override

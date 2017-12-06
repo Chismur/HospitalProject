@@ -1,15 +1,12 @@
 package com.hospitalproject.services.impl;
 
-import com.hospitalproject.dao.IDoctorDAO;
-import com.hospitalproject.dao.IPositionsDAO;
-import com.hospitalproject.dao.IQualificationsDAO;
-import com.hospitalproject.dao.ISpecialisationsDAO;
+import com.hospitalproject.dao.interfaces.IDoctorDAO;
+import com.hospitalproject.dao.interfaces.IPositionsDAO;
+import com.hospitalproject.dao.interfaces.IQualificationsDAO;
+import com.hospitalproject.dao.interfaces.ISpecialisationsDAO;
 import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.services.IDoctorService;
+import com.hospitalproject.services.interfaces.IDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

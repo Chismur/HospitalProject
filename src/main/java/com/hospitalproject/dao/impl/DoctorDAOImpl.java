@@ -1,13 +1,8 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.IDoctorDAO;
+import com.hospitalproject.dao.interfaces.IDoctorDAO;
 import com.hospitalproject.model.DoctorEntity;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.List;

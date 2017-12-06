@@ -1,8 +1,8 @@
 package com.hospitalproject.services.impl;
 
-import com.hospitalproject.dao.IUserDAO;
+import com.hospitalproject.dao.interfaces.IUserDAO;
 import com.hospitalproject.model.UsersEntity;
-import com.hospitalproject.services.IUserService;
+import com.hospitalproject.services.interfaces.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

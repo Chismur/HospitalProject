@@ -39,6 +39,17 @@ public enum FxmlView {
         public String getFxmlFile() {
             return "/fxml/doctors.fxml";
         }
+    },
+    PATIENTSINFO{
+        @Override
+        public String getTitle() {
+            return getStringFromResourceBundle("patientsInfo.title");
+        }
+
+        @Override
+        public String getFxmlFile() {
+            return "/fxml/patientInf.fxml";
+        }
     };
 
     public abstract String getTitle();

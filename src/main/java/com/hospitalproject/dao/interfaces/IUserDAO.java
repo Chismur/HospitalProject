@@ -1,4 +1,4 @@
-package com.hospitalproject.dao;
+package com.hospitalproject.dao.interfaces;
 
 import com.hospitalproject.model.UsersEntity;
 

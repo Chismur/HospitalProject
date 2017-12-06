@@ -2,8 +2,7 @@ package com.hospitalproject.controllers;
 
 import com.hospitalproject.config.StageManager;
 import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.model.PositionEntity;
-import com.hospitalproject.services.IDoctorService;
+import com.hospitalproject.services.interfaces.IDoctorService;
 import com.hospitalproject.view.FxmlView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,16 +11,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.data.repository.cdi.Eager;
 import org.springframework.stereotype.Controller;
 import javafx.fxml.FXML;
 
 import javafx.event.ActionEvent;
 
-import javax.swing.event.ChangeListener;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -172,7 +167,7 @@ public class DoctorsController implements Initializable {
         return lastName.getText();
     }
 
-    public String getFirstName() {
+    private String getFirstName() {
         return firstName.getText();
     }
 

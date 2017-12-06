@@ -1,6 +1,6 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.IUserDAO;
+import com.hospitalproject.dao.interfaces.IUserDAO;
 import com.hospitalproject.model.UsersEntity;
 import org.springframework.stereotype.Repository;
 

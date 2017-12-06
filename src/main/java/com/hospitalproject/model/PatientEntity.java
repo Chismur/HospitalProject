@@ -1,5 +1,9 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -136,4 +140,20 @@ public class PatientEntity {
     public void setVisitsByIdPatient(Collection<VisitEntity> visitsByIdPatient) {
         this.visitsByIdPatient = visitsByIdPatient;
     }
+
+    @Transient
+    public StringProperty pSurnameProperty(){
+        return new SimpleStringProperty(pSurname);
+    }
+
+    @Transient
+    public StringProperty pNameProperty(){
+        return new SimpleStringProperty(pName);
+    }
+
+    @Transient
+    public StringProperty pDateProperty(){
+        return new SimpleStringProperty(bDate.toString());
+    }
+
 }

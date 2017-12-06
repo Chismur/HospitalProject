@@ -1,6 +1,6 @@
 package com.hospitalproject.services.impl;
 
-import com.hospitalproject.services.IAuthentificationService;
+import com.hospitalproject.services.interfaces.IAuthentificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;

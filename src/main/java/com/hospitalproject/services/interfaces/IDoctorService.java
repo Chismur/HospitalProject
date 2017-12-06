@@ -1,4 +1,4 @@
-package com.hospitalproject.services;
+package com.hospitalproject.services.interfaces;
 
 import com.hospitalproject.model.DoctorEntity;
 

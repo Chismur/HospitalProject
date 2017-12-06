@@ -1,4 +1,4 @@
-package com.hospitalproject.services;
+package com.hospitalproject.services.interfaces;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;

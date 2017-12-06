@@ -1,6 +1,6 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.ISpecialisationsDAO;
+import com.hospitalproject.dao.interfaces.ISpecialisationsDAO;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;

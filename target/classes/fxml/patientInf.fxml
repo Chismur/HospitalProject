@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.chart.*?>
 <?import java.lang.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane fx:id="patients" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.PatientInfoController">
+<AnchorPane fx:id="patientsInformation" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.PatientInfoController">
     <children>
         <BorderPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/styles.css">
             <top>
@@ -47,9 +45,9 @@
                         </VBox>
                         <VBox layoutX="229.0" layoutY="221.0" prefHeight="101.0" prefWidth="156.0">
                            <children>
-                              <ComboBox fx:id="socialStatus" prefWidth="150.0" promptText="Social Status" />
+                              <ComboBox fx:id="cbSocialStatus" prefWidth="150.0" promptText="Social Status" />
                               <HBox prefHeight="20.0" prefWidth="200.0" />
-                              <ComboBox fx:id="currentCondition" prefWidth="150.0" promptText="CurrentCondition" />
+                              <ComboBox fx:id="cbCurrentCondition" prefWidth="150.0" promptText="CurrentCondition" />
                            </children>
                         </VBox>
                         <Label layoutX="473.0" layoutY="340.0" text="Diognosis" textFill="WHITE">
@@ -80,6 +78,7 @@
                               <TableColumn fx:id="colSpecializationDoc" maxWidth="4000.0" prefWidth="100.3333740234375" text="Specialization" />
                            </columns>
                         </TableView>
+                        <Button fx:id="btnChange" layoutX="229.0" layoutY="310.0" mnemonicParsing="false" onAction="#apply" prefHeight="14.0" prefWidth="74.0" text="apply" />
                      </children>
                   </AnchorPane>
                     </children>
@@ -105,16 +104,22 @@
                             <columnResizePolicy>
                                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem fx:id="deletePatient" mnemonicParsing="false" onAction="#deletePatient" text="delete" />
+                              <MenuItem fx:id="changeItem" mnemonicParsing="false" onAction="#change" text="change" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
                         </TableView>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <HBox prefHeight="90.0" prefWidth="92.0" />
-                        <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" text="Logout">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Button>
-                        <HBox prefHeight="90.0" prefWidth="92.0" />
+                        <AnchorPane prefHeight="90.0" prefWidth="301.0">
+                           <children>
+                              <Button fx:id="btnLogout" layoutX="112.0" layoutY="27.0" mnemonicParsing="false" onAction="#logout" prefHeight="37.0" prefWidth="91.0" text="Logout" />
+                           </children>
+                        </AnchorPane>
                      </children>
                   </HBox>
                     </children>

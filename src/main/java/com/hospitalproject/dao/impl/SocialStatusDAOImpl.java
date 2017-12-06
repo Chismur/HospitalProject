@@ -1,6 +1,6 @@
 package com.hospitalproject.dao.impl;
 
-import com.hospitalproject.dao.ISocialStatusDAO;
+import com.hospitalproject.dao.interfaces.ISocialStatusDAO;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
