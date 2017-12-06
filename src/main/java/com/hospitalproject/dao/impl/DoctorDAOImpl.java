@@ -2,7 +2,12 @@ package com.hospitalproject.dao.impl;
 
 import com.hospitalproject.dao.IDoctorDAO;
 import com.hospitalproject.model.DoctorEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,6 +16,7 @@ import java.util.List;
  * Created by kingm on 26.11.2017.
  */
 @Repository("DoctorDAOImpl")
+//@Scope(proxyMode = ScopedProxyMode.INTERFACES)
 public class DoctorDAOImpl implements IDoctorDAO {
 
     @PersistenceUnit
@@ -20,7 +26,7 @@ public class DoctorDAOImpl implements IDoctorDAO {
 
     @Override
     public List<DoctorEntity> getAll() {
-        String s = "From DoctorEntity de order by de.idDoctor";
+        String s = "select de From DoctorEntity de order by de.idDoctor";
         return (List<DoctorEntity>)entityManager.createQuery(s).getResultList();
     }
 
@@ -37,5 +43,10 @@ public class DoctorDAOImpl implements IDoctorDAO {
     @Override
     public void updateDoctor(DoctorEntity doctorEntity) {
         entityManager.merge(doctorEntity);
+    }
+
+    @Override
+    public void deleteDoctor(DoctorEntity doctorEntity) {
+        entityManager.remove(entityManager.merge(doctorEntity));
     }
 }

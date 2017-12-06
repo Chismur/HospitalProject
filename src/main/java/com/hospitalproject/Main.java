@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 //@Component
 //public class Main extends Application {
@@ -64,7 +65,7 @@ public class Main extends Application {
      * window.
      */
     protected void displayInitialScene() {
-        stageManager.switchScene(FxmlView.DOCTORS);
+        stageManager.switchScene(FxmlView.LOGIN);
     }
 
 

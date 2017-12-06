@@ -27,4 +27,6 @@ public interface IDoctorService {
     int getSpecialisationIdByName(String item);
 
     int getQualificationIdByName(String item);
+
+    void deleteDoctor(DoctorEntity doctorEntity);
 }

@@ -16,8 +16,7 @@ public class SpringSecurityConfig {
     public void configureGlobal(AuthenticationManagerBuilder authenticationManagerBuilder) {
         try {
             authenticationManagerBuilder.inMemoryAuthentication()
-                    .withUser("matvey").password("1234").roles("USER")
-                    .and().withUser("admin").password("admin").roles("USER", "ADMIN");
+                    .withUser("matvey").password("{noop}1234").roles("ADMIN");
         } catch (Exception exception) {
             System.out.println("In Memory Authentication has failed");
         }

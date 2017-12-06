@@ -7,7 +7,11 @@ import com.hospitalproject.dao.ISpecialisationsDAO;
 import com.hospitalproject.model.DoctorEntity;
 import com.hospitalproject.services.IDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +19,7 @@ import java.util.List;
  * Created by kingm on 26.11.2017.
  */
 @Service
+@Transactional
 public class DoctorServiceImpl implements IDoctorService {
 
     @Autowired
@@ -39,12 +44,12 @@ public class DoctorServiceImpl implements IDoctorService {
 
     @Override
     public List<String> getAllDoctorSpecialisations() {
-        return null;
+        return iSpecialisationsDAO.getAllSpecialisations();
     }
 
     @Override
     public List<String> getAllDoctorQualifications() {
-        return null;
+        return iQualificationsDAO.getAllQualifications();
     }
 
     @Override
@@ -75,5 +80,10 @@ public class DoctorServiceImpl implements IDoctorService {
     @Override
     public int getQualificationIdByName(String item) {
         return iQualificationsDAO.getQualificationIdByName(item);
+    }
+
+    @Override
+    public void deleteDoctor(DoctorEntity doctorEntity) {
+        iDoctorDAO.deleteDoctor(doctorEntity);
     }
 }

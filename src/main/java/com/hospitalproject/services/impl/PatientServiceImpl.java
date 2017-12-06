@@ -1,6 +1,8 @@
 package com.hospitalproject.services.impl;
 
+import com.hospitalproject.dao.ICurrentConditionDAO;
 import com.hospitalproject.dao.IPatientDAO;
+import com.hospitalproject.dao.ISocialStatusDAO;
 import com.hospitalproject.dao.impl.PatientDAOImpl;
 import com.hospitalproject.model.PatientEntity;
 import com.hospitalproject.services.IPatientService;
@@ -17,8 +19,14 @@ public class PatientServiceImpl implements IPatientService {
     @Autowired
     IPatientDAO patientDAO;
 
+    @Autowired
+    ISocialStatusDAO iSocialStatusDAO;
+
+    @Autowired
+    ICurrentConditionDAO iCurrentConditionDAO;
+
     @Override
-    public List<PatientEntity> getAll(){
+    public List<PatientEntity> getAll() {
         return patientDAO.getAll();
     }
 
@@ -28,7 +36,19 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
-    public PatientEntity getPatientById(int id){
+    public List<String> getAllSocialStatus() {
+        return iSocialStatusDAO.getAllSocialStatus();
+    }
+
+    @Override
+    public List<String> getAllCurrentCondition() {
+        return iCurrentConditionDAO.getAllCurrentCondition();
+    }
+
+    @Override
+    public PatientEntity getPatientById(int id) {
         return patientDAO.getPatientById(id);
     }
+
+
 }

@@ -1,5 +1,9 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -7,7 +11,7 @@ import java.util.Collection;
  * Created by kingm on 15.11.2017.
  */
 @Entity
-@Table(name = "doctor", schema = "mydb", catalog = "")
+@Table(name = "doctor", schema = "mydb")
 public class DoctorEntity {
     private int idDoctor;
     private String dName;
@@ -116,5 +120,30 @@ public class DoctorEntity {
     }
     public void setQueuesByIdDoctor(Collection<QueueEntity> queuesByIdDoctor) {
         this.queuesByIdDoctor = queuesByIdDoctor;
+    }
+
+    @Transient
+    public StringProperty positionByIdPositionProperty(){
+        return new SimpleStringProperty(positionByIdPosition.getPosition());
+    }
+
+    @Transient
+    public StringProperty qualificationByIdQualificationProperty(){
+        return new SimpleStringProperty(qualificationByIdQualification.getQualification());
+    }
+
+    @Transient
+    public StringProperty specialisationByIdSpecialisationProperty(){
+        return new SimpleStringProperty(specializationByIdSpecialization.getSpecialization());
+    }
+
+    @Transient
+    public StringProperty dSurnameProperty(){
+        return new SimpleStringProperty(dSurname);
+    }
+
+    @Transient
+    public StringProperty dNameProperty(){
+        return new SimpleStringProperty(dName);
     }
 }

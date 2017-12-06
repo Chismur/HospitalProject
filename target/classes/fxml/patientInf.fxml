@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<AnchorPane fx:id="patients" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.PatientInfoController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../css/styles.css">
+            <top>
+            </top>
+            <left>
+                <VBox prefHeight="550.0" prefWidth="700.0" spacing="10.0" styleClass="background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+                    <children>
+                  <AnchorPane prefHeight="571.0" prefWidth="700.0">
+                     <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Info about Patient " textFill="WHITE">
+                                  <font>
+                                      <Font name="Bell MT" size="28.0" />
+                                  </font>
+                              </Label>
+                        <ImageView fx:id="imagePatient" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                        <Separator layoutX="14.0" layoutY="47.0" prefWidth="200.0">
+                           <effect>
+                              <Reflection bottomOpacity="1.0" />
+                           </effect>
+                        </Separator>
+                        <Separator layoutX="14.0" layoutY="207.0" prefWidth="200.0">
+                           <effect>
+                              <Reflection bottomOpacity="1.0" />
+                           </effect>
+                        </Separator>
+                        <VBox layoutX="14.0" layoutY="221.0" prefHeight="100.0" prefWidth="201.0">
+                           <children>
+                              <TextField fx:id="firstName" promptText="Name" />
+                              <HBox prefHeight="20.0" prefWidth="200.0" />
+                              <TextField fx:id="lastName" promptText="Surname" />
+                              <HBox prefHeight="20.0" prefWidth="200.0" />
+                              <DatePicker fx:id="bDate" prefHeight="25.0" prefWidth="150.0" promptText="Date of birth" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="229.0" layoutY="221.0" prefHeight="101.0" prefWidth="156.0">
+                           <children>
+                              <ComboBox fx:id="socialStatus" prefWidth="150.0" promptText="Social Status" />
+                              <HBox prefHeight="20.0" prefWidth="200.0" />
+                              <ComboBox fx:id="currentCondition" prefWidth="150.0" promptText="CurrentCondition" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="473.0" layoutY="340.0" text="Diognosis" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="diognosisTable" layoutX="473.0" layoutY="380.0" prefHeight="177.0" prefWidth="217.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="colDiognosis" editable="false" maxWidth="4000.0" prefWidth="100.3333740234375" text="Diognosis" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="340.0" text="Doctors" textFill="WHITE">
+                           <font>
+                              <Font name="Bell MT" size="28.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="doctorsTable" layoutX="14.0" layoutY="380.0" prefHeight="177.0" prefWidth="447.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="colFirstNameDoc" maxWidth="4000.0" prefWidth="100.3333740234375" text="First Name" />
+                              <TableColumn fx:id="colLastNameDoc" maxWidth="4000.0" prefWidth="91.0" text="Last Name" />
+                              <TableColumn fx:id="colSpecializationDoc" maxWidth="4000.0" prefWidth="100.3333740234375" text="Specialization" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+         <right>
+                <VBox alignment="TOP_RIGHT" prefHeight="571.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TableView fx:id="patientTable" onMouseClicked="#showInfo" prefHeight="520.0" prefWidth="679.0" tableMenuButtonVisible="true">
+                            <columns>
+                                <TableColumn fx:id="colFirstNamePatient" maxWidth="4000.0" prefWidth="100.3333740234375" text="First Name" />
+                                <TableColumn fx:id="colLastNamePatient" maxWidth="4000.0" prefWidth="91.0" text="Last Name" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="10.0" right="5.0" />
+                            </VBox.margin>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="90.0" prefWidth="92.0" />
+                        <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" text="Logout">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <HBox prefHeight="90.0" prefWidth="92.0" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+         </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

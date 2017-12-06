@@ -12,4 +12,5 @@ public interface IDoctorDAO {
     DoctorEntity getDoctorById(int idDoctor);
     void addDoctor(DoctorEntity doctorEntity);
     void updateDoctor(DoctorEntity doctorEntity);
+    void deleteDoctor(DoctorEntity doctorEntity);
 }
