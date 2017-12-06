@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 public class ServicesHasVisitEntityPK implements Serializable {
     private int servicesIdServices;

@@ -15,7 +15,7 @@ import java.util.List;
 @Repository("IVisitDAO")
 public class VisitDAOImpl implements IVisitDAO {
     @PersistenceUnit
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPersistenceUnit");
     @PersistenceContext
     private EntityManager entityManager = entityManagerFactory.createEntityManager();
 

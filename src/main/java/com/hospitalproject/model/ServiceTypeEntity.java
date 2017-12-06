@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.util.Collection;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
 @Table(name = "service_type", schema = "mydb", catalog = "")

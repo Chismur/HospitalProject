@@ -2,16 +2,15 @@ package com.hospitalproject.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Collection;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "doctor", schema = "mydb")
+@Table(name = "doctor", schema = "mydb", catalog = "")
 public class DoctorEntity {
     private int idDoctor;
     private String dName;
@@ -84,6 +83,34 @@ public class DoctorEntity {
         this.idSpecialization = idSpecialization;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        DoctorEntity that = (DoctorEntity) o;
+
+        if (idDoctor != that.idDoctor) return false;
+        if (idPosition != that.idPosition) return false;
+        if (idQualification != that.idQualification) return false;
+        if (idSpecialization != that.idSpecialization) return false;
+        if (dName != null ? !dName.equals(that.dName) : that.dName != null) return false;
+        if (dSurname != null ? !dSurname.equals(that.dSurname) : that.dSurname != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = idDoctor;
+        result = 31 * result + (dName != null ? dName.hashCode() : 0);
+        result = 31 * result + (dSurname != null ? dSurname.hashCode() : 0);
+        result = 31 * result + idPosition;
+        result = 31 * result + idQualification;
+        result = 31 * result + idSpecialization;
+        return result;
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_position", referencedColumnName = "id_position", nullable = false)
     public PositionEntity getPositionByIdPosition() {
@@ -118,6 +145,7 @@ public class DoctorEntity {
     public Collection<QueueEntity> getQueuesByIdDoctor() {
         return queuesByIdDoctor;
     }
+
     public void setQueuesByIdDoctor(Collection<QueueEntity> queuesByIdDoctor) {
         this.queuesByIdDoctor = queuesByIdDoctor;
     }

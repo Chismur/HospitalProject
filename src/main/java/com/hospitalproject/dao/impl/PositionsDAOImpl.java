@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class PositionsDAOImpl implements IPositionsDAO {
 
     @PersistenceUnit
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPersistenceUnit");
     @PersistenceContext
     private EntityManager entityManager = entityManagerFactory.createEntityManager();
 

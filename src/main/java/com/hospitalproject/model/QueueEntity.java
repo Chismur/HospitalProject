@@ -2,13 +2,12 @@ package com.hospitalproject.model;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "queue", schema = "mydb")
+@Table(name = "queue", schema = "mydb", catalog = "")
 public class QueueEntity {
     private int idQueue;
     private Date currentDate;
@@ -17,17 +16,19 @@ public class QueueEntity {
     private int idDoctor;
     private Integer idTimetable;
     private Integer idWeekday;
+    private Integer idVisits;
     private VisitHasSpecializationEntity visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization;
     private DoctorEntity doctorByIdDoctor;
     private TimeEntity timeByIdTimetable;
     private DateEntity dateByIdWeekday;
-    private Collection<VisitEntity> visitsByIdQueue;
+    private VisitEntity visitByIdVisits;
 
     @Id
     @Column(name = "id_queue", nullable = false)
     public int getIdQueue() {
         return idQueue;
     }
+
     public void setIdQueue(int idQueue) {
         this.idQueue = idQueue;
     }
@@ -37,6 +38,7 @@ public class QueueEntity {
     public Date getCurrentDate() {
         return currentDate;
     }
+
     public void setCurrentDate(Date currentDate) {
         this.currentDate = currentDate;
     }
@@ -46,6 +48,7 @@ public class QueueEntity {
     public Integer getCabNum() {
         return cabNum;
     }
+
     public void setCabNum(Integer cabNum) {
         this.cabNum = cabNum;
     }
@@ -55,6 +58,7 @@ public class QueueEntity {
     public Integer getVisitHasSpecializationIdVisitHasSpecialization() {
         return visitHasSpecializationIdVisitHasSpecialization;
     }
+
     public void setVisitHasSpecializationIdVisitHasSpecialization(Integer visitHasSpecializationIdVisitHasSpecialization) {
         this.visitHasSpecializationIdVisitHasSpecialization = visitHasSpecializationIdVisitHasSpecialization;
     }
@@ -64,6 +68,7 @@ public class QueueEntity {
     public int getIdDoctor() {
         return idDoctor;
     }
+
     public void setIdDoctor(int idDoctor) {
         this.idDoctor = idDoctor;
     }
@@ -88,6 +93,49 @@ public class QueueEntity {
         this.idWeekday = idWeekday;
     }
 
+    @Basic
+    @Column(name = "id_visits", nullable = true)
+    public Integer getIdVisits() {
+        return idVisits;
+    }
+
+    public void setIdVisits(Integer idVisits) {
+        this.idVisits = idVisits;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        QueueEntity that = (QueueEntity) o;
+
+        if (idQueue != that.idQueue) return false;
+        if (idDoctor != that.idDoctor) return false;
+        if (currentDate != null ? !currentDate.equals(that.currentDate) : that.currentDate != null) return false;
+        if (cabNum != null ? !cabNum.equals(that.cabNum) : that.cabNum != null) return false;
+        if (visitHasSpecializationIdVisitHasSpecialization != null ? !visitHasSpecializationIdVisitHasSpecialization.equals(that.visitHasSpecializationIdVisitHasSpecialization) : that.visitHasSpecializationIdVisitHasSpecialization != null)
+            return false;
+        if (idTimetable != null ? !idTimetable.equals(that.idTimetable) : that.idTimetable != null) return false;
+        if (idWeekday != null ? !idWeekday.equals(that.idWeekday) : that.idWeekday != null) return false;
+        if (idVisits != null ? !idVisits.equals(that.idVisits) : that.idVisits != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = idQueue;
+        result = 31 * result + (currentDate != null ? currentDate.hashCode() : 0);
+        result = 31 * result + (cabNum != null ? cabNum.hashCode() : 0);
+        result = 31 * result + (visitHasSpecializationIdVisitHasSpecialization != null ? visitHasSpecializationIdVisitHasSpecialization.hashCode() : 0);
+        result = 31 * result + idDoctor;
+        result = 31 * result + (idTimetable != null ? idTimetable.hashCode() : 0);
+        result = 31 * result + (idWeekday != null ? idWeekday.hashCode() : 0);
+        result = 31 * result + (idVisits != null ? idVisits.hashCode() : 0);
+        return result;
+    }
+
     @ManyToOne
     @JoinColumn(name = "visit_has_specialization_id_visit_has_specialization", referencedColumnName = "id_visit_has_specialization")
     public VisitHasSpecializationEntity getVisitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization() {
@@ -99,7 +147,7 @@ public class QueueEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_doctor", referencedColumnName = "id_doctor", nullable = false ,insertable= false, updatable=false)
+    @JoinColumn(name = "id_doctor", referencedColumnName = "id_doctor", nullable = false)
     public DoctorEntity getDoctorByIdDoctor() {
         return doctorByIdDoctor;
     }
@@ -128,12 +176,13 @@ public class QueueEntity {
         this.dateByIdWeekday = dateByIdWeekday;
     }
 
-    @OneToMany(mappedBy = "queueByIdQueue")
-    public Collection<VisitEntity> getVisitsByIdQueue() {
-        return visitsByIdQueue;
+    @ManyToOne
+    @JoinColumn(name = "id_visits", referencedColumnName = "id_visit")
+    public VisitEntity getVisitByIdVisits() {
+        return visitByIdVisits;
     }
 
-    public void setVisitsByIdQueue(Collection<VisitEntity> visitsByIdQueue) {
-        this.visitsByIdQueue = visitsByIdQueue;
+    public void setVisitByIdVisits(VisitEntity visitByIdVisits) {
+        this.visitByIdVisits = visitByIdVisits;
     }
 }

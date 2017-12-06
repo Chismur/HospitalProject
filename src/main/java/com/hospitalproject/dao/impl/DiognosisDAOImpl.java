@@ -15,7 +15,7 @@ import java.util.List;
 public class DiognosisDAOImpl implements IDiognosisDAO {
 
     @PersistenceUnit
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPersistenceUnit");
     @PersistenceContext
     private EntityManager entityManager = entityManagerFactory.createEntityManager();
 

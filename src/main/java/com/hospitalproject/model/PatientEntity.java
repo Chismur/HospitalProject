@@ -2,17 +2,16 @@ package com.hospitalproject.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "patient", schema = "mydb")
+@Table(name = "patient", schema = "mydb", catalog = "")
 public class PatientEntity {
     private int idPatient;
     private String pName;
@@ -155,5 +154,4 @@ public class PatientEntity {
     public StringProperty pDateProperty(){
         return new SimpleStringProperty(bDate.toString());
     }
-
 }

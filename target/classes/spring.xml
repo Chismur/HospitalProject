@@ -15,8 +15,7 @@
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceXmlLocation" value="classpath:\META-INF\persistence.xml" />
-        <property name="persistenceUnitName" value="NewPersistenceUnit" />
-
+        <property name="persistenceUnitName" value="HospitalPersistenceUnit" />
     </bean>
 
     <!--property name="jpaVendorAdapter" ref="jpaVendorAdapter" />

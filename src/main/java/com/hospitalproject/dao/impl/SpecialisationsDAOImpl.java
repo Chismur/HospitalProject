@@ -13,7 +13,7 @@ import java.util.List;
 public class SpecialisationsDAOImpl implements ISpecialisationsDAO {
 
     @PersistenceUnit
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPersistenceUnit");
     @PersistenceContext
     private EntityManager entityManager = entityManagerFactory.createEntityManager();
 

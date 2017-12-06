@@ -15,9 +15,11 @@
             <property name="hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit-->
-    <persistence-unit name="NewPersistenceUnit">
+    <persistence-unit name="HospitalPersistenceUnit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <mapping-file>META-INF/orm.xml</mapping-file>
+        <class>com.hospitalproject.model.VisitEntity</class>
+        <class>com.hospitalproject.model.QueueEntity</class>
         <class>com.hospitalproject.model.CurrentConditionEntity</class>
         <class>com.hospitalproject.model.DateEntity</class>
         <class>com.hospitalproject.model.DiognosisEntity</class>
@@ -26,16 +28,15 @@
         <class>com.hospitalproject.model.PatientEntity</class>
         <class>com.hospitalproject.model.PositionEntity</class>
         <class>com.hospitalproject.model.QualificationEntity</class>
-        <class>com.hospitalproject.model.QueueEntity</class>
         <class>com.hospitalproject.model.ServiceTypeEntity</class>
         <class>com.hospitalproject.model.ServicesEntity</class>
         <class>com.hospitalproject.model.ServicesHasVisitEntity</class>
         <class>com.hospitalproject.model.SocialStatusEntity</class>
         <class>com.hospitalproject.model.SpecializationEntity</class>
         <class>com.hospitalproject.model.TimeEntity</class>
-        <class>com.hospitalproject.model.VisitEntity</class>
         <class>com.hospitalproject.model.VisitHasSpecializationEntity</class>
         <class>com.hospitalproject.model.UsersEntity</class>
+        <class>com.hospitalproject.model.UserEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>

@@ -3,10 +3,10 @@ package com.hospitalproject.model;
 import javax.persistence.*;
 
 /**
- * Created by kingm on 26.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "users", schema = "mydb")
+@Table(name = "users", schema = "mydb", catalog = "")
 public class UsersEntity {
     private int idUser;
     private String password;

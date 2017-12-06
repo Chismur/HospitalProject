@@ -3,10 +3,10 @@ package com.hospitalproject.model;
 import javax.persistence.*;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "diognosis_has_visit", schema = "mydb")
+@Table(name = "diognosis_has_visit", schema = "mydb", catalog = "")
 @IdClass(DiognosisHasVisitEntityPK.class)
 public class DiognosisHasVisitEntity {
     private int diognosisIdDiognosis;
@@ -15,7 +15,7 @@ public class DiognosisHasVisitEntity {
     private VisitEntity visitByVisitIdVisit;
 
     @Id
-    @Column(name = "diognosis_id_diognosis", nullable = false,insertable = false, updatable = false)
+    @Column(name = "diognosis_id_diognosis", nullable = false)
     public int getDiognosisIdDiognosis() {
         return diognosisIdDiognosis;
     }
@@ -55,7 +55,7 @@ public class DiognosisHasVisitEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "diognosis_id_diognosis", referencedColumnName = "id_diognosis", nullable = false,insertable = false, updatable = false)
+    @JoinColumn(name = "diognosis_id_diognosis", referencedColumnName = "id_diognosis", nullable = false)
     public DiognosisEntity getDiognosisByDiognosisIdDiognosis() {
         return diognosisByDiognosisIdDiognosis;
     }
@@ -65,7 +65,7 @@ public class DiognosisHasVisitEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "visit_id_visit", referencedColumnName = "id_visit", nullable = false ,insertable = false, updatable = false)
+    @JoinColumn(name = "visit_id_visit", referencedColumnName = "id_visit", nullable = false)
     public VisitEntity getVisitByVisitIdVisit() {
         return visitByVisitIdVisit;
     }

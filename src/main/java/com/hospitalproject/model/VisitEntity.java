@@ -5,20 +5,19 @@ import java.sql.Date;
 import java.util.Collection;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "visit", schema = "mydb")
+@Table(name = "visit", schema = "mydb", catalog = "")
 public class VisitEntity {
     private int idVisit;
     private int idPatient;
     private Date dateCured;
     private Date startDateTreatment;
-    private int idQueue;
     private Collection<DiognosisHasVisitEntity> diognosisHasVisitsByIdVisit;
+    private Collection<QueueEntity> queuesByIdVisit;
     private Collection<ServicesHasVisitEntity> servicesHasVisitsByIdVisit;
     private PatientEntity patientByIdPatient;
-    private QueueEntity queueByIdQueue;
     private Collection<VisitHasSpecializationEntity> visitHasSpecializationsByIdVisit;
 
     @Id
@@ -61,16 +60,6 @@ public class VisitEntity {
         this.startDateTreatment = startDateTreatment;
     }
 
-    @Basic
-    @Column(name = "id_queue", nullable = false)
-    public int getIdQueue() {
-        return idQueue;
-    }
-
-    public void setIdQueue(int idQueue) {
-        this.idQueue = idQueue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -80,7 +69,6 @@ public class VisitEntity {
 
         if (idVisit != that.idVisit) return false;
         if (idPatient != that.idPatient) return false;
-        if (idQueue != that.idQueue) return false;
         if (dateCured != null ? !dateCured.equals(that.dateCured) : that.dateCured != null) return false;
         if (startDateTreatment != null ? !startDateTreatment.equals(that.startDateTreatment) : that.startDateTreatment != null)
             return false;
@@ -94,7 +82,6 @@ public class VisitEntity {
         result = 31 * result + idPatient;
         result = 31 * result + (dateCured != null ? dateCured.hashCode() : 0);
         result = 31 * result + (startDateTreatment != null ? startDateTreatment.hashCode() : 0);
-        result = 31 * result + idQueue;
         return result;
     }
 
@@ -105,6 +92,15 @@ public class VisitEntity {
 
     public void setDiognosisHasVisitsByIdVisit(Collection<DiognosisHasVisitEntity> diognosisHasVisitsByIdVisit) {
         this.diognosisHasVisitsByIdVisit = diognosisHasVisitsByIdVisit;
+    }
+
+    @OneToMany(mappedBy = "visitByIdVisits")
+    public Collection<QueueEntity> getQueuesByIdVisit() {
+        return queuesByIdVisit;
+    }
+
+    public void setQueuesByIdVisit(Collection<QueueEntity> queuesByIdVisit) {
+        this.queuesByIdVisit = queuesByIdVisit;
     }
 
     @OneToMany(mappedBy = "visitByVisitIdVisit")
@@ -124,16 +120,6 @@ public class VisitEntity {
 
     public void setPatientByIdPatient(PatientEntity patientByIdPatient) {
         this.patientByIdPatient = patientByIdPatient;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "id_queue", referencedColumnName = "id_queue", nullable = false)
-    public QueueEntity getQueueByIdQueue() {
-        return queueByIdQueue;
-    }
-
-    public void setQueueByIdQueue(QueueEntity queueByIdQueue) {
-        this.queueByIdQueue = queueByIdQueue;
     }
 
     @OneToMany(mappedBy = "visitByVisitIdVisit")

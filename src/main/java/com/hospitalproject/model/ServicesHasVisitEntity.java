@@ -3,7 +3,7 @@ package com.hospitalproject.model;
 import javax.persistence.*;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 @Entity
 @Table(name = "services_has_visit", schema = "mydb", catalog = "")

@@ -48,8 +48,6 @@ public class PatientInfoController implements Initializable {
     IVisitService iVisitService;
 
     private ObservableList<DoctorEntity> doctorsList = FXCollections.observableArrayList();
-    //private ObservableList<String> specialisations = FXCollections.observableArrayList();
-    //private ObservableList<PatientEntity> patientEntities = FXCollections.observableArrayList();
     private ObservableList<DiognosisEntity> diognosisList = FXCollections.observableArrayList();
     private ObservableList<PatientEntity> patientList = FXCollections.observableArrayList();
     private ObservableList<SocialStatusEntity> socialStatus = FXCollections.observableArrayList();
@@ -114,10 +112,9 @@ public class PatientInfoController implements Initializable {
 
         PatientEntity patientEntity = patientTable.getFocusModel().getFocusedItem();
 
+        // get all visits for current patient
         List<VisitEntity> visitEntityList = iVisitService.getAllVisitsOfPatient(patientEntity);
-        for (VisitEntity v: visitEntityList) {
-            System.out.println(v.getIdVisit());
-        }
+    
 
 
     }

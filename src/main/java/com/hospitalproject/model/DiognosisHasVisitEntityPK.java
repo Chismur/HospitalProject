@@ -5,13 +5,13 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by kingm on 15.11.2017.
+ * Created by kingm on 06.12.2017.
  */
 public class DiognosisHasVisitEntityPK implements Serializable {
     private int diognosisIdDiognosis;
     private int visitIdVisit;
 
-    @Column(name = "diognosis_id_diognosis", nullable = false,insertable = false, updatable = false)
+    @Column(name = "diognosis_id_diognosis", nullable = false)
     @Id
     public int getDiognosisIdDiognosis() {
         return diognosisIdDiognosis;
@@ -21,7 +21,7 @@ public class DiognosisHasVisitEntityPK implements Serializable {
         this.diognosisIdDiognosis = diognosisIdDiognosis;
     }
 
-    @Column(name = "visit_id_visit", nullable = false,insertable = false, updatable = false)
+    @Column(name = "visit_id_visit", nullable = false)
     @Id
     public int getVisitIdVisit() {
         return visitIdVisit;
