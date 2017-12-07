@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -21,6 +22,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.event.ActionEvent;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.*;
@@ -115,14 +119,16 @@ public class PatientInfoController implements Initializable {
     private TableColumn<DiognosisEntity, String> colDiognosis;
 
     @FXML
-    void showInfo(MouseEvent mouseEvent) {
+    void showInfo(MouseEvent mouseEvent) throws FileNotFoundException {
         clearcb();
         clearObsLists();
 
         PatientEntity patientEntity = patientTable.getFocusModel().getFocusedItem();
 
         setInfoPatient(patientEntity);
-
+        //set imageD:\HospitalProject\src\main\resources\img\putin.jpg
+        Image iv = new Image(new FileInputStream("src/main/resources/img/putin.jpg"));
+        imagePatient.setImage(iv);
 
         List<VisitEntity> visitEntityList = iVisitService.getAllVisitsOfPatient(patientEntity);
         for (VisitEntity v : visitEntityList) {
@@ -130,26 +136,25 @@ public class PatientInfoController implements Initializable {
         }
         cbVisit.setItems(visitsList);
         cbVisit.setOnAction(event -> {
-            if (cbVisit != null ) {
+            if (cbVisit != null) {
+
                 //for doc table
                 doctorsList.clear();
                 Date date = cbVisit.getSelectionModel().getSelectedItem();
-                System.out.println(date);
                 VisitEntity visitEntity = iVisitService.getVisitByDate(date);
-                System.out.println(visitEntity.getIdVisit());
                 QueueEntity queueEntity = iVisitService.getQueueByVisit(visitEntity);
-                System.out.println(queueEntity.getCabNum());
                 doctorsList.addAll(iVisitService.getDoctorForQueue(queueEntity));
                 doctorsTable.refresh();
                 doctorsTable.getItems().setAll(doctorsList);
+
                 //for diognosis
                 diognosisList.clear();
+               // List<DiognosisEntity> de = iVisitService.getAllDiognosisForVisit(visitEntity);
+                diognosisList.addAll(iVisitService.getAllDiognosisForVisit(visitEntity));
+                diognosisTable.getItems().setAll(diognosisList);
 
-            }
-
-            else System.out.println("Error try again!");
+            } else System.out.println("Error try again!");
         });
-
 
 
     }
@@ -205,8 +210,11 @@ public class PatientInfoController implements Initializable {
 
         doctorsTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         patientTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        diognosisTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+
         setColumnPropertiesForPatient();
         setColumnPropertiesForDoctors();
+        setColumnPropertiesForDiognosis();
         loadPatientDetails();
 
 
@@ -232,7 +240,6 @@ public class PatientInfoController implements Initializable {
     }
 
     private void setColumnPropertiesForDoctors() {
-        colDiognosis.setCellValueFactory(new PropertyValueFactory<>("diognosis"));
         colSpecializationDoc.setCellValueFactory(new PropertyValueFactory<>("specializationByIdSpecialization"));
         colFirstNameDoc.setCellValueFactory(new PropertyValueFactory<>("dName"));
         colLastNameDoc.setCellValueFactory(new PropertyValueFactory<>("dSurname"));
@@ -241,6 +248,11 @@ public class PatientInfoController implements Initializable {
     private void setColumnPropertiesForPatient() {
         colLastNamePatient.setCellValueFactory(new PropertyValueFactory<>("pSurname"));
         colFirstNamePatient.setCellValueFactory(new PropertyValueFactory<>("pName"));
+    }
+
+
+    private void setColumnPropertiesForDiognosis() {
+        colDiognosis.setCellValueFactory(new PropertyValueFactory<>("diognosis"));
     }
 
 

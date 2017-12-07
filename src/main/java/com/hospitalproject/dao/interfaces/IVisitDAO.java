@@ -1,9 +1,6 @@
 package com.hospitalproject.dao.interfaces;
 
-import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.model.PatientEntity;
-import com.hospitalproject.model.QueueEntity;
-import com.hospitalproject.model.VisitEntity;
+import com.hospitalproject.model.*;
 
 import java.util.Date;
 import java.util.List;
@@ -17,4 +14,6 @@ public interface IVisitDAO {
     DoctorEntity getDoctorForQueue(QueueEntity queueEntity);
 
     VisitEntity getVisitByDate(Date date);
+
+    List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity);
 }

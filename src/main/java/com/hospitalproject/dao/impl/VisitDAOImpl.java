@@ -1,10 +1,7 @@
 package com.hospitalproject.dao.impl;
 
 import com.hospitalproject.dao.interfaces.IVisitDAO;
-import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.model.PatientEntity;
-import com.hospitalproject.model.QueueEntity;
-import com.hospitalproject.model.VisitEntity;
+import com.hospitalproject.model.*;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -47,6 +44,14 @@ public class VisitDAOImpl implements IVisitDAO {
         Query query = entityManager.createQuery("select ve from VisitEntity ve where ve.dateCured =:date");
         query.setParameter("date",date);
         return (VisitEntity) query.getSingleResult();
+    }
+
+    @Override
+    public List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity) {
+        Query query = entityManager.createQuery("select de.diognosisByDiognosisIdDiognosis from  DiognosisHasVisitEntity de where de.visitIdVisit =:id");
+        query.setParameter("id",visitEntity.getIdVisit());
+        List<DiognosisEntity> result = query.getResultList();
+        return result;
     }
 
 

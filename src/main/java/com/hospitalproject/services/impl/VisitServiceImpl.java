@@ -43,5 +43,10 @@ public class VisitServiceImpl implements IVisitService {
         return iVisitDAO.getVisitByDate(date);
     }
 
+    @Override
+    public List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity) {
+        return iVisitDAO.getAllDiognosisForVisit(visitEntity);
+    }
+
 
 }

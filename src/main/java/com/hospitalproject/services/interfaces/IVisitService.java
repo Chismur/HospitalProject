@@ -18,4 +18,6 @@ public interface IVisitService {
     DoctorEntity getDoctorForQueue(QueueEntity queueEntity);
 
     VisitEntity getVisitByDate(Date date);
+
+    List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity);
 }

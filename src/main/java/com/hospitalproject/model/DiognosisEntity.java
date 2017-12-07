@@ -1,5 +1,8 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -7,7 +10,7 @@ import java.util.Collection;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "diognosis", schema = "mydb", catalog = "")
+@Table(name = "diognosis", schema = "mydb")
 public class DiognosisEntity {
     private int idDiognosis;
     private String diognosis;
@@ -60,5 +63,10 @@ public class DiognosisEntity {
 
     public void setDiognosisHasVisitsByIdDiognosis(Collection<DiognosisHasVisitEntity> diognosisHasVisitsByIdDiognosis) {
         this.diognosisHasVisitsByIdDiognosis = diognosisHasVisitsByIdDiognosis;
+    }
+
+    @Transient
+    public StringProperty  diognosisProperty(){
+        return new SimpleStringProperty(diognosis);
     }
 }
