@@ -34,16 +34,16 @@
                               <Reflection bottomOpacity="1.0" />
                            </effect>
                         </Separator>
-                        <VBox layoutX="14.0" layoutY="221.0" prefHeight="100.0" prefWidth="201.0">
+                        <VBox layoutX="14.0" layoutY="221.0" prefHeight="100.0" prefWidth="139.0">
                            <children>
-                              <TextField fx:id="firstName" promptText="Name" />
+                              <TextField fx:id="firstName" prefHeight="25.0" prefWidth="145.0" promptText="Name" />
                               <HBox prefHeight="20.0" prefWidth="200.0" />
                               <TextField fx:id="lastName" promptText="Surname" />
                               <HBox prefHeight="20.0" prefWidth="200.0" />
                               <DatePicker fx:id="bDate" prefHeight="25.0" prefWidth="150.0" promptText="Date of birth" />
                            </children>
                         </VBox>
-                        <VBox layoutX="229.0" layoutY="221.0" prefHeight="101.0" prefWidth="156.0">
+                        <VBox layoutX="325.0" layoutY="221.0" prefHeight="101.0" prefWidth="156.0">
                            <children>
                               <ComboBox fx:id="cbSocialStatus" prefWidth="150.0" promptText="Social Status" />
                               <HBox prefHeight="20.0" prefWidth="200.0" />
@@ -78,7 +78,18 @@
                               <TableColumn fx:id="colSpecializationDoc" maxWidth="4000.0" prefWidth="100.3333740234375" text="Specialization" />
                            </columns>
                         </TableView>
-                        <Button fx:id="btnChange" layoutX="229.0" layoutY="310.0" mnemonicParsing="false" onAction="#apply" prefHeight="14.0" prefWidth="74.0" text="apply" />
+                        <ComboBox fx:id="cbVisit" layoutX="481.0" layoutY="14.0" onContextMenuRequested="#findDoctors" prefHeight="25.0" prefWidth="200.0" promptText="visits for selected patient" />
+                        <Button fx:id="btnChange" layoutX="602.0" layoutY="70.0" mnemonicParsing="false" onAction="#apply" prefHeight="14.0" prefWidth="74.0" text="apply" />
+                        <Label fx:id="lbSocialStatus" layoutX="175.0" layoutY="221.0" prefHeight="25.0" prefWidth="104.0" text="Social Status" textFill="#fcf5f5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbCurrentCondition" layoutX="175.0" layoutY="259.0" prefHeight="25.0" prefWidth="104.0" text="Current Condition" textFill="#f8f8f8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                     </children>

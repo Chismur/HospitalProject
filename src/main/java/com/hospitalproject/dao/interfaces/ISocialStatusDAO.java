@@ -1,5 +1,7 @@
 package com.hospitalproject.dao.interfaces;
 
+import com.hospitalproject.model.PatientEntity;
+
 import java.util.List;
 
 /**
@@ -7,4 +9,7 @@ import java.util.List;
  */
 public interface ISocialStatusDAO {
     List<String> getAllSocialStatus();
+
+    String getSocialStatusOfPatient(PatientEntity patientEntity);
+
 }

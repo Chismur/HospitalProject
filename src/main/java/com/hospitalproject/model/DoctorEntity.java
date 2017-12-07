@@ -10,7 +10,7 @@ import java.util.Collection;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "doctor", schema = "mydb", catalog = "")
+@Table(name = "doctor", schema = "mydb")
 public class DoctorEntity {
     private int idDoctor;
     private String dName;
@@ -173,5 +173,10 @@ public class DoctorEntity {
     @Transient
     public StringProperty dNameProperty(){
         return new SimpleStringProperty(dName);
+    }
+
+    @Transient
+    public StringProperty specializationByIdSpecializationProperty(){
+        return new SimpleStringProperty(specializationByIdSpecialization.getSpecialization());
     }
 }

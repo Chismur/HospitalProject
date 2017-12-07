@@ -1,6 +1,8 @@
 package com.hospitalproject.dao.impl;
 
 import com.hospitalproject.dao.interfaces.ISocialStatusDAO;
+import com.hospitalproject.model.PatientEntity;
+import com.hospitalproject.model.QueueEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -21,4 +23,13 @@ public class SocialStatusDAOImpl implements ISocialStatusDAO{
     public List<String> getAllSocialStatus() {
         return entityManager.createQuery("select ss.socialStatus from SocialStatusEntity ss").getResultList();
     }
+
+    @Override
+    public String getSocialStatusOfPatient(PatientEntity patientEntity) {
+        Query query = entityManager.createQuery("select pe.socialStatusByIdSocialStatus.socialStatus from PatientEntity pe where pe.id = :p");
+        query.setParameter("p",patientEntity.getIdPatient());
+        return String.valueOf(query.getResultList());
+    }
+
+
 }

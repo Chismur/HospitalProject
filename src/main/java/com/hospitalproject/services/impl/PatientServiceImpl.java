@@ -50,6 +50,16 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
+    public String getSocialStatusOfPatient(PatientEntity patientEntity) {
+        return iSocialStatusDAO.getSocialStatusOfPatient(patientEntity);
+    }
+
+    @Override
+    public String getCurrentConditionOfPatient(PatientEntity patientEntity) {
+        return iCurrentConditionDAO.getCurrentConditionOfPatient(patientEntity);
+    }
+
+    @Override
     public PatientEntity getPatientById(int id) {
         return patientDAO.getPatientById(id);
     }

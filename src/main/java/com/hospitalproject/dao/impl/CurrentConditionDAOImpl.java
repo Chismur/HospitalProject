@@ -1,6 +1,7 @@
 package com.hospitalproject.dao.impl;
 
 import com.hospitalproject.dao.interfaces.ICurrentConditionDAO;
+import com.hospitalproject.model.PatientEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
@@ -20,5 +21,12 @@ public class CurrentConditionDAOImpl implements ICurrentConditionDAO {
     @Override
     public List<String> getAllCurrentCondition() {
         return entityManager.createQuery("select cc.currentCondition from CurrentConditionEntity cc").getResultList();
+    }
+
+    @Override
+    public String getCurrentConditionOfPatient(PatientEntity patientEntity) {
+        Query query = entityManager.createQuery("select pe.currentConditionByIdCurrentCondition.currentCondition from PatientEntity pe where pe.id = :p");
+        query.setParameter("p",patientEntity.getIdPatient());
+        return String.valueOf(query.getResultList());
     }
 }

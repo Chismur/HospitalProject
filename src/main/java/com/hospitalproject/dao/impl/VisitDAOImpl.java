@@ -3,10 +3,12 @@ package com.hospitalproject.dao.impl;
 import com.hospitalproject.dao.interfaces.IVisitDAO;
 import com.hospitalproject.model.DoctorEntity;
 import com.hospitalproject.model.PatientEntity;
+import com.hospitalproject.model.QueueEntity;
 import com.hospitalproject.model.VisitEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,16 +23,31 @@ public class VisitDAOImpl implements IVisitDAO {
 
     @Override
     public List<VisitEntity> getAllVisitsOfPatient(PatientEntity patientEntity) {
-//        Query q = entityManager.createQuery("SELECT c FROM Customer c WHERE c.login.username = :username");
-//        q.setParameter("username", username);
-//        return (Customer) q.getSingleResult();
         Query q = entityManager.createQuery("select ve from VisitEntity ve where ve.patientByIdPatient.idPatient =:patientID");
-        q.setParameter("patientID",patientEntity.getIdPatient());
+        q.setParameter("patientID", patientEntity.getIdPatient());
         return (List<VisitEntity>) q.getResultList();
     }
 
     @Override
-    public List<DoctorEntity> getAllDoctorsForCurrentVisit(VisitEntity visitEntities) {
-        return null;
+    public QueueEntity getQueueByVisit(VisitEntity visitEntity) {
+        Query query = entityManager.createQuery("select qe from QueueEntity qe where qe.id =:visitId");
+        query.setParameter("visitId",visitEntity.getIdVisit());
+        return (QueueEntity) query.getSingleResult();
     }
+
+    @Override
+    public DoctorEntity getDoctorForQueue(QueueEntity queueEntity) {
+        Query query = entityManager.createQuery("select de from DoctorEntity de where de.id =:queueDocId");
+        query.setParameter("queueDocId",queueEntity.getIdDoctor());
+        return (DoctorEntity) query.getSingleResult();
+    }
+
+    @Override
+    public VisitEntity getVisitByDate(Date date) {
+        Query query = entityManager.createQuery("select ve from VisitEntity ve where ve.dateCured =:date");
+        query.setParameter("date",date);
+        return (VisitEntity) query.getSingleResult();
+    }
+
+
 }

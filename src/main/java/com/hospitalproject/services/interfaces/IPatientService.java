@@ -3,6 +3,7 @@ package com.hospitalproject.services.interfaces;
 
 import com.hospitalproject.model.PatientEntity;
 
+import java.util.Collection;
 import java.util.List;
 
 public interface IPatientService {
@@ -17,4 +18,8 @@ public interface IPatientService {
     List<String> getAllCurrentCondition();
 
     void deletePatient(PatientEntity patientEntity);
+
+    String getSocialStatusOfPatient(PatientEntity patientEntity);
+
+    String getCurrentConditionOfPatient(PatientEntity patientEntity);
 }

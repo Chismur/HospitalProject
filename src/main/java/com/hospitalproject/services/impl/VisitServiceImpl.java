@@ -1,14 +1,12 @@
 package com.hospitalproject.services.impl;
 
 import com.hospitalproject.dao.interfaces.IVisitDAO;
-import com.hospitalproject.model.DiognosisEntity;
-import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.model.PatientEntity;
-import com.hospitalproject.model.VisitEntity;
+import com.hospitalproject.model.*;
 import com.hospitalproject.services.interfaces.IVisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,8 +29,19 @@ public class VisitServiceImpl implements IVisitService {
     }
 
     @Override
-    public List<DoctorEntity> getAllDoctorsForVisit(List<VisitEntity> visitEntities) {
-
-        return null;
+    public QueueEntity getQueueByVisit(VisitEntity visitEntity) {
+        return iVisitDAO.getQueueByVisit(visitEntity);
     }
+
+    @Override
+    public DoctorEntity getDoctorForQueue(QueueEntity queueEntity) {
+        return iVisitDAO.getDoctorForQueue(queueEntity);
+    }
+
+    @Override
+    public VisitEntity getVisitByDate(Date date) {
+        return iVisitDAO.getVisitByDate(date);
+    }
+
+
 }

@@ -1,10 +1,8 @@
 package com.hospitalproject.services.interfaces;
 
-import com.hospitalproject.model.DiognosisEntity;
-import com.hospitalproject.model.DoctorEntity;
-import com.hospitalproject.model.PatientEntity;
-import com.hospitalproject.model.VisitEntity;
+import com.hospitalproject.model.*;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,6 +10,12 @@ import java.util.List;
  */
 public interface IVisitService {
     List<VisitEntity> getAllVisitsOfPatient(PatientEntity patientEntity);
+
     List<DiognosisEntity> getDiognosisOfPatient(PatientEntity patientEntity);
-    List<DoctorEntity> getAllDoctorsForVisit(List<VisitEntity> visitEntities);
+
+    QueueEntity getQueueByVisit(VisitEntity visitEntity);
+
+    DoctorEntity getDoctorForQueue(QueueEntity queueEntity);
+
+    VisitEntity getVisitByDate(Date date);
 }

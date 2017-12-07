@@ -19,14 +19,11 @@ import org.springframework.stereotype.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-
-
 import javafx.event.ActionEvent;
 
 import java.net.URL;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.time.LocalDate;
+import java.util.*;
 
 /**
  * Created by kingm on 04.12.2017.
@@ -50,11 +47,18 @@ public class PatientInfoController implements Initializable {
     private ObservableList<DoctorEntity> doctorsList = FXCollections.observableArrayList();
     private ObservableList<DiognosisEntity> diognosisList = FXCollections.observableArrayList();
     private ObservableList<PatientEntity> patientList = FXCollections.observableArrayList();
-    private ObservableList<SocialStatusEntity> socialStatus = FXCollections.observableArrayList();
-    private ObservableList<CurrentConditionEntity> currentCondition = FXCollections.observableArrayList();
+    private ObservableList<String> socialStatus = FXCollections.observableArrayList();
+    private ObservableList<String> currentCondition = FXCollections.observableArrayList();
+    private ObservableList<Date> visitsList = FXCollections.observableArrayList();
 
     @FXML
     private Button logOut;
+
+    @FXML
+    private Label lbSocialStatus;
+
+    @FXML
+    private Label lbCurrentCondition;
 
     @FXML
     private MenuItem deletePatient;
@@ -79,6 +83,9 @@ public class PatientInfoController implements Initializable {
 
     @FXML
     private ComboBox<String> cbSocialStatus;
+
+    @FXML
+    private ComboBox<Date> cbVisit;
 
     @FXML
     private TableView<DiognosisEntity> diognosisTable;
@@ -109,14 +116,57 @@ public class PatientInfoController implements Initializable {
 
     @FXML
     void showInfo(MouseEvent mouseEvent) {
+        clearcb();
+        clearObsLists();
 
         PatientEntity patientEntity = patientTable.getFocusModel().getFocusedItem();
 
-        // get all visits for current patient
+        setInfoPatient(patientEntity);
+
+
         List<VisitEntity> visitEntityList = iVisitService.getAllVisitsOfPatient(patientEntity);
-    
+        for (VisitEntity v : visitEntityList) {
+            visitsList.addAll(v.getDateCured());
+        }
+        cbVisit.setItems(visitsList);
+        cbVisit.setOnAction(event -> {
+            if (cbVisit != null ) {
+                //for doc table
+                doctorsList.clear();
+                Date date = cbVisit.getSelectionModel().getSelectedItem();
+                System.out.println(date);
+                VisitEntity visitEntity = iVisitService.getVisitByDate(date);
+                System.out.println(visitEntity.getIdVisit());
+                QueueEntity queueEntity = iVisitService.getQueueByVisit(visitEntity);
+                System.out.println(queueEntity.getCabNum());
+                doctorsList.addAll(iVisitService.getDoctorForQueue(queueEntity));
+                doctorsTable.refresh();
+                doctorsTable.getItems().setAll(doctorsList);
+                //for diognosis
+                diognosisList.clear();
+
+            }
+
+            else System.out.println("Error try again!");
+        });
 
 
+
+    }
+
+    private void setInfoPatient(PatientEntity patientEntity) {
+
+        firstName.setText(patientEntity.getpName());
+        lastName.setText(patientEntity.getpSurname());
+        bDate.setValue(patientEntity.getbDate().toLocalDate());
+        lbCurrentCondition.setText(iPatientService.getCurrentConditionOfPatient(patientEntity));
+        lbSocialStatus.setText(iPatientService.getSocialStatusOfPatient(patientEntity));
+
+        socialStatus.addAll(iPatientService.getAllSocialStatus());
+        currentCondition.addAll(iPatientService.getAllCurrentCondition());
+
+        cbSocialStatus.setItems(socialStatus);
+        cbCurrentCondition.setItems(currentCondition);
     }
 
 
@@ -152,18 +202,33 @@ public class PatientInfoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        doctorsTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         patientTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         setColumnPropertiesForPatient();
+        setColumnPropertiesForDoctors();
         loadPatientDetails();
 
+
+    }
+
+    private void clearcb() {
+        cbVisit.getItems().clear();
+        cbSocialStatus.getItems().clear();
+        cbCurrentCondition.getItems().clear();
+    }
+
+    private void clearObsLists() {
+        visitsList.clear();
+        socialStatus.clear();
+        currentCondition.clear();
+        doctorsList.clear();
+        bDate.getEditor().clear();
     }
 
     private void clearFields() {
         firstName.clear();
         lastName.clear();
-        cbSocialStatus.getSelectionModel().clearSelection();
-        cbCurrentCondition.getSelectionModel().clearSelection();
-        bDate.getEditor().clear();
     }
 
     private void setColumnPropertiesForDoctors() {
@@ -193,9 +258,13 @@ public class PatientInfoController implements Initializable {
 
     private void loadDiognosisDetails() {
         diognosisList.clear();
-       // diognosisList.addAll(iVisitService.getDiognosisOfPatient());
+        // diognosisList.addAll(iVisitService.getDiognosisOfPatient());
         diognosisTable.getItems().setAll(diognosisList);
     }
 
 
+    @FXML
+    void findDoctors(MouseEvent mouseEvent) {
+    }
 }
+
