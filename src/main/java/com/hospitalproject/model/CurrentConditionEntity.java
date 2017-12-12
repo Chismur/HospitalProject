@@ -1,5 +1,8 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -7,7 +10,7 @@ import java.util.Collection;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "current_condition", schema = "mydb", catalog = "")
+@Table(name = "current_condition", schema = "mydb")
 public class CurrentConditionEntity {
     private int idCurrentCondition;
     private String currentCondition;
@@ -61,5 +64,10 @@ public class CurrentConditionEntity {
 
     public void setPatientsByIdCurrentCondition(Collection<PatientEntity> patientsByIdCurrentCondition) {
         this.patientsByIdCurrentCondition = patientsByIdCurrentCondition;
+    }
+
+    @Transient
+    public StringProperty socialStatusProperty(){
+        return new SimpleStringProperty(currentCondition);
     }
 }

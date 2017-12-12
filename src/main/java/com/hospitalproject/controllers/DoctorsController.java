@@ -38,6 +38,8 @@ public class DoctorsController implements Initializable {
     private ObservableList<String> qualifications = FXCollections.observableArrayList();
     private ObservableList<String> specialisations = FXCollections.observableArrayList();
 
+    @FXML
+    private Button refTab;
 
     @FXML
     private TextField firstName;
@@ -125,6 +127,11 @@ public class DoctorsController implements Initializable {
 
     @FXML
     void refactorDoctor(ActionEvent event) {
+        loadDoctorsDetails();
+    }
+
+    @FXML
+    void refreshTab(ActionEvent event) {
         loadDoctorsDetails();
     }
 

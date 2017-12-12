@@ -22,12 +22,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.event.ActionEvent;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.IntStream;
 
 /**
  * Created by kingm on 04.12.2017.
@@ -53,7 +52,7 @@ public class PatientInfoController implements Initializable {
     private ObservableList<PatientEntity> patientList = FXCollections.observableArrayList();
     private ObservableList<String> socialStatus = FXCollections.observableArrayList();
     private ObservableList<String> currentCondition = FXCollections.observableArrayList();
-    private ObservableList<Date> visitsList = FXCollections.observableArrayList();
+    private ObservableList<Date> dateList = FXCollections.observableArrayList();
 
     @FXML
     private Button logOut;
@@ -89,9 +88,6 @@ public class PatientInfoController implements Initializable {
     private ComboBox<String> cbSocialStatus;
 
     @FXML
-    private ComboBox<Date> cbVisit;
-
-    @FXML
     private TableView<DiognosisEntity> diognosisTable;
 
     @FXML
@@ -120,43 +116,35 @@ public class PatientInfoController implements Initializable {
 
     @FXML
     void showInfo(MouseEvent mouseEvent) throws FileNotFoundException {
+
         clearcb();
         clearObsLists();
+        doctorsList.clear();
+        doctorsTable.refresh();
+        diognosisList.clear();
+        diognosisTable.refresh();
 
         PatientEntity patientEntity = patientTable.getFocusModel().getFocusedItem();
 
         setInfoPatient(patientEntity);
-        //set imageD:\HospitalProject\src\main\resources\img\putin.jpg
         Image iv = new Image(new FileInputStream("src/main/resources/img/putin.jpg"));
         imagePatient.setImage(iv);
 
         List<VisitEntity> visitEntityList = iVisitService.getAllVisitsOfPatient(patientEntity);
+        List<QueueEntity> qList = new ArrayList<>();
+        List<DiognosisEntity> de = new ArrayList<>();
+
         for (VisitEntity v : visitEntityList) {
-            visitsList.addAll(v.getDateCured());
+            dateList.add(v.getDateCured());
+            qList.add(iVisitService.getQueueByVisit(v));
         }
-        cbVisit.setItems(visitsList);
-        cbVisit.setOnAction(event -> {
-            if (cbVisit != null) {
-
-                //for doc table
-                doctorsList.clear();
-                Date date = cbVisit.getSelectionModel().getSelectedItem();
-                VisitEntity visitEntity = iVisitService.getVisitByDate(date);
-                QueueEntity queueEntity = iVisitService.getQueueByVisit(visitEntity);
-                doctorsList.addAll(iVisitService.getDoctorForQueue(queueEntity));
-                doctorsTable.refresh();
-                doctorsTable.getItems().setAll(doctorsList);
-
-                //for diognosis
-                diognosisList.clear();
-               // List<DiognosisEntity> de = iVisitService.getAllDiognosisForVisit(visitEntity);
-                diognosisList.addAll(iVisitService.getAllDiognosisForVisit(visitEntity));
-                diognosisTable.getItems().setAll(diognosisList);
-
-            } else System.out.println("Error try again!");
-        });
+        for (QueueEntity q:qList) {
+            doctorsList.add(iVisitService.getDoctorForQueue(q));
+        }
 
 
+        diognosisTable.getItems().setAll(diognosisList);
+        doctorsTable.getItems().setAll(doctorsList);
     }
 
     private void setInfoPatient(PatientEntity patientEntity) {
@@ -172,6 +160,18 @@ public class PatientInfoController implements Initializable {
 
         cbSocialStatus.setItems(socialStatus);
         cbCurrentCondition.setItems(currentCondition);
+    }
+
+    @FXML
+    void showInfoDoc(MouseEvent mouseEvent) {
+        diognosisList.clear();
+        diognosisTable.getItems().clear(); //diognosisTable.refresh();
+
+        PatientEntity patientEntity = patientTable.getFocusModel().getFocusedItem();
+        DoctorEntity doctorEntity = doctorsTable.getFocusModel().getFocusedItem();
+
+        diognosisList.addAll(iDoctorService.getAllDiognosisByDoctor(doctorEntity,patientEntity));
+        diognosisTable.getItems().setAll(diognosisList);
     }
 
 
@@ -221,13 +221,13 @@ public class PatientInfoController implements Initializable {
     }
 
     private void clearcb() {
-        cbVisit.getItems().clear();
+        //cbVisit.getItems().clear();
         cbSocialStatus.getItems().clear();
         cbCurrentCondition.getItems().clear();
     }
 
     private void clearObsLists() {
-        visitsList.clear();
+        //visitsList.clear();
         socialStatus.clear();
         currentCondition.clear();
         doctorsList.clear();
@@ -278,5 +278,6 @@ public class PatientInfoController implements Initializable {
     @FXML
     void findDoctors(MouseEvent mouseEvent) {
     }
+
 }
 

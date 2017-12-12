@@ -16,4 +16,10 @@ public interface IVisitDAO {
     VisitEntity getVisitByDate(Date date);
 
     List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity);
+
+    List<String> getAllDiognosis();
+
+    void save(VisitEntity visitEntity);
+
+    void deleteVisit(VisitEntity v);
 }

@@ -3,6 +3,7 @@ package com.hospitalproject.services.interfaces;
 
 import com.hospitalproject.model.PatientEntity;
 
+import java.sql.Date;
 import java.util.Collection;
 import java.util.List;
 
@@ -22,4 +23,9 @@ public interface IPatientService {
     String getSocialStatusOfPatient(PatientEntity patientEntity);
 
     String getCurrentConditionOfPatient(PatientEntity patientEntity);
+
+    int getCurrentConditionByName(String s);
+
+    int getSocialStatusByName(String s);
+    int getPatientId(String name,String surname,Date bDate);
 }

@@ -11,7 +11,7 @@ import java.util.Collection;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "patient", schema = "mydb", catalog = "")
+@Table(name = "patient", schema = "mydb")
 public class PatientEntity {
     private int idPatient;
     private String pName;
@@ -131,7 +131,7 @@ public class PatientEntity {
         this.currentConditionByIdCurrentCondition = currentConditionByIdCurrentCondition;
     }
 
-    @OneToMany(mappedBy = "patientByIdPatient")
+    @OneToMany(mappedBy = "patientByIdPatient",cascade = CascadeType.ALL)
     public Collection<VisitEntity> getVisitsByIdPatient() {
         return visitsByIdPatient;
     }
@@ -151,7 +151,16 @@ public class PatientEntity {
     }
 
     @Transient
-    public StringProperty pDateProperty(){
+    public StringProperty bDateProperty(){
         return new SimpleStringProperty(bDate.toString());
+    }
+
+    @Transient
+    public  StringProperty socialStatusByIdSocialStatusProperty(){
+        return new SimpleStringProperty(socialStatusByIdSocialStatus.getSocialStatus());
+    }
+    @Transient
+    public  StringProperty currentConditionByIdCurrentConditionProperty(){
+        return new SimpleStringProperty(currentConditionByIdCurrentCondition.getCurrentCondition());
     }
 }

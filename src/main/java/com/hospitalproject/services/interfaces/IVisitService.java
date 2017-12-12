@@ -20,4 +20,10 @@ public interface IVisitService {
     VisitEntity getVisitByDate(Date date);
 
     List<DiognosisEntity> getAllDiognosisForVisit(VisitEntity visitEntity);
+
+    List<String> getAllDiognosis();
+
+    void addVisit(VisitEntity visitEntity);
+
+    void deleteVisit(VisitEntity v);
 }

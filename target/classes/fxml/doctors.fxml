@@ -1,41 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="doctors" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.hospitalproject.controllers.DoctorsController">
+<AnchorPane fx:id="doctors" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.DoctorsController">
     <children>
-        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-                    prefHeight="600.0" prefWidth="1000.0">
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
             <center>
                 <VBox prefHeight="500.0" prefWidth="600.0">
                     <children>
-                        <TableView fx:id="doctorsTable" prefHeight="500.0" prefWidth="600.0"
-                                   BorderPane.alignment="CENTER">
+                        <TableView fx:id="doctorsTable" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                             <VBox.margin>
-                                <Insets left="10.0" right="5.0"/>
+                                <Insets left="10.0" right="5.0" />
                             </VBox.margin>
                             <columnResizePolicy>
-                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                             </columnResizePolicy>
                             <columns>
-                                <TableColumn fx:id="colDoctorName" prefWidth="75.0" text="Name"/>
-                                <TableColumn fx:id="colDoctorSurname" prefWidth="75.0" text="Surname"/>
-                                <TableColumn fx:id="colDoctorPosition" prefWidth="75.0" text="Position"/>
-                                <TableColumn fx:id="colDoctorSpecialisation" prefWidth="101.0" text="Specialisation"/>
-                                <TableColumn fx:id="colDoctorQualification" prefWidth="88.0" text="Qualification"/>
+                                <TableColumn fx:id="colDoctorName" prefWidth="75.0" text="Name" />
+                                <TableColumn fx:id="colDoctorSurname" prefWidth="75.0" text="Surname" />
+                                <TableColumn fx:id="colDoctorPosition" prefWidth="75.0" text="Position" />
+                                <TableColumn fx:id="colDoctorSpecialisation" prefWidth="101.0" text="Specialisation" />
+                                <TableColumn fx:id="colDoctorQualification" prefWidth="88.0" text="Qualification" />
                             </columns>
                             <contextMenu>
                                 <ContextMenu>
                                     <items>
-                                        <MenuItem fx:id="deleteDoctor" mnemonicParsing="false" onAction="#deleteDoctor"
-                                                  text="delete"/>
-                                        <MenuItem fx:id="refactorDoctor" mnemonicParsing="false"
-                                                  onAction="#refactorDoctor" text="refactor"/>
+                                        <MenuItem fx:id="deleteDoctor" mnemonicParsing="false" onAction="#deleteDoctor" text="delete" />
+                                        <MenuItem fx:id="refactorDoctor" mnemonicParsing="false" onAction="#refactorDoctor" text="refactor" />
                                     </items>
                                 </ContextMenu>
                             </contextMenu>
@@ -44,91 +40,84 @@
                 </VBox>
             </center>
             <left>
-                <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background"
-                      stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+                <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
                     <children>
                         <Label text="Add New Doctor" textFill="WHITE">
                             <font>
-                                <Font size="20.0"/>
+                                <Font size="20.0" />
                             </font>
                             <VBox.margin>
-                                <Insets bottom="10.0" left="20.0" top="30.0"/>
+                                <Insets bottom="10.0" left="20.0" top="30.0" />
                             </VBox.margin>
                         </Label>
                         <HBox prefHeight="30.0" prefWidth="265.0">
                             <children>
                                 <Label fx:id="userId">
                                     <HBox.margin>
-                                        <Insets left="25.0"/>
+                                        <Insets left="25.0" />
                                     </HBox.margin>
                                 </Label>
                             </children>
                             <VBox.margin>
-                                <Insets left="25.0"/>
+                                <Insets left="25.0" />
                             </VBox.margin>
                         </HBox>
                         <TextField fx:id="firstName" prefHeight="30.0" prefWidth="246.0" promptText="First Name">
                             <VBox.margin>
-                                <Insets left="25.0" right="25.0"/>
+                                <Insets left="25.0" right="25.0" />
                             </VBox.margin>
                         </TextField>
                         <TextField fx:id="lastName" prefHeight="30.0" prefWidth="246.0" promptText="Last Name">
                             <VBox.margin>
-                                <Insets left="25.0" right="25.0"/>
+                                <Insets left="25.0" right="25.0" />
                             </VBox.margin>
                         </TextField>
                         <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="255.0" spacing="15.0">
                             <VBox.margin>
-                                <Insets left="25.0" right="25.0"/>
+                                <Insets left="25.0" right="25.0" />
                             </VBox.margin>
                         </HBox>
                         <ComboBox fx:id="cbPosition" prefHeight="30.0" prefWidth="246.0" promptText="Select Position">
                             <VBox.margin>
-                                <Insets left="25.0"/>
+                                <Insets left="25.0" />
                             </VBox.margin>
                         </ComboBox>
-                        <ComboBox fx:id="cbQualification" prefHeight="30.0" prefWidth="246.0"
-                                  promptText="Select Qualification">
+                        <ComboBox fx:id="cbQualification" prefHeight="30.0" prefWidth="246.0" promptText="Select Qualification">
                             <VBox.margin>
-                                <Insets left="25.0"/>
+                                <Insets left="25.0" />
                             </VBox.margin>
                         </ComboBox>
-                        <ComboBox fx:id="cbSpecialisation" prefHeight="30.0" prefWidth="246.0"
-                                  promptText="Select Specialisation">
+                        <ComboBox fx:id="cbSpecialisation" prefHeight="30.0" prefWidth="246.0" promptText="Select Specialisation">
                             <VBox.margin>
-                                <Insets left="25.0"/>
+                                <Insets left="25.0" />
                             </VBox.margin>
                         </ComboBox>
                         <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
                             <children>
-                                <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="30.0"
-                                        prefWidth="75.0" style="-fx-background-color: red;" styleClass="btnRed"
-                                        text="Reset" textFill="WHITE">
+                                <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red;" styleClass="btnRed" text="Reset" textFill="WHITE">
                                     <effect>
-                                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0"/>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
                                     </effect>
                                 </Button>
-                                <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
-                                        onAction="#save" prefHeight="30.0" prefWidth="75.0" styleClass="btnGreen"
-                                        text="Save" textFill="WHITE">
+                                <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="75.0" styleClass="btnGreen" text="Save" textFill="WHITE">
                                     <effect>
-                                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2"/>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
                                     </effect>
                                     <font>
-                                        <Font size="15.0"/>
+                                        <Font size="15.0" />
                                     </font>
                                 </Button>
                             </children>
                             <opaqueInsets>
-                                <Insets/>
+                                <Insets />
                             </opaqueInsets>
                             <VBox.margin>
-                                <Insets left="110.0"/>
+                                <Insets left="110.0" />
                             </VBox.margin>
                         </HBox>
                     </children>
                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
                 </VBox>
             </left>
@@ -137,12 +126,16 @@
                     <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                             <children>
-                                <Button fx:id="logout" layoutX="78.0" layoutY="14.0" mnemonicParsing="false"
-                                        onAction="#logout" text="Logout">
+                                <Button fx:id="logout" layoutX="78.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" text="Logout">
                                     <font>
-                                        <Font size="24.0"/>
+                                        <Font size="24.0" />
                                     </font>
                                 </Button>
+                        <Button fx:id="refTab" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshTab" prefHeight="51.0" prefWidth="50.0" text="R">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
                             </children>
                         </AnchorPane>
                     </children>

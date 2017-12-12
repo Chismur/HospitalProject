@@ -29,4 +29,11 @@ public class CurrentConditionDAOImpl implements ICurrentConditionDAO {
         query.setParameter("p",patientEntity.getIdPatient());
         return String.valueOf(query.getResultList());
     }
+
+    @Override
+    public int getCurrentConditionByName(String s) {
+        Query query = entityManager.createQuery("select cc.id  from CurrentConditionEntity cc where cc.currentCondition = :s");
+        query.setParameter("s",s);
+        return (int) query.getSingleResult();
+    }
 }

@@ -4,7 +4,9 @@ import com.hospitalproject.dao.interfaces.IDoctorDAO;
 import com.hospitalproject.dao.interfaces.IPositionsDAO;
 import com.hospitalproject.dao.interfaces.IQualificationsDAO;
 import com.hospitalproject.dao.interfaces.ISpecialisationsDAO;
+import com.hospitalproject.model.DiognosisEntity;
 import com.hospitalproject.model.DoctorEntity;
+import com.hospitalproject.model.PatientEntity;
 import com.hospitalproject.services.interfaces.IDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,11 @@ public class DoctorServiceImpl implements IDoctorService {
     @Override
     public List<DoctorEntity> getAll() {
         return iDoctorDAO.getAll();
+    }
+
+    @Override
+    public List<String> getAllDoctorsNames() {
+        return iDoctorDAO.getAllDoctorsNames();
     }
 
     @Override
@@ -82,5 +89,15 @@ public class DoctorServiceImpl implements IDoctorService {
     @Override
     public void deleteDoctor(DoctorEntity doctorEntity) {
         iDoctorDAO.deleteDoctor(doctorEntity);
+    }
+
+    @Override
+    public int getIdDoctorByName(String name) {
+        return iDoctorDAO.getIdDoctorByName(name);
+    }
+
+    @Override
+    public List<DiognosisEntity> getAllDiognosisByDoctor(DoctorEntity doctorEntity, PatientEntity patientEntity) {
+        return iDoctorDAO.getAllDiognosisByDoctor(doctorEntity,patientEntity);
     }
 }

@@ -31,5 +31,12 @@ public class SocialStatusDAOImpl implements ISocialStatusDAO{
         return String.valueOf(query.getResultList());
     }
 
+    @Override
+    public int getSocialStatusByName(String s) {
+        Query query = entityManager.createQuery("select ss.id  from SocialStatusEntity ss where ss.socialStatus = :s");
+        query.setParameter("s",s);
+        return (int) query.getSingleResult();
+    }
+
 
 }

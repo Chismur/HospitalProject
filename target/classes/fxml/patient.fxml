@@ -13,66 +13,22 @@
             <top>
             </top>
             <left>
-                <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+                <VBox prefHeight="600.0" prefWidth="364.0" spacing="10.0" styleClass="background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
                     <children>
-                        <Label text="Add New User" textFill="WHITE">
-                            <font>
-                                <Font size="20.0" />
-                            </font>
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="20.0" top="30.0" />
-                            </VBox.margin>
-                        </Label>
-                        <HBox prefHeight="30.0" prefWidth="265.0">
-                            <children>
-                                <Label fx:id="patientId">
-                                    <HBox.margin>
-                                        <Insets left="25.0" />
-                                    </HBox.margin>
-                                </Label>
-                            </children>
-                            <VBox.margin>
-                                <Insets left="25.0" />
-                            </VBox.margin>
-                        </HBox>
-                        <TextField fx:id="firstName" prefHeight="30.0" prefWidth="246.0" promptText="First Name">
-                            <VBox.margin>
-                                <Insets left="25.0" right="25.0" />
-                            </VBox.margin>
-                        </TextField>
-                        <TextField fx:id="lastName" prefHeight="30.0" prefWidth="246.0" promptText="Last Name">
-                            <VBox.margin>
-                                <Insets left="25.0" right="25.0" />
-                            </VBox.margin>
-                        </TextField>
-                        <DatePicker fx:id="dob" editable="false" prefHeight="30.0" prefWidth="245.0" promptText="Date of Birth">
-                            <VBox.margin>
-                                <Insets left="25.0" />
-                            </VBox.margin>
-                        </DatePicker>
-                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="255.0" spacing="15.0">
-                            <VBox.margin>
-                                <Insets left="25.0" right="25.0" />
-                            </VBox.margin>
-                        </HBox>
-                        <ComboBox fx:id="cbCurrentCondition" prefHeight="30.0" prefWidth="246.0" promptText="Select Condition">
-                            <VBox.margin>
-                                <Insets left="25.0" />
-                            </VBox.margin>
-                        </ComboBox>
-                        <ComboBox fx:id="cbSocialStatus" prefHeight="30.0" prefWidth="246.0" promptText="Select Status">
-                            <VBox.margin>
-                                <Insets left="25.0" />
-                            </VBox.margin>
-                        </ComboBox>
-                        <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
-                            <children>
-                                <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red;" styleClass="btnRed" text="Reset" textFill="WHITE">
-                                    <effect>
-                                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
-                                    </effect>
-                                </Button>
-                                <Button fx:id="savePatient" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#savePatient" prefHeight="30.0" prefWidth="75.0" styleClass="btnGreen" text="Save" textFill="WHITE">
+                  <AnchorPane prefHeight="593.0" prefWidth="291.0">
+                     <children>
+                        <Button fx:id="btnLogout" layoutX="210.0" layoutY="539.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="73.0" text="Logout" />
+                              <Label layoutX="14.0" layoutY="36.0" text="Add New Patient" textFill="WHITE">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="firstName" layoutX="14.0" layoutY="72.0" prefHeight="30.0" prefWidth="185.0" promptText="First Name" />
+                              <TextField fx:id="lastName" layoutX="15.0" layoutY="110.0" prefHeight="30.0" prefWidth="184.0" promptText="Last Name" />
+                              <DatePicker fx:id="dob" editable="false" layoutX="16.0" layoutY="147.0" prefHeight="30.0" prefWidth="183.0" promptText="Date of Birth" />
+                              <ComboBox fx:id="cbCurrentCondition" layoutX="219.0" layoutY="72.0" prefHeight="30.0" prefWidth="131.0" promptText="Select Condition" />
+                              <ComboBox fx:id="cbSocialStatus" layoutX="220.0" layoutY="110.0" prefHeight="30.0" prefWidth="130.0" promptText="Select Status" />
+                                <Button fx:id="savePatient" alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="539.0" mnemonicParsing="false" onAction="#savePatient" prefHeight="30.0" prefWidth="75.0" styleClass="btnGreen" text="Save" textFill="WHITE">
                                     <font>
                                         <Font size="15.0" />
                                     </font>
@@ -80,14 +36,21 @@
                                         <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
                                     </effect>
                                 </Button>
-                            </children>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <VBox.margin>
-                                <Insets left="110.0" />
-                            </VBox.margin>
-                        </HBox>
+                                <Button fx:id="reset" layoutX="44.0" layoutY="540.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red;" styleClass="btnRed" text="Reset" textFill="WHITE">
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                                    </effect>
+                                </Button>
+                        <Separator layoutX="16.0" layoutY="258.0" prefHeight="28.0" prefWidth="194.0" />
+                        <DatePicker fx:id="dov" editable="false" layoutX="16.0" layoutY="280.0" prefHeight="30.0" prefWidth="194.0" promptText="Date of Visit" />
+                        <ComboBox fx:id="cbDiognosis" layoutX="17.0" layoutY="318.0" prefHeight="30.0" prefWidth="192.0" promptText="Ilness" />
+                        <TextField fx:id="cabNumber" layoutX="227.0" layoutY="355.0" prefHeight="30.0" prefWidth="67.0" promptText="Cab №" />
+                        <ComboBox fx:id="cbDoctor" layoutX="17.0" layoutY="355.0" prefHeight="30.0" prefWidth="192.0" promptText="Doctor" />
+                        <Button fx:id="refreshPatientTab" layoutX="294.0" layoutY="539.0" mnemonicParsing="false" onAction="#refresh" prefHeight="31.0" prefWidth="26.0" text="Logout" />
+                        <ComboBox fx:id="cbTime" layoutX="17.0" layoutY="395.0" prefHeight="30.0" prefWidth="192.0" promptText="time" />
+                        <ComboBox fx:id="cbDay" layoutX="17.0" layoutY="435.0" prefHeight="30.0" prefWidth="192.0" promptText="day" />
+                     </children>
+                  </AnchorPane>
                     </children>
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -100,14 +63,13 @@
             <center>
                 <VBox alignment="TOP_RIGHT" prefHeight="571.0" prefWidth="692.0" BorderPane.alignment="CENTER">
                     <children>
-                        <TableView fx:id="patientTable" prefHeight="300.0" prefWidth="679.0" tableMenuButtonVisible="true">
+                        <TableView fx:id="patientTableInfo" prefHeight="587.0" prefWidth="680.0" tableMenuButtonVisible="true">
                             <columns>
                                 <TableColumn fx:id="colFirstName" maxWidth="4000.0" prefWidth="100.3333740234375" text="First Name" />
                                 <TableColumn fx:id="colLastName" maxWidth="4000.0" prefWidth="91.0" text="Last Name" />
                                 <TableColumn fx:id="colDOB" maxWidth="4000.0" prefWidth="75.0" text="Date of Birth" />
                                 <TableColumn fx:id="colCurrentCondition" maxWidth="4000.0" prefWidth="60.0" text="Condition" />
                                 <TableColumn fx:id="colSocialStatus" maxWidth="4000.0" prefWidth="75.0" text="Status" />
-                                <TableColumn fx:id="colEdit" maxWidth="3500.0" prefWidth="75.0" text="Edit" />
                             </columns>
                             <VBox.margin>
                                 <Insets left="10.0" right="5.0" />

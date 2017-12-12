@@ -48,5 +48,20 @@ public class VisitServiceImpl implements IVisitService {
         return iVisitDAO.getAllDiognosisForVisit(visitEntity);
     }
 
+    @Override
+    public List<String> getAllDiognosis() {
+        return iVisitDAO.getAllDiognosis();
+    }
+
+    @Override
+    public void addVisit(VisitEntity visitEntity) {
+        iVisitDAO.save(visitEntity);
+    }
+
+    @Override
+    public void deleteVisit(VisitEntity v) {
+        iVisitDAO.deleteVisit(v);
+    }
+
 
 }

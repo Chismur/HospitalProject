@@ -1,122 +1,290 @@
 package com.hospitalproject.controllers;
 
-import com.hospitalproject.config.SpringConfig;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import com.hospitalproject.config.StageManager;
+import com.hospitalproject.model.*;
+import com.hospitalproject.services.interfaces.IDoctorService;
+import com.hospitalproject.services.interfaces.IPatientService;
+import com.hospitalproject.services.interfaces.IQueueService;
+import com.hospitalproject.services.interfaces.IVisitService;
+import com.hospitalproject.view.FxmlView;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
-import java.io.IOException;
+import java.net.URL;
+import java.sql.Date;
+import java.util.List;
+import java.util.Optional;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
+import javafx.event.ActionEvent;
 
 @Controller
-public class PatientController {
+public class PatientController implements Initializable {
+
+    private ObservableList<PatientEntity> patientsList = FXCollections.observableArrayList();
+    private ObservableList<String> socialStatusList = FXCollections.observableArrayList();
+    private ObservableList<String> currentConditionList = FXCollections.observableArrayList();
+    private ObservableList<String> diognosisList = FXCollections.observableArrayList();
+    private ObservableList<String> doctorsList = FXCollections.observableArrayList();
+    private ObservableList<String> timeList = FXCollections.observableArrayList();
+    private ObservableList<String> dayList = FXCollections.observableArrayList();
 
     @Autowired
-    SpringConfig springConfig;
+    @Lazy
+    StageManager stageManager;
 
     @Autowired
-    MainController mainController;
+    IPatientService iPatientService;
+    @Autowired
+    IDoctorService iDoctorService;
+    @Autowired
+    IVisitService iVisitService;
+
+    @Autowired
+    IQueueService iQueueService;
 
     @FXML
-    private TextField lastName;
-
-    @FXML
-    private ComboBox<?> cbCurrentCondition;
-
-    @FXML
-    private Button btnVisits;
-
-    @FXML
-    private Button btnLogout;
-
-    @FXML
-    private TableColumn<?, ?> colLastName;
-
-    @FXML
-    private Button btnDoctors;
-
-    @FXML
-    private TableColumn<?, ?> colDOB;
-
-    @FXML
-    private MenuItem deleteUsers;
-
-    @FXML
-    private TableColumn<?, ?> colUserId;
-
-    @FXML
-    private Label userId;
-
-    @FXML
-    private TableColumn<?, ?> colFirstName;
-
-    @FXML
-    private TableColumn<?, ?> colEdit;
+    private Button refreshPatientTab;
 
     @FXML
     private TextField firstName;
 
     @FXML
-    private Button btnQueue;
-
-    @FXML
-    private ComboBox<?> cbSocialStatus;
-
-    @FXML
-    private TableColumn<?, ?> colSocialStatus;
-
-    @FXML
-    private Button btnPatients;
+    private TextField lastName;
 
     @FXML
     private DatePicker dob;
 
     @FXML
+    private ComboBox<String> cbSocialStatus;
+
+    @FXML
+    private ComboBox<String> cbCurrentCondition;
+
+    @FXML
+    private ComboBox<String> cbDay;
+
+    @FXML
+    private ComboBox<String> cbTime;
+
+    @FXML
+    private DatePicker dov;
+
+    @FXML
+    private ComboBox<String> cbDiognosis;
+
+    @FXML
+    private ComboBox<String> cbDoctor;
+
+    @FXML
+    private TextField cabNumber;
+
+    @FXML
+    private TableView<PatientEntity> patientTableInfo;
+    @FXML
+    private TableColumn<PatientEntity, String> colFirstName;
+    @FXML
+    private TableColumn<PatientEntity, String> colLastName;
+    @FXML
+    private TableColumn<PatientEntity, String> colDOB;
+    @FXML
+    private TableColumn<PatientEntity, String> colCurrentCondition;
+    @FXML
+    private TableColumn<PatientEntity, String> colSocialStatus;
+
+    @FXML
+    private Button btnLogout;
+
+    @FXML
+    private Button savePatient;
+
+    @FXML
     private Button reset;
 
     @FXML
-    private TableView<?> userTable;
+    private AnchorPane patients;
 
     @FXML
-    private TableColumn<?, ?> colCurrentCondition;
-
-    @FXML
-    private Button saveUser;
+    private MenuItem deleteUsers;
+    private int idDoctor;
 
     @FXML
     void deletePatient(ActionEvent event) {
+        PatientEntity patientEntity = patientTableInfo.getFocusModel().getFocusedItem();
+        List<VisitEntity> list = iVisitService.getAllVisitsOfPatient(patientEntity);
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation Dialog");
+        alert.setHeaderText(null);
+        alert.setContentText("Are you sure you want to delete selected?");
+        Optional<ButtonType> action = alert.showAndWait();
+
+        if (action.get() == ButtonType.OK) {
+            for (VisitEntity v : list) {
+                iVisitService.deleteVisit(v);
+            }
+            iPatientService.deletePatient(patientEntity);
+        }
+
+        loadPatientsDetails();
+    }
+
+    @FXML
+    void refresh(ActionEvent event) {
+        loadPatientsDetails();
+        clearFields();
+    }
+
+    @FXML
+    void logout(ActionEvent event) {
+        stageManager.switchScene(FxmlView.LOGIN);
+    }
+
+    @FXML
+    void savePatient(ActionEvent event) {
+        PatientEntity patientEntity = new PatientEntity();
+        patientEntity.setpName(getFirstName());
+        patientEntity.setpSurname(getLastName());
+        patientEntity.setbDate(getBDate());
+        patientEntity.setIdCurrentCondition(getIdCurrentCondition());
+        patientEntity.setIdSocialStatus(getIdSocialStatus());
+        iPatientService.addPatient(patientEntity);
+
+        loadPatientsDetails();
+
+        VisitEntity visitEntity = new VisitEntity();
+        visitEntity.setIdPatient(iPatientService.getPatientId(patientEntity.getpName(), patientEntity.getpSurname(), patientEntity.getbDate()));
+        visitEntity.setStartDateTreatment(getVDate());
+        visitEntity.setDateCured(getVDate());
+        System.out.println(getVDate().toString());
+        iVisitService.addVisit(visitEntity);
+
+        QueueEntity queueEntity = new QueueEntity();
+        queueEntity.setCabNum(getCabNumber());
+        queueEntity.setCurrentDate(getVDate());
+        queueEntity.setIdDoctor(getIdDoctor());
+        queueEntity.setIdVisits(iVisitService.getVisitByDate(getVDate()).getIdVisit());
+        //todo make it right
+        queueEntity.setIdTimetable(2);
+        // todo make it right
+        queueEntity.setIdWeekday(2);
+        // iQueueService.addQueue(queueEntity);
+        System.out.println("cab" + queueEntity.getCabNum());
+        System.out.println("dateq" + queueEntity.getCurrentDate());
+        System.out.println("doc" + queueEntity.getIdDoctor());
+        System.out.println("vis" + queueEntity.getIdVisits());
+        System.out.println("time" + queueEntity.getIdTimetable());
+        System.out.println("date" + queueEntity.getIdWeekday());
+
 
     }
 
     @FXML
     void reset(ActionEvent event) {
+        clearFields();
+    }
 
+    private void clearFields() {
+        firstName.clear();
+        lastName.clear();
+        dob.getEditor().clear();
+        dov.getEditor().clear();
+        cbCurrentCondition.getSelectionModel().clearSelection();
+        cbSocialStatus.getSelectionModel().clearSelection();
+        cbDiognosis.getSelectionModel().clearSelection();
+        cbDoctor.getSelectionModel().clearSelection();
     }
 
 
-    @FXML
-    void savePatient(ActionEvent event) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
 
+        socialStatusList.addAll(iPatientService.getAllSocialStatus());
+        currentConditionList.addAll(iPatientService.getAllCurrentCondition());
+        doctorsList.addAll(iDoctorService.getAllDoctorsNames());
+        diognosisList.addAll(iVisitService.getAllDiognosis());
+        //timeList.addAll(iQueueService.getTime());
+        // dayList.addAll(iQueueService.getDays());
+
+        cbSocialStatus.setItems(socialStatusList);
+        cbCurrentCondition.setItems(currentConditionList);
+        cbDoctor.setItems(doctorsList);
+        cbDiognosis.setItems(diognosisList);
+        //cbDay.setItems(dayList);
+        // cbTime.setItems(timeList);
+
+        patientTableInfo.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        setColumnProperties();
+        loadPatientsDetails();
     }
 
-    @FXML
-    void exit(ActionEvent event) {
-
+    private void loadPatientsDetails() {
+        patientsList.clear();
+        patientsList.addAll(iPatientService.getAll());
+        patientTableInfo.getItems().setAll(patientsList);
     }
 
-    public void showStage() throws IOException {
+    private Integer getCabNumber() {
+        return Integer.parseInt(cabNumber.getText());
     }
 
-    @FXML
-    public void toMenu(ActionEvent event) throws IOException {
+    private String getLastName() {
+        return lastName.getText();
+    }
 
+    private String getFirstName() {
+        return firstName.getText();
+    }
+
+    private void setColumnProperties() {
+        colFirstName.setCellValueFactory(new PropertyValueFactory<>("pName"));
+        colLastName.setCellValueFactory(new PropertyValueFactory<>("pSurname"));
+        colDOB.setCellValueFactory(new PropertyValueFactory<>("bDate"));
+        colCurrentCondition.setCellValueFactory(new PropertyValueFactory<>("currentConditionByIdCurrentCondition"));
+        colSocialStatus.setCellValueFactory(new PropertyValueFactory<>("socialStatusByIdSocialStatus"));
+    }
+
+    public Date getBDate() {
+        Date date = Date.valueOf(dob.getValue());
+        return date;
+    }
+
+    public int getIdCurrentCondition() {
+        String s = cbCurrentCondition.getSelectionModel().getSelectedItem();
+        return iPatientService.getCurrentConditionByName(s);
+    }
+
+    public int getIdSocialStatus() {
+        String s = cbSocialStatus.getSelectionModel().getSelectedItem();
+        return iPatientService.getSocialStatusByName(s);
+    }
+
+    public Date getVDate() {
+        Date date = Date.valueOf(dov.getValue());
+        return date;
+    }
+
+    //TO DO make find by name,surname and another param
+    public int getIdDoctor() {
+        String s = cbDoctor.getSelectionModel().getSelectedItem();
+        return iDoctorService.getIdDoctorByName(s);
+    }
+
+    public Integer getTime() {
+        String s = cbTime.getSelectionModel().getSelectedItem();
+        return iQueueService.getTimeByName(s);
+    }
+
+    public Integer getDay() {
+        String s = cbDay.getSelectionModel().getSelectedItem();
+        return iQueueService.getDayByName(s);
     }
 }

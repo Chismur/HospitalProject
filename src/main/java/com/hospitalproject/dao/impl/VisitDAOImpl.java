@@ -3,6 +3,7 @@ package com.hospitalproject.dao.impl;
 import com.hospitalproject.dao.interfaces.IVisitDAO;
 import com.hospitalproject.model.*;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.List;
  * Created by kingm on 06.12.2017.
  */
 @Repository("IVisitDAO")
+@Transactional
 public class VisitDAOImpl implements IVisitDAO {
     @PersistenceUnit
     private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HospitalPersistenceUnit");
@@ -52,6 +54,22 @@ public class VisitDAOImpl implements IVisitDAO {
         query.setParameter("id",visitEntity.getIdVisit());
         List<DiognosisEntity> result = query.getResultList();
         return result;
+    }
+
+    @Override
+    public List<String> getAllDiognosis() {
+        String s = "select d.diognosis From DiognosisEntity d order by d.idDiognosis";
+        return (List<String>)entityManager.createQuery(s).getResultList();
+    }
+
+    @Override
+    public void save(VisitEntity visitEntity) {
+        entityManager.persist(visitEntity);
+    }
+
+    @Override
+    public void deleteVisit(VisitEntity v) {
+        entityManager.remove(entityManager.merge(v));
     }
 
 

@@ -2,21 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/35c22260-7f83-4b5a-bf7a-5744a29f81d9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/f6bd9667-471a-4852-a890-4e9e9f169a52.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/DoctorsController.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/DoctorsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/PatientController.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/PatientController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/PatientInfoController.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/controllers/PatientInfoController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/DoctorDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/DoctorDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/PatientDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/PatientDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/SocialStatusDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/SocialStatusDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/VisitDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/impl/VisitDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IDoctorDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IDoctorDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IPatientDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IPatientDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/ISocialStatusDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/ISocialStatusDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IVisitDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/dao/interfaces/IVisitDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/DiognosisEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/DiognosisEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/CurrentConditionEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/CurrentConditionEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/DiognosisHasVisitEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/DiognosisHasVisitEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/PatientEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/PatientEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/QueueEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/QueueEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/SocialStatusEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/SocialStatusEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/VisitEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/model/VisitEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/DoctorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/DoctorServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/PatientServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/PatientServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/VisitServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/impl/VisitServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IDoctorService.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IDoctorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IPatientService.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IPatientService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IVisitService.class" afterPath="$PROJECT_DIR$/target/classes/com/hospitalproject/services/interfaces/IVisitService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SocialStatusDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SocialStatusDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IPatientDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IPatientDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISocialStatusDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISocialStatusDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/CurrentConditionEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/CurrentConditionEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/SocialStatusEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/SocialStatusEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IPatientService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IPatientService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IVisitService.java" afterPath="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IVisitService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/doctors.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/doctors.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/patient.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/patient.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/img/Vladimir_Putin_12023.jpg" afterPath="$PROJECT_DIR$/src/main/resources/img/putin.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/orm.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/orm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/doctors.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/doctors.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/main.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/patient.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/patient.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/fxml/patientInf.fxml" afterPath="$PROJECT_DIR$/target/classes/fxml/patientInf.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,6 +94,34 @@
       </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" value="mydb@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mydb@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="patient" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="mydb@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="doctor" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -93,35 +169,51 @@
     <favorites_list name="JavaFxApplication">
       <favorite_root url="javaeeDummy://JavaeeElement:/59e71ff9//HospitalProject/jpa/JPA/Facet" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
     </favorites_list>
+    <favorites_list name="CodeIris Favorites" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PatientInfoController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java">
+      <file leaf-file-name="IVisitService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IVisitService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="129" column="53" lean-forward="false" selection-start-line="129" selection-start-column="53" selection-end-line="129" selection-end-column="53" />
+            <state relative-caret-position="360">
+              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#change#0;class#PatientInfoController#0" expanded="false" />
-                <element signature="method#deletePatient#0;class#PatientInfoController#0" expanded="false" />
-                <element signature="method#apply#0;class#PatientInfoController#0" expanded="false" />
-                <element signature="method#clearcb#0;class#PatientInfoController#0" expanded="false" />
-                <element signature="method#clearObsLists#0;class#PatientInfoController#0" expanded="false" />
-                <element signature="method#clearFields#0;class#PatientInfoController#0" expanded="false" />
+                <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiognosisEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java">
+      <file leaf-file-name="IVisitDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="71" column="51" lean-forward="false" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
               <folding>
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2763#2764#0" expanded="true" />
+                <element signature="e#2823#2824#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,9 +222,71 @@
       <file leaf-file-name="DoctorEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DoctorEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="177" column="2" lean-forward="false" selection-start-line="177" selection-start-column="2" selection-end-line="180" selection-end-column="5" />
+            <state relative-caret-position="1339">
+              <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiognosisHasVisitEntityPK.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntityPK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="method#equals#0;class#DiognosisHasVisitEntityPK#0" expanded="false" />
+                <element signature="method#hashCode#0;class#DiognosisHasVisitEntityPK#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoctorDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="69" column="61" lean-forward="true" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+              <folding>
+                <element signature="method#equals#0;class#VisitEntity#0" expanded="false" />
+                <element signature="method#hashCode#0;class#VisitEntity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiognosisEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="59" column="85" lean-forward="true" selection-start-line="59" selection-start-column="85" selection-end-line="59" selection-end-column="85" />
+              <folding>
+                <element signature="e#1978#1979#0" expanded="true" />
+                <element signature="e#2036#2037#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiognosisHasVisitEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="method#equals#0;class#DiognosisHasVisitEntity#0" expanded="false" />
+                <element signature="method#hashCode#0;class#DiognosisHasVisitEntity#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +322,12 @@
       <find>ServicesHasVisitEntity</find>
       <find>visits</find>
       <find>findDoc</find>
+      <find>patientTab</find>
+      <find>col</find>
+      <find>patient</find>
+      <find>DoctorEntity</find>
+      <find>visitHasSpecialization</find>
+      <find>show</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -186,57 +346,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/doctors.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/IPatientService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/IPatientDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/VisitService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/IDiognosisDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/IVisitService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/IVisitDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/view/FxmlView.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Bundle.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDiognosisDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IPatientDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IUserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DiognosisDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PositionsDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/QualificationsDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SpecialisationsDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DoctorEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISocialStatusDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/SocialStatusEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/CurrentConditionEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/patient.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISocialStatusDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SocialStatusDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IPatientService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IPatientDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IQueueService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/QueueServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IQueueDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/QueueDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IVisitService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java" />
       </list>
     </option>
   </component>
@@ -257,8 +417,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1604" />
-    <option name="height" value="876" />
+    <option name="width" value="1616" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -281,24 +441,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DB Consoles" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="35c22260-7f83-4b5a-bf7a-5744a29f81d9" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyPsiNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -357,7 +499,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fxml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,6 +604,168 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HospitalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hospitalproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,6 +801,24 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DB Consoles" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="35c22260-7f83-4b5a-bf7a-5744a29f81d9" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyPsiNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,34 +837,38 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.25780347" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/hospitalproject/diagrams" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="JPA.DatabaseSchemaImportDialog" value="148ad0b1-8726-4a93-b8c1-2766da21bcb4" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="diagrams&#9;ACTION&#9;UML.Group.Simple" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\HospitalProject\src\main\resources\fxml" />
-      <recent name="D:\HospitalProject\src\main\resources\META-INF" />
-      <recent name="D:\HospitalProject\src\main\java\com\hospitalproject" />
-      <recent name="D:\HospitalProject\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hospitalproject.dao.interfaces" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.hospitalproject.model" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\HospitalProject\src\main\resources\fxml" />
       <recent name="D:\HospitalProject\src\main\resources\db" />
       <recent name="D:\HospitalProject\src\main\resources\img" />
+      <recent name="D:\HospitalProject\src\main\resources" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.hospitalproject.model" />
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\HospitalProject\src\main\resources\fxml" />
+      <recent name="D:\HospitalProject\src\main\resources\META-INF" />
+      <recent name="D:\HospitalProject\src\main\java\com\hospitalproject" />
       <recent name="D:\HospitalProject\src\main\resources" />
     </key>
   </component>
@@ -968,15 +1372,19 @@
       <workItem from="1511730396384" duration="16403000" />
       <workItem from="1512058537066" duration="9109000" />
       <workItem from="1512413111071" duration="10892000" />
-      <workItem from="1512572364897" duration="41634000" />
+      <workItem from="1512572364897" duration="41854000" />
+      <workItem from="1512919140231" duration="17178000" />
+      <workItem from="1513011958771" duration="1387000" />
+      <workItem from="1513013399503" duration="1465000" />
+      <workItem from="1513097680936" duration="11710000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145779000" />
+    <option name="totallyTimeSpent" value="177739000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1604" height="876" extended-state="1" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -986,26 +1394,26 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19559586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22409326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13795337" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2594086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25892857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25064766" sideWeight="0.46092185" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25064766" sideWeight="0.5390782" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.253886" sideWeight="0.46823958" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19807073" sideWeight="0.53176045" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32966322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1016,6 +1424,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1065,7 +1474,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1074,172 +1483,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SocialStatusDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DateEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/TimeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/UsersEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitHasSpecializationEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-798">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/config/ApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/config/SpringConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/config/SpringSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" column="79" lean-forward="false" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/148ad0b1-8726-4a93-b8c1-2766da21bcb4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDiognosisDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#522#523#0" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/orm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="267" column="110" lean-forward="false" selection-start-line="267" selection-start-column="110" selection-end-line="267" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="418">
+          <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1247,190 +1494,533 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="15" column="119" lean-forward="false" selection-start-line="15" selection-start-column="119" selection-end-line="15" selection-end-column="119" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/QualificationsDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="119" lean-forward="false" selection-start-line="15" selection-start-column="119" selection-end-line="15" selection-end-column="119" />
-          <folding />
+        <state relative-caret-position="-15">
+          <caret line="17" column="51" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/UserDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="119" lean-forward="false" selection-start-line="15" selection-start-column="119" selection-end-line="15" selection-end-column="119" />
-          <folding>
-            <element signature="e#651#652#0" expanded="false" />
-            <element signature="e#720#721#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="155" column="5" lean-forward="false" selection-start-line="155" selection-start-column="5" selection-end-line="155" selection-end-column="5" />
-          <folding>
-            <element signature="e#4457#4458#0" expanded="true" />
-            <element signature="e#4514#4515#0" expanded="true" />
-            <element signature="e#4573#4574#0" expanded="true" />
-            <element signature="e#4627#4628#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
-            <element signature="e#4751#4752#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="17" column="119" lean-forward="false" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="119" lean-forward="false" selection-start-line="16" selection-start-column="119" selection-end-line="16" selection-end-column="119" />
-          <folding>
-            <element signature="method#getAll#0;class#PatientDAOImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SpecialisationsDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="30" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISpecialisationsDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IPatientDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ISocialStatusDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/ICurrentConditionDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="260">
+          <caret line="134" column="29" lean-forward="false" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/SocialStatusDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="53" column="40" lean-forward="false" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
-          <folding>
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="method#getPosition#0;class#DoctorsController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IPatientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="375">
+          <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/DoctorsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="173" column="17" lean-forward="false" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#clearFields#0;class#DoctorsController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/PatientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/orm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="337" column="103" lean-forward="false" selection-start-line="337" selection-start-column="103" selection-end-line="337" selection-end-column="103" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IQueueService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="255">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/QueueServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IQueueDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/QueueDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/PatientDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/QueueEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="67" column="15" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/148ad0b1-8726-4a93-b8c1-2766da21bcb4">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>148ad0b1-8726-4a93-b8c1-2766da21bcb4</OriginalElement>
+          <nodes>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.date</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.patient</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.time</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.user</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.social_status</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.services_has_visit</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.diognosis_has_visit</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.current_condition</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.specialization</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.diognosis</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.queue</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.doctor</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.visit_has_specialization</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.position</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.users</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.qualification</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.services</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.service_type</node>
+            <node x="" y="">148ad0b1-8726-4a93-b8c1-2766da21bcb4.TABLE:mydb.visit</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8136780650542118" x="1243.0" y="269.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.controllers.DoctorsController">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.controllers.DoctorsController</OriginalElement>
+          <nodes>
+            <node x="" y="">com.hospitalproject.controllers.DoctorsController</node>
+            <node x="" y="">org.springframework.stereotype.Component</node>
+            <node x="" y="">com.hospitalproject.controllers.LoginController</node>
+            <node x="" y="">javafx.fxml.Initializable</node>
+            <node x="" y="">com.hospitalproject.controllers.PatientInfoController</node>
+            <node x="" y="">com.hospitalproject.controllers.MainController</node>
+            <node x="" y="">org.springframework.stereotype.Controller</node>
+            <node x="" y="">com.hospitalproject.controllers.PatientController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="288.0" y="101.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.model.CurrentConditionEntity">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.model.CurrentConditionEntity</OriginalElement>
+          <nodes>
+            <node x="" y="">com.hospitalproject.model.DiognosisHasVisitEntity</node>
+            <node x="" y="">javax.persistence.IdClass</node>
+            <node x="" y="">com.hospitalproject.model.UserEntity</node>
+            <node x="" y="">com.hospitalproject.model.SpecializationEntity</node>
+            <node x="" y="">com.hospitalproject.model.ServicesEntity</node>
+            <node x="" y="">javax.persistence.Table</node>
+            <node x="" y="">com.hospitalproject.model.VisitHasSpecializationEntity</node>
+            <node x="" y="">com.hospitalproject.model.DoctorEntity</node>
+            <node x="" y="">com.hospitalproject.model.CurrentConditionEntity</node>
+            <node x="" y="">com.hospitalproject.model.DiognosisEntity</node>
+            <node x="" y="">com.hospitalproject.model.UsersEntity</node>
+            <node x="" y="">javax.persistence.Entity</node>
+            <node x="" y="">com.hospitalproject.model.QueueEntity</node>
+            <node x="" y="">com.hospitalproject.model.PatientEntity</node>
+            <node x="" y="">com.hospitalproject.model.VisitEntity</node>
+            <node x="" y="">com.hospitalproject.model.SocialStatusEntity</node>
+            <node x="" y="">com.hospitalproject.model.ServicesHasVisitEntityPK</node>
+            <node x="" y="">com.hospitalproject.model.DateEntity</node>
+            <node x="" y="">com.hospitalproject.model.ServiceTypeEntity</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">com.hospitalproject.model.DiognosisHasVisitEntityPK</node>
+            <node x="" y="">com.hospitalproject.model.QualificationEntity</node>
+            <node x="" y="">com.hospitalproject.model.ServicesHasVisitEntity</node>
+            <node x="" y="">com.hospitalproject.model.PositionEntity</node>
+            <node x="" y="">com.hospitalproject.model.TimeEntity</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.1384556574923548" x="494.0" y="234.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/diagrams/d.uml" />
+    <entry file="uml://JAVA/com.hospitalproject.controllers">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.controllers</OriginalElement>
+          <nodes>
+            <node x="0.0" y="1287.0">com.hospitalproject.controllers.DoctorsController</node>
+            <node x="1015.0" y="1287.0">com.hospitalproject.controllers.LoginController</node>
+            <node x="1403.0" y="0.0">com.hospitalproject.controllers.PatientInfoController</node>
+            <node x="1479.0" y="1287.0">com.hospitalproject.controllers.MainController</node>
+            <node x="0.0" y="0.0">com.hospitalproject.controllers.PatientController</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.31375227686703094" x="1277.0" y="928.0" />
+          <SelectedNodes>
+            <node>com.hospitalproject.controllers.DoctorsController</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.view">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.view</OriginalElement>
+          <nodes>
+            <node x="" y="">com.hospitalproject.view.FxmlView</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="96.0" y="93.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.services">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.services</OriginalElement>
+          <nodes>
+            <node x="561.5" y="0.0">com.hospitalproject.services.interfaces.IPatientService</node>
+            <node x="1155.0" y="818.0">com.hospitalproject.services.interfaces.IAuthentificationService</node>
+            <node x="860.0" y="818.0">com.hospitalproject.services.interfaces.IUserService</node>
+            <node x="1126.0" y="920.0">com.hospitalproject.services.impl.AuthenticationServiceImpl</node>
+            <node x="22.0" y="0.0">com.hospitalproject.services.interfaces.IDoctorService</node>
+            <node x="512.0" y="818.0">com.hospitalproject.services.interfaces.IQueueService</node>
+            <node x="0.0" y="818.0">com.hospitalproject.services.interfaces.IVisitService</node>
+            <node x="0.0" y="367.0">com.hospitalproject.services.impl.DoctorServiceImpl</node>
+            <node x="74.5" y="1075.0">com.hospitalproject.services.impl.VisitServiceImpl</node>
+            <node x="870.5" y="942.0">com.hospitalproject.services.impl.UserServiceImpl</node>
+            <node x="521.5" y="1009.0">com.hospitalproject.services.impl.QueueServiceImpl</node>
+            <node x="551.0" y="323.0">com.hospitalproject.services.impl.PatientServiceImpl</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.hospitalproject.services.impl.AuthenticationServiceImpl" target="com.hospitalproject.services.interfaces.IAuthentificationService">
+              <point x="0.0" y="-49.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="com.hospitalproject.services.impl.VisitServiceImpl" target="com.hospitalproject.services.interfaces.IVisitService">
+              <point x="0.0" y="-115.0" />
+              <point x="0.0" y="103.5" />
+            </edge>
+            <edge source="com.hospitalproject.services.impl.QueueServiceImpl" target="com.hospitalproject.services.interfaces.IQueueService">
+              <point x="0.0" y="-82.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="com.hospitalproject.services.impl.PatientServiceImpl" target="com.hospitalproject.services.interfaces.IPatientService">
+              <point x="0.0" y="-170.0" />
+              <point x="0.0" y="136.5" />
+            </edge>
+            <edge source="com.hospitalproject.services.impl.DoctorServiceImpl" target="com.hospitalproject.services.interfaces.IDoctorService">
+              <point x="0.0" y="-203.0" />
+              <point x="0.0" y="158.5" />
+            </edge>
+            <edge source="com.hospitalproject.services.impl.UserServiceImpl" target="com.hospitalproject.services.interfaces.IUserService">
+              <point x="0.0" y="-48.5" />
+              <point x="0.0" y="37.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="376.0" y="676.0" />
+          <SelectedNodes>
+            <node>com.hospitalproject.services.impl.PatientServiceImpl</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.30000000000000004" x="908.0" y="617.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.config">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.config</OriginalElement>
+          <nodes>
+            <node x="" y="">com.hospitalproject.config.StageManager</node>
+            <node x="" y="">com.hospitalproject.config.EntityManagerConfig</node>
+            <node x="" y="">com.hospitalproject.config.ApplicationConfig</node>
+            <node x="" y="">com.hospitalproject.config.SpringConfig</node>
+            <node x="" y="">com.hospitalproject.config.SpringSecurityConfig</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="265.0" y="239.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.hospitalproject.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.hospitalproject.model</OriginalElement>
+          <nodes>
+            <node x="646.0" y="1338.0">com.hospitalproject.model.UsersEntity</node>
+            <node x="363.0" y="878.0">com.hospitalproject.model.DiognosisHasVisitEntity</node>
+            <node x="0.0" y="472.0">com.hospitalproject.model.QueueEntity</node>
+            <node x="563.0" y="0.0">com.hospitalproject.model.PatientEntity</node>
+            <node x="503.0" y="472.0">com.hospitalproject.model.VisitEntity</node>
+            <node x="686.0" y="878.0">com.hospitalproject.model.SocialStatusEntity</node>
+            <node x="926.0" y="472.0">com.hospitalproject.model.UserEntity</node>
+            <node x="303.0" y="1546.0">com.hospitalproject.model.ServicesHasVisitEntityPK</node>
+            <node x="949.0" y="1338.0">com.hospitalproject.model.DateEntity</node>
+            <node x="1009.0" y="878.0">com.hospitalproject.model.SpecializationEntity</node>
+            <node x="0.0" y="1130.0">com.hospitalproject.model.ServiceTypeEntity</node>
+            <node x="323.0" y="1130.0">com.hospitalproject.model.ServicesEntity</node>
+            <node x="586.0" y="1546.0">com.hospitalproject.model.DiognosisHasVisitEntityPK</node>
+            <node x="1252.0" y="1338.0">com.hospitalproject.model.QualificationEntity</node>
+            <node x="646.0" y="1130.0">com.hospitalproject.model.ServicesHasVisitEntity</node>
+            <node x="0.0" y="1546.0">com.hospitalproject.model.PositionEntity</node>
+            <node x="0.0" y="878.0">com.hospitalproject.model.VisitHasSpecializationEntity</node>
+            <node x="0.0" y="0.0">com.hospitalproject.model.DoctorEntity</node>
+            <node x="969.0" y="1130.0">com.hospitalproject.model.CurrentConditionEntity</node>
+            <node x="0.0" y="1338.0">com.hospitalproject.model.TimeEntity</node>
+            <node x="323.0" y="1338.0">com.hospitalproject.model.DiognosisEntity</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8036321031048622" x="756.0" y="1143.0" />
+          <SelectedNodes>
+            <node>com.hospitalproject.model.UsersEntity</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Properties</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/CurrentConditionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/config/StageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/loaderProvider/SpringFXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/ServicesHasVisitEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#539#540#0" expanded="false" />
+            <element signature="e#580#581#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <element signature="e#705#706#0" expanded="false" />
+            <element signature="e#804#805#0" expanded="false" />
+            <element signature="e#839#840#0" expanded="false" />
+            <element signature="e#892#893#0" expanded="false" />
+            <element signature="e#940#941#0" expanded="false" />
+            <element signature="e#1665#1666#0" expanded="false" />
+            <element signature="e#1716#1717#0" expanded="false" />
+            <element signature="e#2052#2053#0" expanded="false" />
+            <element signature="e#2094#2095#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="70" column="79" lean-forward="true" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IDoctorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="104" lean-forward="false" selection-start-line="26" selection-start-column="104" selection-end-line="26" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IDoctorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="38" column="104" lean-forward="false" selection-start-line="38" selection-start-column="104" selection-end-line="38" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/PatientEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="133" column="72" lean-forward="false" selection-start-line="133" selection-start-column="72" selection-end-line="133" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -1440,73 +2030,126 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntityPK.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/DoctorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="409">
+          <caret line="100" column="76" lean-forward="false" selection-start-line="100" selection-start-column="76" selection-end-line="100" selection-end-column="76" />
+          <folding>
+            <element signature="e#2601#2602#0" expanded="true" />
+            <element signature="e#2658#2659#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="-754">
+          <caret line="124" column="33" lean-forward="false" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#change#0;class#PatientInfoController#0" expanded="false" />
+            <element signature="method#deletePatient#0;class#PatientInfoController#0" expanded="false" />
+            <element signature="method#apply#0;class#PatientInfoController#0" expanded="false" />
+            <element signature="method#clearFields#0;class#PatientInfoController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="131" column="34" lean-forward="true" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
+          <folding>
+            <element signature="method#clearFields#0;class#PatientController#0" expanded="false" />
+            <element signature="method#initialize#0;class#PatientController#0" expanded="false" />
+            <element signature="method#loadPatientsDetails#0;class#PatientController#0" expanded="false" />
+            <element signature="e#7489#7490#0" expanded="true" />
+            <element signature="method#setColumnProperties#0;class#PatientController#0" expanded="false" />
+            <element signature="method#getIdCurrentCondition#0;class#PatientController#0" expanded="false" />
+            <element signature="method#getIdSocialStatus#0;class#PatientController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/interfaces/IVisitService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/services/impl/VisitServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DiognosisDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/interfaces/IVisitDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="119" lean-forward="false" selection-start-line="17" selection-start-column="119" selection-end-line="17" selection-end-column="119" />
+        <state relative-caret-position="300">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/DoctorDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="69" column="61" lean-forward="true" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/dao/impl/VisitDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="71" column="51" lean-forward="false" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+          <folding>
+            <element signature="e#2763#2764#0" expanded="true" />
+            <element signature="e#2823#2824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntityPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="method#equals#0;class#DiognosisHasVisitEntityPK#0" expanded="false" />
+            <element signature="method#hashCode#0;class#DiognosisHasVisitEntityPK#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DoctorEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1339">
+          <caret line="176" column="0" lean-forward="true" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisHasVisitEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/patientInf.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="52" column="74" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DoctorEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="177" column="2" lean-forward="false" selection-start-line="177" selection-start-column="2" selection-end-line="180" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="223">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="method#equals#0;class#DiognosisHasVisitEntity#0" expanded="false" />
+            <element signature="method#hashCode#0;class#DiognosisHasVisitEntity#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/DiognosisEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="274">
+          <caret line="59" column="85" lean-forward="true" selection-start-line="59" selection-start-column="85" selection-end-line="59" selection-end-column="85" />
           <folding>
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="e#2036#2037#0" expanded="true" />
@@ -1514,18 +2157,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/controllers/PatientInfoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hospitalproject/model/VisitEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="129" column="53" lean-forward="false" selection-start-line="129" selection-start-column="53" selection-end-line="129" selection-end-column="53" />
+        <state relative-caret-position="199">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#change#0;class#PatientInfoController#0" expanded="false" />
-            <element signature="method#deletePatient#0;class#PatientInfoController#0" expanded="false" />
-            <element signature="method#apply#0;class#PatientInfoController#0" expanded="false" />
-            <element signature="method#clearcb#0;class#PatientInfoController#0" expanded="false" />
-            <element signature="method#clearObsLists#0;class#PatientInfoController#0" expanded="false" />
-            <element signature="method#clearFields#0;class#PatientInfoController#0" expanded="false" />
+            <element signature="method#equals#0;class#VisitEntity#0" expanded="false" />
+            <element signature="method#hashCode#0;class#VisitEntity#0" expanded="false" />
           </folding>
         </state>
       </provider>

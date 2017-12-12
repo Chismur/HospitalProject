@@ -1,6 +1,8 @@
 package com.hospitalproject.services.interfaces;
 
+import com.hospitalproject.model.DiognosisEntity;
 import com.hospitalproject.model.DoctorEntity;
+import com.hospitalproject.model.PatientEntity;
 
 import java.util.List;
 
@@ -9,6 +11,8 @@ import java.util.List;
  */
 public interface IDoctorService {
     List<DoctorEntity> getAll();
+
+    List<String> getAllDoctorsNames();
 
     List<String> getAllDoctorPositions();
 
@@ -29,4 +33,8 @@ public interface IDoctorService {
     int getQualificationIdByName(String item);
 
     void deleteDoctor(DoctorEntity doctorEntity);
+
+    int getIdDoctorByName(String name);
+
+    List<DiognosisEntity> getAllDiognosisByDoctor(DoctorEntity doctorEntity, PatientEntity patientEntity);
 }

@@ -11,4 +11,6 @@ public interface ICurrentConditionDAO {
     List<String> getAllCurrentCondition();
 
     String getCurrentConditionOfPatient(PatientEntity patientEntity);
+
+    int getCurrentConditionByName(String s);
 }

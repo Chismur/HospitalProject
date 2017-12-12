@@ -1,6 +1,8 @@
 package com.hospitalproject.dao.interfaces;
 
+import com.hospitalproject.model.DiognosisEntity;
 import com.hospitalproject.model.DoctorEntity;
+import com.hospitalproject.model.PatientEntity;
 
 import java.util.List;
 
@@ -9,8 +11,19 @@ import java.util.List;
  */
 public interface IDoctorDAO {
     List<DoctorEntity> getAll();
+
     DoctorEntity getDoctorById(int idDoctor);
+
     void addDoctor(DoctorEntity doctorEntity);
+
     void updateDoctor(DoctorEntity doctorEntity);
+
     void deleteDoctor(DoctorEntity doctorEntity);
+
+    List<String> getAllDoctorsNames();
+
+    int getIdDoctorByName(String name);
+
+    List<DiognosisEntity> getAllDiognosisByDoctor(DoctorEntity doctorEntity, PatientEntity patientEntity);
+
 }

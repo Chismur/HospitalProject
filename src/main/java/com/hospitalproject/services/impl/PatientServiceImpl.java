@@ -8,6 +8,7 @@ import com.hospitalproject.services.interfaces.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -57,6 +58,21 @@ public class PatientServiceImpl implements IPatientService {
     @Override
     public String getCurrentConditionOfPatient(PatientEntity patientEntity) {
         return iCurrentConditionDAO.getCurrentConditionOfPatient(patientEntity);
+    }
+
+    @Override
+    public int getCurrentConditionByName(String s) {
+        return iCurrentConditionDAO.getCurrentConditionByName(s);
+    }
+
+    @Override
+    public int getSocialStatusByName(String s) {
+        return iSocialStatusDAO.getSocialStatusByName(s);
+    }
+
+    @Override
+    public int getPatientId(String name, String surname, Date bDate) {
+        return patientDAO.getPatientId(name,surname,bDate);
     }
 
     @Override

@@ -7,7 +7,7 @@ import java.sql.Date;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "queue", schema = "mydb", catalog = "")
+@Table(name = "queue", schema = "mydb")
 public class QueueEntity {
     private int idQueue;
     private Date currentDate;

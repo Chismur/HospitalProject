@@ -2,6 +2,7 @@ package com.hospitalproject.dao.interfaces;
 
 import com.hospitalproject.model.PatientEntity;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -17,4 +18,7 @@ public interface IPatientDAO {
     void updatePatient(PatientEntity patientEntity);
 
     void deletePatient(PatientEntity patientEntity);
+
+    int getPatientId(String name, String surname, Date bDate);
+
 }

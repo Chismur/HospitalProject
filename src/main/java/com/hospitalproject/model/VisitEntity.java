@@ -85,7 +85,7 @@ public class VisitEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "visitByVisitIdVisit")
+    @OneToMany(mappedBy = "visitByVisitIdVisit",orphanRemoval = true)
     public Collection<DiognosisHasVisitEntity> getDiognosisHasVisitsByIdVisit() {
         return diognosisHasVisitsByIdVisit;
     }
@@ -94,7 +94,7 @@ public class VisitEntity {
         this.diognosisHasVisitsByIdVisit = diognosisHasVisitsByIdVisit;
     }
 
-    @OneToMany(mappedBy = "visitByIdVisits")
+    @OneToMany(mappedBy = "visitByIdVisits",cascade = CascadeType.ALL)
     public Collection<QueueEntity> getQueuesByIdVisit() {
         return queuesByIdVisit;
     }
@@ -103,7 +103,7 @@ public class VisitEntity {
         this.queuesByIdVisit = queuesByIdVisit;
     }
 
-    @OneToMany(mappedBy = "visitByVisitIdVisit")
+    @OneToMany(mappedBy = "visitByVisitIdVisit",cascade = CascadeType.ALL)
     public Collection<ServicesHasVisitEntity> getServicesHasVisitsByIdVisit() {
         return servicesHasVisitsByIdVisit;
     }

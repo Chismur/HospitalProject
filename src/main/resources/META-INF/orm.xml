@@ -319,7 +319,7 @@
                 <column name="cab_num" nullable="false" precision="11"/>
             </basic>
             <basic name="visitHasSpecializationIdVisitHasSpecialization">
-                <column name="visit_has_specialization_id_visit_has_specialization" nullable="false" precision="11"/>
+                <column name="visit_has_specialization_id_visit_has_specialization" nullable="true" precision="11"/>
             </basic>
             <basic name="idDoctor">
                 <column name="id_doctor" precision="11"/>
@@ -335,7 +335,7 @@
             </basic>
             <many-to-one name="visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization" optional="true"
                          target-entity="com.hospitalproject.model.VisitHasSpecializationEntity">
-                <join-column name="visit_has_specialization_id_visit_has_specialization" nullable="false"
+                <join-column name="visit_has_specialization_id_visit_has_specialization" nullable="true"
                              referenced-column-name="id_visit_has_specialization" insertable="false" updatable="false"/>
             </many-to-one>
             <many-to-one name="doctorByIdDoctor" optional="true" target-entity="com.hospitalproject.model.DoctorEntity">

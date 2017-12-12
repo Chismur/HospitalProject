@@ -12,4 +12,5 @@ public interface ISocialStatusDAO {
 
     String getSocialStatusOfPatient(PatientEntity patientEntity);
 
+    int getSocialStatusByName(String s);
 }
