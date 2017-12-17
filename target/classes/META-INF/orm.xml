@@ -307,19 +307,19 @@
     </entity>
 
     <entity class="com.hospitalproject.model.QueueEntity">
-        <table name="queue" schema="mydb" catalog=""/>
+        <table name="queue_table" schema="mydb" catalog=""/>
         <attributes>
             <id name="idQueue">
                 <column name="id_queue" precision="11"/>
             </id>
             <basic name="currentDate">
-                <column name="current_date" nullable="false" precision="-1"/>
+                <column name="c_date" nullable="false" precision="-1"/>
             </basic>
             <basic name="cabNum">
-                <column name="cab_num" nullable="false" precision="11"/>
+                <column name="cab_num" nullable="true" precision="11"/>
             </basic>
-            <basic name="visitHasSpecializationIdVisitHasSpecialization">
-                <column name="visit_has_specialization_id_visit_has_specialization" nullable="true" precision="11"/>
+            <basic name="vHasSpById">
+                <column name="visit_h_s_id_visit_h_s" nullable="true" precision="11"/>
             </basic>
             <basic name="idDoctor">
                 <column name="id_doctor" precision="11"/>
@@ -335,7 +335,7 @@
             </basic>
             <many-to-one name="visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization" optional="true"
                          target-entity="com.hospitalproject.model.VisitHasSpecializationEntity">
-                <join-column name="visit_has_specialization_id_visit_has_specialization" nullable="true"
+                <join-column name="visit_h_s_id_visit_h_s" nullable="true"
                              referenced-column-name="id_visit_has_specialization" insertable="false" updatable="false"/>
             </many-to-one>
             <many-to-one name="doctorByIdDoctor" optional="true" target-entity="com.hospitalproject.model.DoctorEntity">

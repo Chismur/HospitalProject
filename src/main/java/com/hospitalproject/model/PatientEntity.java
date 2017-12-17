@@ -2,8 +2,11 @@ package com.hospitalproject.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Date;
 import java.util.Collection;
 
@@ -131,7 +134,8 @@ public class PatientEntity {
         this.currentConditionByIdCurrentCondition = currentConditionByIdCurrentCondition;
     }
 
-    @OneToMany(mappedBy = "patientByIdPatient",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "patientByIdPatient")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     public Collection<VisitEntity> getVisitsByIdPatient() {
         return visitsByIdPatient;
     }

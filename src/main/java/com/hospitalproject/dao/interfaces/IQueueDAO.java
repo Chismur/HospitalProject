@@ -2,6 +2,7 @@ package com.hospitalproject.dao.interfaces;
 
 import com.hospitalproject.model.QueueEntity;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
@@ -16,5 +17,7 @@ public interface IQueueDAO {
 
     Integer getDayByName(String s);
 
-    void addQueue(QueueEntity queueEntity);
+    void save(QueueEntity queueEntity);
+
+    void save(Date curDate,int cab,int vhs,int doc,int time,int day,int visis);
 }

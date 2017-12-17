@@ -5,6 +5,7 @@ import com.hospitalproject.model.QueueEntity;
 import com.hospitalproject.services.interfaces.IQueueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -19,27 +20,27 @@ public class QueueServiceImpl implements IQueueService {
 
     @Override
     public List<String> getTime() {
-        return null;
+        return iQueueDAO.getTime();
     }
 
     @Override
     public List<String> getDays() {
-        return null;
+        return iQueueDAO.getDays();
     }
 
     @Override
     public Integer getTimeByName(String s) {
-        return null;
+        return iQueueDAO.getTimeByName(s);
     }
 
     @Override
     public Integer getDayByName(String s) {
-        return null;
+        return iQueueDAO.getDayByName(s);
     }
 
     @Override
-    public void addQueue(QueueEntity queueEntity) {
-        iQueueDAO.addQueue(queueEntity);
+    public void save(QueueEntity queueEntity) {
+        iQueueDAO.save(queueEntity);
     }
 
 }

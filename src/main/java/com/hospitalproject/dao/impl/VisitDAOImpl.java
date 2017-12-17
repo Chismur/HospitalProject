@@ -29,7 +29,7 @@ public class VisitDAOImpl implements IVisitDAO {
 
     @Override
     public QueueEntity getQueueByVisit(VisitEntity visitEntity) {
-        Query query = entityManager.createQuery("select qe from QueueEntity qe where qe.id =:visitId");
+        Query query = entityManager.createQuery("select qe from QueueEntity qe where qe.idVisits =:visitId");
         query.setParameter("visitId",visitEntity.getIdVisit());
         return (QueueEntity) query.getSingleResult();
     }
@@ -70,6 +70,20 @@ public class VisitDAOImpl implements IVisitDAO {
     @Override
     public void deleteVisit(VisitEntity v) {
         entityManager.remove(entityManager.merge(v));
+    }
+
+    @Override
+    public List<VisitEntity> getVisitByPatient(PatientEntity patientEntity) {
+        Query query = entityManager.createQuery("select v from VisitEntity v where v.idPatient = :p");
+        query.setParameter("p",patientEntity.getIdPatient());
+        return (List<VisitEntity>) query.getResultList();
+    }
+
+    @Override
+    public DiognosisEntity getDiognosisByName(String s) {
+        Query query = entityManager.createQuery("select d from DiognosisEntity d where d.diognosis = :s");
+        query.setParameter("s",s);
+        return (DiognosisEntity) query.getSingleResult();
     }
 
 

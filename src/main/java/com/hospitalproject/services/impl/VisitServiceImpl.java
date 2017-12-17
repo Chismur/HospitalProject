@@ -63,5 +63,15 @@ public class VisitServiceImpl implements IVisitService {
         iVisitDAO.deleteVisit(v);
     }
 
+    @Override
+    public List<VisitEntity> getVisitByPatient(PatientEntity patientEntity) {
+        return iVisitDAO.getVisitByPatient(patientEntity);
+    }
+
+    @Override
+    public DiognosisEntity getDiognosisByName(String s) {
+        return iVisitDAO.getDiognosisByName(s);
+    }
+
 
 }

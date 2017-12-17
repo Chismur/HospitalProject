@@ -28,4 +28,10 @@ public interface IPatientService {
 
     int getSocialStatusByName(String s);
     int getPatientId(String name,String surname,Date bDate);
+
+    List<PatientEntity> getAllFirst();
+
+    List<PatientEntity> getAllSecond();
+
+    List<PatientEntity> getAllThird();
 }

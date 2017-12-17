@@ -7,31 +7,6 @@ import javafx.stage.Stage;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-
-//@Component
-//public class Main extends Application {
-//
-//    @Autowired
-//    SpringConfig springConfig;
-//
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        final AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-//        FXMLLoader loader = ctx.getBean(FXMLLoaderProvider.class).getLoader("/fxml/main.fxml");
-//        Parent root = loader.load();
-//        primaryStage.setMinHeight(400);
-//        primaryStage.setMinWidth(600);
-//        primaryStage.setTitle("HospitalProject");
-//        primaryStage.setScene(new Scene(root, 400, 600));
-//        primaryStage.show();
-//    }
-//
-//
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-//}
 
 @SpringBootApplication
 public class Main extends Application {

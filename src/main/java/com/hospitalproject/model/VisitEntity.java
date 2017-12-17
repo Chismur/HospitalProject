@@ -1,6 +1,11 @@
 package com.hospitalproject.model;
 
+import org.hibernate.annotations.*;
+
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.sql.Date;
 import java.util.Collection;
 
@@ -85,7 +90,8 @@ public class VisitEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "visitByVisitIdVisit",orphanRemoval = true)
+    @OneToMany(mappedBy = "visitByVisitIdVisit")
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     public Collection<DiognosisHasVisitEntity> getDiognosisHasVisitsByIdVisit() {
         return diognosisHasVisitsByIdVisit;
     }
@@ -103,7 +109,7 @@ public class VisitEntity {
         this.queuesByIdVisit = queuesByIdVisit;
     }
 
-    @OneToMany(mappedBy = "visitByVisitIdVisit",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "visitByVisitIdVisit")
     public Collection<ServicesHasVisitEntity> getServicesHasVisitsByIdVisit() {
         return servicesHasVisitsByIdVisit;
     }

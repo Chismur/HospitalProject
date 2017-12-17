@@ -52,14 +52,14 @@ public class DoctorDAOImpl implements IDoctorDAO {
 
     @Override
     public List<String> getAllDoctorsNames() {
-        String s = "select de.dName From DoctorEntity de order by de.idDoctor";
+        String s = "select de.specializationByIdSpecialization.specialization From DoctorEntity de order by de.idDoctor";
         return (List<String>)entityManager.createQuery(s).getResultList();
     }
 
     @Override
-    public int getIdDoctorByName(String name) {
-        Query query = entityManager.createQuery("select de.id from DoctorEntity de where de.dName = :name");
-        query.setParameter("name",name);
+    public int getIdDoctorByName(String specialization) {
+        Query query = entityManager.createQuery("select de.id from DoctorEntity de where de.specializationByIdSpecialization.specialization = :name");
+        query.setParameter("name",specialization);
         return (int) query.getSingleResult();
     }
 

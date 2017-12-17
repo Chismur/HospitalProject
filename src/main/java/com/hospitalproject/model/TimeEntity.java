@@ -1,5 +1,8 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import javax.persistence.*;
 import java.sql.Time;
 import java.util.Collection;
@@ -75,4 +78,9 @@ public class TimeEntity {
     public void setQueuesByIdTime(Collection<QueueEntity> queuesByIdTime) {
         this.queuesByIdTime = queuesByIdTime;
     }
+
+//    @Transient
+//    public StringProperty timeStartProperty(){
+//        return new SimpleStringProperty(timeStart.toInstant().toString());
+//    }
 }

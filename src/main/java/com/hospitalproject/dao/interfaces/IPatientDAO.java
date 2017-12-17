@@ -21,4 +21,9 @@ public interface IPatientDAO {
 
     int getPatientId(String name, String surname, Date bDate);
 
+    List<PatientEntity> getAllThird();
+
+    List<PatientEntity> getAllSecond();
+
+    List<PatientEntity> getAllFirst();
 }

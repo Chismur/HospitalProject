@@ -76,6 +76,21 @@ public class PatientServiceImpl implements IPatientService {
     }
 
     @Override
+    public List<PatientEntity> getAllFirst() {
+        return patientDAO.getAllFirst();
+    }
+
+    @Override
+    public List<PatientEntity> getAllSecond() {
+        return patientDAO.getAllSecond();
+    }
+
+    @Override
+    public List<PatientEntity> getAllThird() {
+        return patientDAO.getAllThird();
+    }
+
+    @Override
     public PatientEntity getPatientById(int id) {
         return patientDAO.getPatientById(id);
     }

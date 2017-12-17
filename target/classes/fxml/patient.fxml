@@ -42,13 +42,7 @@
                                     </effect>
                                 </Button>
                         <Separator layoutX="16.0" layoutY="258.0" prefHeight="28.0" prefWidth="194.0" />
-                        <DatePicker fx:id="dov" editable="false" layoutX="16.0" layoutY="280.0" prefHeight="30.0" prefWidth="194.0" promptText="Date of Visit" />
-                        <ComboBox fx:id="cbDiognosis" layoutX="17.0" layoutY="318.0" prefHeight="30.0" prefWidth="192.0" promptText="Ilness" />
-                        <TextField fx:id="cabNumber" layoutX="227.0" layoutY="355.0" prefHeight="30.0" prefWidth="67.0" promptText="Cab №" />
-                        <ComboBox fx:id="cbDoctor" layoutX="17.0" layoutY="355.0" prefHeight="30.0" prefWidth="192.0" promptText="Doctor" />
                         <Button fx:id="refreshPatientTab" layoutX="294.0" layoutY="539.0" mnemonicParsing="false" onAction="#refresh" prefHeight="31.0" prefWidth="26.0" text="Logout" />
-                        <ComboBox fx:id="cbTime" layoutX="17.0" layoutY="395.0" prefHeight="30.0" prefWidth="192.0" promptText="time" />
-                        <ComboBox fx:id="cbDay" layoutX="17.0" layoutY="435.0" prefHeight="30.0" prefWidth="192.0" promptText="day" />
                      </children>
                   </AnchorPane>
                     </children>

@@ -17,5 +17,5 @@ public interface IQueueService {
 
     Integer getDayByName(String s);
 
-    void addQueue(QueueEntity queueEntity);
+    void save(QueueEntity queueEntity);
 }

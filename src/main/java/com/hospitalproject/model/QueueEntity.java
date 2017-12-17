@@ -7,12 +7,12 @@ import java.sql.Date;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "queue", schema = "mydb")
+@Table(name = "queue_table", schema = "mydb")
 public class QueueEntity {
     private int idQueue;
     private Date currentDate;
     private Integer cabNum;
-    private Integer visitHasSpecializationIdVisitHasSpecialization;
+    private Integer vHasSpById;
     private int idDoctor;
     private Integer idTimetable;
     private Integer idWeekday;
@@ -34,7 +34,7 @@ public class QueueEntity {
     }
 
     @Basic
-    @Column(name = "current_date", nullable = true)
+    @Column(name = "c_date", nullable = true)
     public Date getCurrentDate() {
         return currentDate;
     }
@@ -54,13 +54,13 @@ public class QueueEntity {
     }
 
     @Basic
-    @Column(name = "visit_has_specialization_id_visit_has_specialization", nullable = true)
+    @Column(name = "visit_h_s_id_visit_h_s", nullable = true)
     public Integer getVisitHasSpecializationIdVisitHasSpecialization() {
-        return visitHasSpecializationIdVisitHasSpecialization;
+        return vHasSpById;
     }
 
     public void setVisitHasSpecializationIdVisitHasSpecialization(Integer visitHasSpecializationIdVisitHasSpecialization) {
-        this.visitHasSpecializationIdVisitHasSpecialization = visitHasSpecializationIdVisitHasSpecialization;
+        this.vHasSpById = visitHasSpecializationIdVisitHasSpecialization;
     }
 
     @Basic
@@ -114,7 +114,7 @@ public class QueueEntity {
         if (idDoctor != that.idDoctor) return false;
         if (currentDate != null ? !currentDate.equals(that.currentDate) : that.currentDate != null) return false;
         if (cabNum != null ? !cabNum.equals(that.cabNum) : that.cabNum != null) return false;
-        if (visitHasSpecializationIdVisitHasSpecialization != null ? !visitHasSpecializationIdVisitHasSpecialization.equals(that.visitHasSpecializationIdVisitHasSpecialization) : that.visitHasSpecializationIdVisitHasSpecialization != null)
+        if (vHasSpById != null ? !vHasSpById.equals(that.vHasSpById) : that.vHasSpById != null)
             return false;
         if (idTimetable != null ? !idTimetable.equals(that.idTimetable) : that.idTimetable != null) return false;
         if (idWeekday != null ? !idWeekday.equals(that.idWeekday) : that.idWeekday != null) return false;
@@ -128,7 +128,7 @@ public class QueueEntity {
         int result = idQueue;
         result = 31 * result + (currentDate != null ? currentDate.hashCode() : 0);
         result = 31 * result + (cabNum != null ? cabNum.hashCode() : 0);
-        result = 31 * result + (visitHasSpecializationIdVisitHasSpecialization != null ? visitHasSpecializationIdVisitHasSpecialization.hashCode() : 0);
+        result = 31 * result + (vHasSpById != null ? vHasSpById.hashCode() : 0);
         result = 31 * result + idDoctor;
         result = 31 * result + (idTimetable != null ? idTimetable.hashCode() : 0);
         result = 31 * result + (idWeekday != null ? idWeekday.hashCode() : 0);
@@ -137,7 +137,7 @@ public class QueueEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "visit_has_specialization_id_visit_has_specialization", referencedColumnName = "id_visit_has_specialization")
+    @JoinColumn(name = "visit_h_s_id_visit_h_s", referencedColumnName = "id_visit_has_specialization")
     public VisitHasSpecializationEntity getVisitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization() {
         return visitHasSpecializationByVisitHasSpecializationIdVisitHasSpecialization;
     }

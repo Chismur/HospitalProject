@@ -32,10 +32,7 @@ public class PatientController implements Initializable {
     private ObservableList<PatientEntity> patientsList = FXCollections.observableArrayList();
     private ObservableList<String> socialStatusList = FXCollections.observableArrayList();
     private ObservableList<String> currentConditionList = FXCollections.observableArrayList();
-    private ObservableList<String> diognosisList = FXCollections.observableArrayList();
-    private ObservableList<String> doctorsList = FXCollections.observableArrayList();
-    private ObservableList<String> timeList = FXCollections.observableArrayList();
-    private ObservableList<String> dayList = FXCollections.observableArrayList();
+
 
     @Autowired
     @Lazy
@@ -70,24 +67,6 @@ public class PatientController implements Initializable {
     private ComboBox<String> cbCurrentCondition;
 
     @FXML
-    private ComboBox<String> cbDay;
-
-    @FXML
-    private ComboBox<String> cbTime;
-
-    @FXML
-    private DatePicker dov;
-
-    @FXML
-    private ComboBox<String> cbDiognosis;
-
-    @FXML
-    private ComboBox<String> cbDoctor;
-
-    @FXML
-    private TextField cabNumber;
-
-    @FXML
     private TableView<PatientEntity> patientTableInfo;
     @FXML
     private TableColumn<PatientEntity, String> colFirstName;
@@ -114,7 +93,6 @@ public class PatientController implements Initializable {
 
     @FXML
     private MenuItem deleteUsers;
-    private int idDoctor;
 
     @FXML
     void deletePatient(ActionEvent event) {
@@ -160,30 +138,6 @@ public class PatientController implements Initializable {
 
         loadPatientsDetails();
 
-        VisitEntity visitEntity = new VisitEntity();
-        visitEntity.setIdPatient(iPatientService.getPatientId(patientEntity.getpName(), patientEntity.getpSurname(), patientEntity.getbDate()));
-        visitEntity.setStartDateTreatment(getVDate());
-        visitEntity.setDateCured(getVDate());
-        System.out.println(getVDate().toString());
-        iVisitService.addVisit(visitEntity);
-
-        QueueEntity queueEntity = new QueueEntity();
-        queueEntity.setCabNum(getCabNumber());
-        queueEntity.setCurrentDate(getVDate());
-        queueEntity.setIdDoctor(getIdDoctor());
-        queueEntity.setIdVisits(iVisitService.getVisitByDate(getVDate()).getIdVisit());
-        //todo make it right
-        queueEntity.setIdTimetable(2);
-        // todo make it right
-        queueEntity.setIdWeekday(2);
-        // iQueueService.addQueue(queueEntity);
-        System.out.println("cab" + queueEntity.getCabNum());
-        System.out.println("dateq" + queueEntity.getCurrentDate());
-        System.out.println("doc" + queueEntity.getIdDoctor());
-        System.out.println("vis" + queueEntity.getIdVisits());
-        System.out.println("time" + queueEntity.getIdTimetable());
-        System.out.println("date" + queueEntity.getIdWeekday());
-
 
     }
 
@@ -196,11 +150,8 @@ public class PatientController implements Initializable {
         firstName.clear();
         lastName.clear();
         dob.getEditor().clear();
-        dov.getEditor().clear();
         cbCurrentCondition.getSelectionModel().clearSelection();
         cbSocialStatus.getSelectionModel().clearSelection();
-        cbDiognosis.getSelectionModel().clearSelection();
-        cbDoctor.getSelectionModel().clearSelection();
     }
 
 
@@ -209,17 +160,9 @@ public class PatientController implements Initializable {
 
         socialStatusList.addAll(iPatientService.getAllSocialStatus());
         currentConditionList.addAll(iPatientService.getAllCurrentCondition());
-        doctorsList.addAll(iDoctorService.getAllDoctorsNames());
-        diognosisList.addAll(iVisitService.getAllDiognosis());
-        //timeList.addAll(iQueueService.getTime());
-        // dayList.addAll(iQueueService.getDays());
 
         cbSocialStatus.setItems(socialStatusList);
         cbCurrentCondition.setItems(currentConditionList);
-        cbDoctor.setItems(doctorsList);
-        cbDiognosis.setItems(diognosisList);
-        //cbDay.setItems(dayList);
-        // cbTime.setItems(timeList);
 
         patientTableInfo.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         setColumnProperties();
@@ -230,10 +173,6 @@ public class PatientController implements Initializable {
         patientsList.clear();
         patientsList.addAll(iPatientService.getAll());
         patientTableInfo.getItems().setAll(patientsList);
-    }
-
-    private Integer getCabNumber() {
-        return Integer.parseInt(cabNumber.getText());
     }
 
     private String getLastName() {
@@ -267,24 +206,4 @@ public class PatientController implements Initializable {
         return iPatientService.getSocialStatusByName(s);
     }
 
-    public Date getVDate() {
-        Date date = Date.valueOf(dov.getValue());
-        return date;
-    }
-
-    //TO DO make find by name,surname and another param
-    public int getIdDoctor() {
-        String s = cbDoctor.getSelectionModel().getSelectedItem();
-        return iDoctorService.getIdDoctorByName(s);
-    }
-
-    public Integer getTime() {
-        String s = cbTime.getSelectionModel().getSelectedItem();
-        return iQueueService.getTimeByName(s);
-    }
-
-    public Integer getDay() {
-        String s = cbDay.getSelectionModel().getSelectedItem();
-        return iQueueService.getDayByName(s);
-    }
 }

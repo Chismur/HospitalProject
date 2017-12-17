@@ -22,4 +22,8 @@ public interface IVisitDAO {
     void save(VisitEntity visitEntity);
 
     void deleteVisit(VisitEntity v);
+
+    List<VisitEntity> getVisitByPatient(PatientEntity patientEntity);
+
+    DiognosisEntity getDiognosisByName(String s);
 }

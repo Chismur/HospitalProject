@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="visits" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hospitalproject.controllers.VisitController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
+            <center>
+                <VBox prefHeight="500.0" prefWidth="600.0">
+                    <children>
+                        <TableView fx:id="patientTable" onMouseClicked="#showInfo" prefHeight="500.0" prefWidth="600.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                            <VBox.margin>
+                                <Insets left="10.0" right="5.0" />
+                            </VBox.margin>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                            <columns>
+                                <TableColumn fx:id="colFirstName" maxWidth="4000.0" prefWidth="100.3333740234375" text="First Name" />
+                                <TableColumn fx:id="colLastName" maxWidth="4000.0" prefWidth="91.0" text="Last Name" />
+                                <TableColumn fx:id="colDOB" maxWidth="4000.0" prefWidth="75.0" text="Date of Birth" />
+                                <TableColumn fx:id="colCurrentCondition" maxWidth="4000.0" prefWidth="60.0" text="Condition" />
+                                <TableColumn fx:id="colSocialStatus" maxWidth="4000.0" prefWidth="75.0" text="Status" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox prefHeight="571.0" prefWidth="306.0" spacing="10.0" styleClass="background" stylesheets="@../css/styles.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane prefHeight="600.0" prefWidth="296.0">
+                            <children>
+                                <DatePicker fx:id="dov" editable="false" layoutY="88.0" prefHeight="30.0" prefWidth="194.0" promptText="Date of Visit" />
+                                <Button fx:id="refreshPatientTab" layoutX="67.0" layoutY="529.0" mnemonicParsing="false" onAction="#refresh" prefHeight="31.0" prefWidth="26.0" text="Logout" />
+                                <Separator layoutY="50.0" prefHeight="28.0" prefWidth="194.0" />
+                                <Label layoutX="20.0" text="Visits" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="20.0" top="30.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <ComboBox fx:id="cbDay" layoutY="288.0" prefHeight="30.0" prefWidth="192.0" promptText="day" />
+                                <ComboBox fx:id="cbTime" layoutY="248.0" prefHeight="30.0" prefWidth="192.0" promptText="time" />
+                                <TextField fx:id="cabNumber" layoutY="168.0" prefHeight="30.0" prefWidth="67.0" promptText="Cab №" />
+                                <ComboBox fx:id="cbDoctor" layoutY="208.0" prefHeight="30.0" prefWidth="192.0" promptText="Specialization" />
+                                <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="369.0" prefHeight="30.0" prefWidth="255.0" spacing="15.0">
+                                    <VBox.margin>
+                                        <Insets left="25.0" right="25.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <ComboBox fx:id="cbDiognosis" layoutY="128.0" prefHeight="30.0" prefWidth="192.0" promptText="Ilness" />
+                                <Button fx:id="reset" layoutX="110.0" layoutY="529.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: red;" styleClass="btnRed" text="Reset" textFill="WHITE">
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#1965d0" />
+                                    </effect>
+                                </Button>
+                                <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="529.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="75.0" styleClass="btnGreen" text="Save" textFill="WHITE">
+                                    <effect>
+                                        <DropShadow blurType="ONE_PASS_BOX" color="#6468b2" />
+                                    </effect>
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Button>
+                        <Button fx:id="firstSort" layoutX="-1.0" layoutY="332.0" mnemonicParsing="false" onAction="#first" text="A-G" />
+                        <Button fx:id="secondSort" layoutX="67.0" layoutY="332.0" mnemonicParsing="false" onAction="#second" text="H-P" />
+                        <Button fx:id="trirdSort" layoutX="142.0" layoutY="332.0" mnemonicParsing="false" onAction="#third" text="Q-Z" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </left>
+            <bottom>
+
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

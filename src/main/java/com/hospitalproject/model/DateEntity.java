@@ -1,5 +1,8 @@
 package com.hospitalproject.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -7,7 +10,7 @@ import java.util.Collection;
  * Created by kingm on 06.12.2017.
  */
 @Entity
-@Table(name = "date", schema = "mydb", catalog = "")
+@Table(name = "date", schema = "mydb")
 public class DateEntity {
     private int idDate;
     private String name;
@@ -60,5 +63,10 @@ public class DateEntity {
 
     public void setQueuesByIdDate(Collection<QueueEntity> queuesByIdDate) {
         this.queuesByIdDate = queuesByIdDate;
+    }
+
+    @Transient
+    public StringProperty nameProperty(){
+        return new SimpleStringProperty(name);
     }
 }

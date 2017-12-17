@@ -54,7 +54,7 @@ public class DiognosisHasVisitEntity {
         return result;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "diognosis_id_diognosis", referencedColumnName = "id_diognosis", nullable = false)
     public DiognosisEntity getDiognosisByDiognosisIdDiognosis() {
         return diognosisByDiognosisIdDiognosis;
@@ -64,7 +64,7 @@ public class DiognosisHasVisitEntity {
         this.diognosisByDiognosisIdDiognosis = diognosisByDiognosisIdDiognosis;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "visit_id_visit", referencedColumnName = "id_visit", nullable = false)
     public VisitEntity getVisitByVisitIdVisit() {
         return visitByVisitIdVisit;

@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -54,5 +55,47 @@ public class PatientDAOImpl implements IPatientDAO {
         query.setParameter("s",surname);
         query.setParameter("d",bDate);
         return (int) query.getSingleResult();
+    }
+
+    @Override
+    public List<PatientEntity> getAllThird() {
+        List<PatientEntity> result = new ArrayList<>();
+        String s = "select pe From PatientEntity pe order by pe.idPatient";
+        List<PatientEntity> p = (List<PatientEntity>)entityManager.createQuery(s).getResultList();
+        for (PatientEntity pe:p) {
+            char ch = pe.getpName().charAt(0);
+            if ((ch >= 'q' && ch <= 'z') || (ch >= 'Q' && ch <= 'Z')){
+                result.add(pe);
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<PatientEntity> getAllSecond() {
+        List<PatientEntity> result = new ArrayList<>();
+        String s = "select pe From PatientEntity pe order by pe.idPatient";
+        List<PatientEntity> p = (List<PatientEntity>)entityManager.createQuery(s).getResultList();
+        for (PatientEntity pe:p) {
+            char ch = pe.getpName().charAt(0);
+            if ((ch >= 'h' && ch <= 'p') || (ch >= 'H' && ch <= 'P')){
+                result.add(pe);
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<PatientEntity> getAllFirst() {
+        List<PatientEntity> result = new ArrayList<>();
+        String s = "select pe From PatientEntity pe order by pe.idPatient";
+        List<PatientEntity> p = (List<PatientEntity>)entityManager.createQuery(s).getResultList();
+        for (PatientEntity pe:p) {
+            char ch = pe.getpName().charAt(0);
+            if ((ch >= 'a' && ch <= 'g') || (ch >= 'A' && ch <= 'G')){
+                result.add(pe);
+            }
+        }
+        return result;
     }
 }

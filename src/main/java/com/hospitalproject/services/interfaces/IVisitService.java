@@ -26,4 +26,8 @@ public interface IVisitService {
     void addVisit(VisitEntity visitEntity);
 
     void deleteVisit(VisitEntity v);
+
+    List<VisitEntity> getVisitByPatient(PatientEntity patientEntity);
+
+    DiognosisEntity getDiognosisByName(String s);
 }
